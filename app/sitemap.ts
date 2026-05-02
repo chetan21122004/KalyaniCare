@@ -3,13 +3,31 @@ import type { MetadataRoute } from "next";
 import { AREAS, getAllSocietySlugs } from "@/lib/areas";
 import { getAbsoluteSiteUrl, getAllServiceSlugs, services } from "@/lib/services";
 
+function dedupeValidSitemapEntries(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
+  const seen = new Set<string>();
+  const out: MetadataRoute.Sitemap = [];
+  for (const entry of entries) {
+    let href = entry.url;
+    try {
+      const u = new URL(href);
+      if (u.protocol !== "http:" && u.protocol !== "https:") continue;
+      href = u.href;
+    } catch {
+      continue;
+    }
+    if (seen.has(href)) continue;
+    seen.add(href);
+    out.push({ ...entry, url: href });
+  }
+  return out;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const origin = getAbsoluteSiteUrl("/");
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: origin,
+      url: getAbsoluteSiteUrl("/"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
@@ -50,5 +68,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...servicePages, ...areaPages, ...serviceAreaPages, ...societyPages];
+  const combined = [...staticPages, ...servicePages, ...areaPages, ...serviceAreaPages, ...societyPages];
+  return dedupeValidSitemapEntries(combined);
 }

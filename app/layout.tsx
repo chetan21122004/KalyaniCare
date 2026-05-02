@@ -10,8 +10,16 @@ const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const siteUrl = getAbsoluteSiteUrl("/");
 
+function safeMetadataBaseUrl(url: string): URL {
+  try {
+    return new URL(url);
+  } catch {
+    return new URL("http://localhost:3000");
+  }
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: safeMetadataBaseUrl(siteUrl),
   title: {
     default: "SakhiHome - Trusted Maid Services in Hinjewadi IT Park, Pune",
     template: `%s | SakhiHome`,

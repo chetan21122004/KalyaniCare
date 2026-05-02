@@ -63,15 +63,30 @@ export function getWhatsAppHrefWithService(topic: string) {
   return `https://wa.me/919172475977?text=${q}`;
 }
 
-export function getAbsoluteSiteUrl(path = "") {
-  const base =
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000");
-  const trimmed = base.replace(/\/$/, "");
-  const p = path.startsWith("/") ? path : path ? `/${path}` : "";
-  return `${trimmed}${p}`;
+/**
+ * Absolute URL for canonicals, sitemaps, JSON-LD, and Open Graph metadata.
+ *
+ * Uses `||` (not `??`) so an **empty-string** env var falls through — `??` would keep `""`,
+ * which produced relative URLs (`/services/...`) and broke `/sitemap.xml` in production.
+ */
+export function getAbsoluteSiteUrl(path = ""): string {
+  const pathname = path.startsWith("/") ? path : path ? `/${path}` : "";
+
+  const baseCandidate =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.SITE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "") ||
+    "http://localhost:3000";
+
+  const trimmed = baseCandidate.trim();
+  const withScheme = /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+
+  try {
+    const originUrl = new URL(withScheme);
+    return `${originUrl.origin}${pathname}`;
+  } catch {
+    return `http://localhost:3000${pathname}`;
+  }
 }
 
 export const SERVICE_SLUGS = [
