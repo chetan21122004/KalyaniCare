@@ -359,15 +359,15 @@ export const services: readonly ServiceRecord[] = [
   // ─────────────────────────────────────────────────────────────────────────────
   {
     slug: "japa-maid",
-    iconKey: "heart",
+    iconKey: "handHeart",
     title: "Japa Maid",
     tag: "Specialist",
     points: [
-      "Postpartum mother & newborn care",
-      "Baby bathing, massage & feeding support",
-      "Traditional Japa diet & recovery routines",
+      "Mother & newborn care after delivery",
+      "Traditional Japa diet, massage & baby routines",
+      "Short-term 40-day specialist — not daily housekeeping",
     ],
-    mobileSummary: "Specialist postpartum care for mother and newborn.",
+    mobileSummary: "Postpartum specialist for mother & baby — not a regular full-time maid.",
     headline: "Japa Maid in Hinjewadi, Wakad & Baner, Pune",
     metaTitle:
       "Japa Maid in Hinjewadi Pune | Postpartum Care | Newborn Care | SakhiHome",
@@ -517,12 +517,13 @@ export const services: readonly ServiceRecord[] = [
     slug: "full-time-maid",
     iconKey: "home",
     title: "Full-Time Maid",
+    tag: "All-round",
     points: [
-      "8–12 hour shifts",
-      "Live-in option available",
-      "All-round household help",
+      "Ongoing full-day household help",
+      "Cleaning, cooking, laundry & errands",
+      "8–12 hour shifts or live-in",
     ],
-    mobileSummary: "8–12 hr shifts with live-in option available.",
+    mobileSummary: "Year-round maid for cleaning, cooking & home duties — not postpartum-only.",
     headline: "Full-Time Maid in Hinjewadi, Wakad & Baner, Pune",
     metaTitle:
       "Full Time Maid in Hinjewadi Pune | Live-in Maid | All-Day Help | SakhiHome",

@@ -28,6 +28,7 @@ const iconByKey: Record<ServiceIconKey, LucideIcon> = {
   home: Home,
   clock: Clock,
   heart: Heart,
+  handHeart: HandHeart,
 };
 
 const MobileServices = () => (
