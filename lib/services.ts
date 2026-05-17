@@ -20,7 +20,8 @@ export type ServiceIconKey =
   | "heartHandshake"
   | "home"
   | "clock"
-  | "heart";
+  | "heart"
+  | "handHeart";
 
 export type ServiceFaq = { question: string; answer: string };
 
@@ -40,7 +41,7 @@ export type ServiceRecord = {
   longDescription: string;
   /** Primary English SEO keywords to weave into page copy */
   keywords: string[];
-  /** Marathi / Hindi search variants — use in alt text, copy, FAQ */
+  /** Marathi / Hindi search variants - use in alt text, copy, FAQ */
   marathiKeywords: string[];
   /** Anchor text for internal cross-linking between service pages */
   relatedSearches: string[];
@@ -65,7 +66,7 @@ export const AREA_SERVED_LOCALITY = "Hinjewadi IT Park";
 /**
  * Absolute URL for canonicals, sitemaps, JSON-LD, and Open Graph metadata.
  *
- * Uses `||` (not `??`) so an **empty-string** env var falls through — `??` would keep `""`,
+ * Uses `||` (not `??`) so an **empty-string** env var falls through - `??` would keep `""`,
  * which produced relative URLs (`/services/...`) and broke `/sitemap.xml` in production.
  */
 export function getAbsoluteSiteUrl(path = ""): string {
@@ -119,9 +120,9 @@ export const services: readonly ServiceRecord[] = [
     metaTitle:
       "House Cleaning Maid in Hinjewadi Pune | Cleaning Bai | SakhiHome",
     metaDescription:
-      "Hire a trusted house cleaning maid in Hinjewadi, Wakad & Baner, Pune. Daily or alternate visits for sweeping, mopping, kitchen & bathroom. Verified cleaning bai — matched within hours. SakhiHome.",
+      "Hire a trusted house cleaning maid in Hinjewadi, Wakad & Baner, Pune. Daily or alternate visits for sweeping, mopping, kitchen & bathroom. Verified cleaning bai - matched within hours. SakhiHome.",
     longDescription:
-      "Keep your floors, surfaces, kitchen, and bathrooms spotless without the daily grind. SakhiHome matches you with reliable, background-verified cleaning maids (cleaning bai) who live near your society in Hinjewadi, Wakad, Baner, or Megapolis — shorter commute means they show up on time, every time. Whether you need daily jhadu-pocha, deep kitchen scrubbing, or alternate-day upkeep, we build a schedule around your home and your routine.",
+      "Keep your floors, surfaces, kitchen, and bathrooms spotless without the daily grind. SakhiHome matches you with reliable, background-verified cleaning maids (cleaning bai) who live near your society in Hinjewadi, Wakad, Baner, or Megapolis - shorter commute means they show up on time, every time. Whether you need daily jhadu-pocha, deep kitchen scrubbing, or alternate-day upkeep, we build a schedule around your home and your routine.",
     keywords: [
       "house cleaning maid Hinjewadi",
       "house cleaning maid Wakad",
@@ -158,22 +159,22 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "What areas do you clean inside the home?",
         answer:
-          "Typically living areas, bedrooms, kitchen, bathrooms, balconies, and common surfaces. We align scope during booking based on home size — 1 BHK through 4 BHK societies like Blue Ridge, Megapolis Splendour, and Kolte Patil Life Republic.",
+          "Typically living areas, bedrooms, kitchen, bathrooms, balconies, and common surfaces. We align scope during booking based on home size - 1 BHK through 4 BHK societies like Blue Ridge, Megapolis Splendour, and Kolte Patil Life Republic.",
       },
       {
         question: "Do you supply cleaning materials?",
         answer:
-          "Most families prefer supplies they already trust at home. We clarify mop, disinfectant, and tool expectations when you enquire — no surprises.",
+          "Most families prefer supplies they already trust at home. We clarify mop, disinfectant, and tool expectations when you enquire - no surprises.",
       },
       {
         question: "Are cleaners background verified?",
         answer:
-          "Yes — every cleaning maid in SakhiHome's Hinjewadi and Wakad network is ID and address verified before placement. You can also ask for a trial visit before committing.",
+          "Yes - every cleaning maid in SakhiHome's Hinjewadi and Wakad network is ID and address verified before placement. You can also ask for a trial visit before committing.",
       },
       {
         question: "What if my cleaning maid doesn't show up?",
         answer:
-          "We arrange a verified replacement within 24–48 hours. One call to SakhiHome is all it takes — no chasing, no waiting.",
+          "We arrange a verified replacement within 24–48 hours. One call to SakhiHome is all it takes - no chasing, no waiting.",
       },
     ],
   },
@@ -196,9 +197,9 @@ export const services: readonly ServiceRecord[] = [
     metaTitle:
       "Cook Maid in Hinjewadi Pune | Swayampak Bai | Daily Home Cook | SakhiHome",
     metaDescription:
-      "Hire a skilled cook maid (swayampak bai) in Hinjewadi, Wakad & Baner, Pune. Daily home-style meals — veg, non-veg, Jain, regional menus. Background-verified, fast matching. SakhiHome.",
+      "Hire a skilled cook maid (swayampak bai) in Hinjewadi, Wakad & Baner, Pune. Daily home-style meals - veg, non-veg, Jain, regional menus. Background-verified, fast matching. SakhiHome.",
     longDescription:
-      "Nutritious, home-style food should match your family's taste — not compromise it. SakhiHome connects IT Park families in Hinjewadi, Wakad, and Baner with experienced cook maids (swayampak bai) for daily lunches and dinners. From Maharashtrian staples to north Indian, south Indian, Jain, and custom diet menus — we document your preferences upfront so the first meal feels familiar. Most cook maids cover breakfast, lunch, and dinner prep with leftovers planning built in.",
+      "Nutritious, home-style food should match your family's taste - not compromise it. SakhiHome connects IT Park families in Hinjewadi, Wakad, and Baner with experienced cook maids (swayampak bai) for daily lunches and dinners. From Maharashtrian staples to north Indian, south Indian, Jain, and custom diet menus - we document your preferences upfront so the first meal feels familiar. Most cook maids cover breakfast, lunch, and dinner prep with leftovers planning built in.",
     keywords: [
       "cook maid Hinjewadi",
       "cook maid Wakad",
@@ -231,7 +232,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Can the cook maid adapt to allergies or Jain meals?",
         answer:
-          "Yes — dietary notes, allergies, and regional preferences are documented upfront when you send an enquiry. We have cook maids in Hinjewadi experienced with Jain, vegan, diabetic-friendly, and low-oil diets.",
+          "Yes - dietary notes, allergies, and regional preferences are documented upfront when you send an enquiry. We have cook maids in Hinjewadi experienced with Jain, vegan, diabetic-friendly, and low-oil diets.",
       },
       {
         question: "Is grocery shopping included?",
@@ -241,7 +242,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Can I get breakfast, lunch, and dinner covered?",
         answer:
-          "Yes — you can prioritise specific meals. Most IT Park families in Hinjewadi anchor lunch and dinner prep, with breakfast being optional. Leftover planning for next-day lunches is common.",
+          "Yes - you can prioritise specific meals. Most IT Park families in Hinjewadi anchor lunch and dinner prep, with breakfast being optional. Leftover planning for next-day lunches is common.",
       },
       {
         question: "What if the food quality or taste doesn't match?",
@@ -251,7 +252,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "How quickly can I get a cook maid in Hinjewadi?",
         answer:
-          "Most placements happen within 24–48 hours of your enquiry. We prioritise maids who live near your society — Megapolis, Blue Ridge, Life Republic — so travel time is minimal.",
+          "Most placements happen within 24–48 hours of your enquiry. We prioritise maids who live near your society - Megapolis, Blue Ridge, Life Republic - so travel time is minimal.",
       },
     ],
   },
@@ -273,9 +274,9 @@ export const services: readonly ServiceRecord[] = [
     metaTitle:
       "Nanny & Babysitter in Hinjewadi Pune | Infant & Toddler Care Maid | SakhiHome",
     metaDescription:
-      "Hire a trusted nanny or babysitter in Hinjewadi, Wakad & Baner, Pune — daytime visits or longer placements, infant & toddler care, ayah/aaya-style home help, after-school supervision. Background-verified caretakers. SakhiHome.",
+      "Hire a trusted nanny or babysitter in Hinjewadi, Wakad & Baner, Pune - daytime visits or longer placements, infant & toddler care, ayah/aaya-style home help, after-school supervision. Background-verified caretakers. SakhiHome.",
     longDescription:
-      "Peace of mind matters most when you're juggling WFH meetings and your little one's routine. SakhiHome connects Hinjewadi, Wakad, and Baner families with trained babysitters and home nannies for supervised daytime care, calm handovers when you're at the IT Park, and dependable coverage for toddlers and school-age kids when schedules slip. We match for newborn-friendly routines through preschool and after-school windows — feeding support, naps, diapering, supervised play, and gentle structure while parents work.\n\nMany families want visiting help a few hours a day; others prefer a longer daytime shift or a live-in nanny arrangement when continuity matters. Every profile we shortlist is background-verified, and you can start with a short trial so chemistry, hours, and duties (including light feeding prep or tidy-up around the child) are clear before you commit.",
+      "Peace of mind matters most when you're juggling WFH meetings and your little one's routine. SakhiHome connects Hinjewadi, Wakad, and Baner families with trained babysitters and home nannies for supervised daytime care, calm handovers when you're at the IT Park, and dependable coverage for toddlers and school-age kids when schedules slip. We match for newborn-friendly routines through preschool and after-school windows - feeding support, naps, diapering, supervised play, and gentle structure while parents work.\n\nMany families want visiting help a few hours a day; others prefer a longer daytime shift or a live-in nanny arrangement when continuity matters. Every profile we shortlist is background-verified, and you can start with a short trial so chemistry, hours, and duties (including light feeding prep or tidy-up around the child) are clear before you commit.",
     keywords: [
       "babysitter Hinjewadi",
       "babysitter Wakad",
@@ -328,17 +329,17 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "What ages do you cover for babysitting in Hinjewadi?",
         answer:
-          "Newborns through school-age children. Duties are matched when you enquire — feeding support, diapering, nap routines, and supervised play for toddlers in societies like Blue Ridge, Life Republic, and Megapolis.",
+          "Newborns through school-age children. Duties are matched when you enquire - feeding support, diapering, nap routines, and supervised play for toddlers in societies like Blue Ridge, Life Republic, and Megapolis.",
       },
       {
         question: "Is daytime vs nighttime sitting available?",
         answer:
-          "Most placements are daytime shifts — ideal for WFH parents in the Hinjewadi IT Park corridor. Overnight needs can be discussed case by case.",
+          "Most placements are daytime shifts - ideal for WFH parents in the Hinjewadi IT Park corridor. Overnight needs can be discussed case by case.",
       },
       {
         question: "Can the babysitter also do light housework?",
         answer:
-          "Yes — many placements include light kitchen tidying or feeding prep alongside childcare. We document the exact scope during onboarding.",
+          "Yes - many placements include light kitchen tidying or feeding prep alongside childcare. We document the exact scope during onboarding.",
       },
       {
         question: "How do you handle emergencies?",
@@ -348,7 +349,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Can we do a trial visit first?",
         answer:
-          "Yes — a short trial half-day helps align routines and build comfort before committing weekly. Most Hinjewadi families do a 2–3 hour trial before full onboarding.",
+          "Yes - a short trial half-day helps align routines and build comfort before committing weekly. Most Hinjewadi families do a 2–3 hour trial before full onboarding.",
       },
     ],
   },
@@ -373,7 +374,7 @@ export const services: readonly ServiceRecord[] = [
     metaDescription:
       "Hire an experienced Japa maid in Hinjewadi, Wakad & Baner, Pune. Postpartum mother care, newborn bathing, massage, feeding support & Japa diet. Background-verified. SakhiHome.",
     longDescription:
-      "The weeks after delivery are precious — and exhausting. A Japa maid is a trained specialist who cares for both the new mother and newborn during the postpartum recovery period. SakhiHome connects families in Hinjewadi, Wakad, Baner, and Megapolis with experienced Japa maids who handle baby bathing, oil massage, swaddling, feeding support, diaper changes, and traditional Japa diet preparation for the mother. Most Japa placements run for 40 days (saade teen mahine) or a custom duration based on your needs.",
+      "The weeks after delivery are precious - and exhausting. A Japa maid is a trained specialist who cares for both the new mother and newborn during the postpartum recovery period. SakhiHome connects families in Hinjewadi, Wakad, Baner, and Megapolis with experienced Japa maids who handle baby bathing, oil massage, swaddling, feeding support, diaper changes, and traditional Japa diet preparation for the mother. Most Japa placements run for 40 days (saade teen mahine) or a custom duration based on your needs.",
     keywords: [
       "Japa maid Hinjewadi",
       "Japa maid Wakad",
@@ -411,7 +412,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "How long is a typical Japa maid placement?",
         answer:
-          "Most Japa placements in Hinjewadi and Pune are for 40 days — the traditional postpartum recovery window. We also offer shorter 20-day or 30-day placements based on availability and your preference.",
+          "Most Japa placements in Hinjewadi and Pune are for 40 days - the traditional postpartum recovery window. We also offer shorter 20-day or 30-day placements based on availability and your preference.",
       },
       {
         question: "Do Japa maids live in or visit daily?",
@@ -421,12 +422,12 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Is the Japa maid experienced with hospital discharge routines?",
         answer:
-          "Yes — experienced Japa maids in our network are familiar with hospital discharge protocols, cord care, weight monitoring cues, and when to alert parents or seek medical attention.",
+          "Yes - experienced Japa maids in our network are familiar with hospital discharge protocols, cord care, weight monitoring cues, and when to alert parents or seek medical attention.",
       },
       {
         question: "How early should I book a Japa maid in Hinjewadi?",
         answer:
-          "We recommend booking 3–4 weeks before your expected delivery date. Japa maids are in high demand in Hinjewadi and Wakad, especially in large societies like Life Republic, Blue Ridge, and Megapolis — early booking ensures availability.",
+          "We recommend booking 3–4 weeks before your expected delivery date. Japa maids are in high demand in Hinjewadi and Wakad, especially in large societies like Life Republic, Blue Ridge, and Megapolis - early booking ensures availability.",
       },
       {
         question: "Can the Japa maid also help with household cooking for the family?",
@@ -455,7 +456,7 @@ export const services: readonly ServiceRecord[] = [
     metaDescription:
       "Compassionate elder care helpers in Hinjewadi, Wakad & Baner, Pune. Mobility support, daily assistance, medication reminders & companionship for elderly parents. SakhiHome.",
     longDescription:
-      "Supporting elderly parents at home while managing an IT career requires patience and a reliable system. SakhiHome's elder care helpers in Hinjewadi, Wakad, and Baner are matched for respectful daily assistance — mobility support, hydration nudges, medication reminders, light housekeeping around medical routines, and consistent companionship that keeps spirits high. Our caretakers are experienced with senior routines in gated societies where families may not always be home.",
+      "Supporting elderly parents at home while managing an IT career requires patience and a reliable system. SakhiHome's elder care helpers in Hinjewadi, Wakad, and Baner are matched for respectful daily assistance - mobility support, hydration nudges, medication reminders, light housekeeping around medical routines, and consistent companionship that keeps spirits high. Our caretakers are experienced with senior routines in gated societies where families may not always be home.",
     keywords: [
       "elder care maid Hinjewadi",
       "elder care maid Pune",
@@ -489,12 +490,12 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Can someone live-in for overnight elder care in Hinjewadi?",
         answer:
-          "Yes — live-in rotations are available for families who need nighttime presence. Room, sanitation, offs, and dietary preferences are clarified before placement.",
+          "Yes - live-in rotations are available for families who need nighttime presence. Room, sanitation, offs, and dietary preferences are clarified before placement.",
       },
       {
         question: "How do carers handle medications?",
         answer:
-          "Carers offer pill organiser reminders and prompt reminders — dosing decisions remain family-directed. We document medication schedules during onboarding.",
+          "Carers offer pill organiser reminders and prompt reminders - dosing decisions remain family-directed. We document medication schedules during onboarding.",
       },
       {
         question: "What happens in a medical emergency?",
@@ -528,7 +529,7 @@ export const services: readonly ServiceRecord[] = [
     metaDescription:
       "Hire a full-time maid in Hinjewadi, Wakad & Baner, Pune. 8–12 hour shifts or live-in option. Cleaning, cooking, errands & all-round household help. Background-verified. SakhiHome.",
     longDescription:
-      "Demanding weeks call for dependable all-day coverage. A full-time maid from SakhiHome handles your Hinjewadi or Wakad household from morning to evening — cleaning rotations, cooking, ironing, grocery errands, and vendor coordination. Whether you need 8-hour weekday coverage or a live-in arrangement for a large family in societies like Blue Ridge, Megapolis Splendour, or Life Republic, we match you with a verified, locally-sourced full-time maid who understands your household rhythm.",
+      "Demanding weeks call for dependable all-day coverage. A full-time maid from SakhiHome handles your Hinjewadi or Wakad household from morning to evening - cleaning rotations, cooking, ironing, grocery errands, and vendor coordination. Whether you need 8-hour weekday coverage or a live-in arrangement for a large family in societies like Blue Ridge, Megapolis Splendour, or Life Republic, we match you with a verified, locally-sourced full-time maid who understands your household rhythm.",
     keywords: [
       "full time maid Hinjewadi",
       "full time maid Wakad",
@@ -575,12 +576,12 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Can I customise the tasks week by week?",
         answer:
-          "Yes — many families run a rotating chore schedule. Mondays for wardrobe organising, Tuesdays for balcony and terrace, Wednesdays for deep kitchen — whatever works for your household.",
+          "Yes - many families run a rotating chore schedule. Mondays for wardrobe organising, Tuesdays for balcony and terrace, Wednesdays for deep kitchen - whatever works for your household.",
       },
       {
         question: "What if I need to end or change the placement?",
         answer:
-          "We recommend aligned notice windows from both sides. SakhiHome handles the transition and matches you with a replacement — usually within 24–48 hours for high-priority cases in Hinjewadi.",
+          "We recommend aligned notice windows from both sides. SakhiHome handles the transition and matches you with a replacement - usually within 24–48 hours for high-priority cases in Hinjewadi.",
       },
     ],
   },
@@ -598,14 +599,14 @@ export const services: readonly ServiceRecord[] = [
       "Choose tasks & timing",
       "Perfect for working families",
     ],
-    mobileSummary: "Flexible 1–3 hr visits — choose your timing.",
+    mobileSummary: "Flexible 1–3 hr visits - choose your timing.",
     headline: "Part-Time Maid in Hinjewadi, Wakad & Baner, Pune",
     metaTitle:
       "Part Time Maid in Hinjewadi Pune | Hourly Maid | Morning Bai | SakhiHome",
     metaDescription:
       "Flexible part-time maids in Hinjewadi, Wakad & Baner, Pune. 1–3 hour visits, choose your tasks & timing. Ideal for working IT families. Background-verified. SakhiHome.",
     longDescription:
-      "Not every chore needs eight hours — sometimes you just need ninety focused minutes of jhadu-pocha and kitchen tidying before the school bus arrives. SakhiHome lines up part-time maids (morning bai) in Hinjewadi, Wakad, Baner, and Megapolis tuned to your weekday windows. Choose your timing, pick your tasks, and scale up or down month to month without any long-term lock-in.",
+      "Not every chore needs eight hours - sometimes you just need ninety focused minutes of jhadu-pocha and kitchen tidying before the school bus arrives. SakhiHome lines up part-time maids (morning bai) in Hinjewadi, Wakad, Baner, and Megapolis tuned to your weekday windows. Choose your timing, pick your tasks, and scale up or down month to month without any long-term lock-in.",
     keywords: [
       "part time maid Hinjewadi",
       "part time maid Wakad",
@@ -642,12 +643,12 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Can I stack multiple tasks in one visit?",
         answer:
-          "Absolutely — jhadu-pocha plus kitchen wipe-down plus folding laundry in one 2-hour slot is very common. We align the task list with the maid before the first visit.",
+          "Absolutely - jhadu-pocha plus kitchen wipe-down plus folding laundry in one 2-hour slot is very common. We align the task list with the maid before the first visit.",
       },
       {
         question: "Is part-time maid timing WFH-friendly?",
         answer:
-          "Yes — we align quiet hours so Zoom calls survive vacuum passes. Most Hinjewadi IT Park families prefer 7–9 AM or 12–2 PM slots. Just tell us your schedule.",
+          "Yes - we align quiet hours so Zoom calls survive vacuum passes. Most Hinjewadi IT Park families prefer 7–9 AM or 12–2 PM slots. Just tell us your schedule.",
       },
       {
         question: "What about festival and holiday coverage?",
@@ -657,7 +658,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Can I upgrade from part-time to full-time later?",
         answer:
-          "Yes — many families start part-time and scale up. Just let us know and we'll match you with a verified full-time maid in your society when you're ready.",
+          "Yes - many families start part-time and scale up. Just let us know and we'll match you with a verified full-time maid in your society when you're ready.",
       },
     ],
   },

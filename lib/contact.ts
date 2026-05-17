@@ -1,4 +1,4 @@
-/** Site-wide call / WhatsApp — single source of truth for NAP consistency. */
+/** Site-wide call / WhatsApp - single source of truth for NAP consistency. */
 
 export const CONTACT_PHONE_E164 = "+919270075977";
 
