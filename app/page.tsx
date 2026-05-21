@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import BlogSection from "@/app/components/site/BlogSection";
 import About from "@/app/components/site/About";
 import Areas from "@/app/components/site/Areas";
 import EnquirySection from "@/app/components/site/EnquirySection";
@@ -80,6 +81,7 @@ export default function Home() {
           <About />
           <Areas />
           <Testimonials />
+          <BlogSection />
           <EnquirySection />
           <FinalCTA />
         </main>

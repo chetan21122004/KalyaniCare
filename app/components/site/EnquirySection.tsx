@@ -108,7 +108,7 @@ const EnquirySection = () => {
           end_time: form.endTime,
           maid_daily_window:
             form.startTime || form.endTime
-              ? [form.startTime || "?", form.endTime || "?"].join(" – ")
+              ? [form.startTime || "?", form.endTime || "?"].join(" - ")
               : "",
           message: form.message,
           _subject: `New SakhiHome enquiry from ${form.name}`,
@@ -190,7 +190,7 @@ const EnquirySection = () => {
                 {[
                   "Real human matching, not an automated app",
                   "Background-verified maids near your locality",
-                  "Replacement maid arranged within 24–48 hours",
+                  "Replacement maid arranged within 24-48 hours",
                 ].map((point) => (
                   <li key={point} className="flex items-start gap-3 text-sm text-dark-foreground/90">
                     <span className="mt-0.5 grid h-5 w-5 md:h-6 md:w-6 shrink-0 place-items-center rounded-full bg-accent/15 text-accent">
@@ -227,7 +227,7 @@ const EnquirySection = () => {
               </div>
 
               <p className="mt-5 md:mt-6 text-[11px] text-dark-muted">
-                Mon–Sun · 8 AM – 9 PM · Replies within minutes
+                Mon-Sun · 8 AM - 9 PM · Replies within minutes
               </p>
 
               <BusinessMap className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10" />

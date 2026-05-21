@@ -117,7 +117,7 @@ const MobileHero = () => (
       <p className="mt-5 text-center text-[11px] font-medium tracking-wide text-white/45">
         <span className="text-white/70">Areas</span>
         <span className="mx-2 text-white/25">·</span>
-        Wakad · Baner · Marunji · Phase 1–3 · Megapolis
+        Wakad · Baner · Marunji · Phase 1-3 · Megapolis
       </p>
     </div>
   </div>
@@ -275,7 +275,7 @@ const Hero = () => {
               {[
                 { icon: ShieldCheck, label: "Verified", sub: "ID & address" },
                 { icon: Clock, label: "Fast Match", sub: "Within hours" },
-                { icon: RefreshCw, label: "Replacement", sub: "24–48 hrs" },
+                { icon: RefreshCw, label: "Replacement", sub: "24-48 hrs" },
               ].map(({ icon: Icon, label, sub }) => (
                 <div
                   key={label}
@@ -292,7 +292,7 @@ const Hero = () => {
 
             {/* Areas served */}
             <p className="mt-6 text-xs font-medium text-white/50 tracking-wide">
-              <span className="text-white/70">Areas:</span> Wakad · Bhumkar Chowk · Baner · Marunji · Phase 1–3 · Megapolis
+              <span className="text-white/70">Areas:</span> Wakad · Bhumkar Chowk · Baner · Marunji · Phase 1-3 · Megapolis
             </p>
           </div>
 

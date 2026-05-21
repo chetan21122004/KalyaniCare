@@ -7,14 +7,14 @@ const blobBg = "/assets/blobs/063602423687.jpg";
 const items = [
   { icon: Users, num: "500+", title: "Maid Network", desc: "A strong, growing network exclusively built for Hinjewadi IT Park families." },
   { icon: TrendingUp, num: "Weekly", title: "Growing Supply", desc: "New verified maids added every week, so you're never left waiting." },
-  { icon: Repeat, num: "24-48h", title: "Quick Replacement", desc: "Backup maid arranged within 24–48 hours if your maid is unavailable." },
+  { icon: Repeat, num: "24-48h", title: "Quick Replacement", desc: "Backup maid arranged within 24-48 hours if your maid is unavailable." },
   { icon: Heart, num: "100%", title: "Local Matching", desc: "Maids who live nearby for better reliability and punctuality." },
 ];
 
 const mobileShortDesc: Record<string, string> = {
   "Maid Network": "Local network built for Hinjewadi families.",
   "Growing Supply": "New verified maids added every week.",
-  "Quick Replacement": "Backup arranged within 24–48 hours.",
+  "Quick Replacement": "Backup arranged within 24-48 hours.",
   "Local Matching": "Maids who live near your home.",
 };
 

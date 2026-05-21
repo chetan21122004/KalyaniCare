@@ -82,6 +82,13 @@ const Footer = () => {
                 </span>
                 Open for bookings
               </div>
+              <a
+                href="/blog"
+                className="relative mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-accent transition-smooth hover:text-dark-foreground hover:underline"
+              >
+                Tips & guides
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
             </div>
 
             <div className="grid grid-cols-2 gap-3">
@@ -110,6 +117,7 @@ const Footer = () => {
                   { label: "Services", href: homeSection("services") },
                   { label: "How It Works", href: homeSection("process") },
                   { label: "Areas", href: homeSection("areas") },
+                  { label: "Blog", href: "/blog" },
                   { label: "Enquiry", href: homeSection("enquiry") },
                 ].map((item) => (
                   <a
@@ -232,6 +240,13 @@ const Footer = () => {
                 </span>
                 Open for bookings
               </div>
+              <a
+                href="/blog"
+                className="relative mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent transition-smooth hover:text-dark-foreground hover:underline underline-offset-4"
+              >
+                Tips & guides (blog)
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
             </div>
           </div>
 

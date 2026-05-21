@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "SakhiHome",
-    title: "SakhiHome – Trusted Maid & Home Services in Pune",
+    title: "SakhiHome - Trusted Maid & Home Services in Pune",
     description:
       "Verified maids & home help in Pune: cleaning, cooking, babysitting & elder care. Book trusted placements with SakhiHome.",
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "SakhiHome – Trusted Maid & Home Services in Pune",
+    title: "SakhiHome - Trusted Maid & Home Services in Pune",
     description:
       "Verified maids & home help in Pune: cleaning, cooking, babysitting & elder care. Book with SakhiHome.",
   },

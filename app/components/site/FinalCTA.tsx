@@ -71,7 +71,7 @@ const FinalCTA = () => {
             </div>
 
             <p className="mt-5 md:mt-6 text-xs md:text-sm text-dark-muted">
-              Reply usually within minutes · Mon–Sun · 8 AM – 9 PM
+              Reply usually within minutes · Mon-Sun · 8 AM - 9 PM
             </p>
           </div>
         </div>

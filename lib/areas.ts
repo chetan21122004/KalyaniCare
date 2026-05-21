@@ -158,7 +158,7 @@ export const AREAS: readonly AreaRecord[] = [
     nearbyMicroLocalities: ["Bhumkar Nagar", "Wakadkar Wasti", "Hinjewadi Road"],
     seoTitle: "Maid Service in Bhumkar Chowk | Verified Maids Near You - SakhiHome",
     metaDescription:
-      "Looking for a maid near Bhumkar Chowk? SakhiHome has 500+ background-verified maids for all home needs. Fast matching & 24–48 hr replacement guaranteed.",
+      "Looking for a maid near Bhumkar Chowk? SakhiHome has 500+ background-verified maids for all home needs. Fast matching & 24-48 hr replacement guaranteed.",
     searchVolumeTier: "medium",
     societies: [
       { name: "Bhumkar Nagar Societies", slug: "bhumkar-nagar-societies" },

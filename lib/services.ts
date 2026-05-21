@@ -148,7 +148,7 @@ export const services: readonly ServiceRecord[] = [
       "full-time maid in Wakad",
       "house cleaning in Baner",
     ],
-    priceRange: "₹3,000 – ₹6,000/month",
+    priceRange: "₹3,000 - ₹6,000/month",
     searchIntent: "transactional",
     faq: [
       {
@@ -174,7 +174,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "What if my cleaning maid doesn't show up?",
         answer:
-          "We arrange a verified replacement within 24–48 hours. One call to SakhiHome is all it takes - no chasing, no waiting.",
+          "We arrange a verified replacement within 24-48 hours. One call to SakhiHome is all it takes - no chasing, no waiting.",
       },
     ],
   },
@@ -226,7 +226,7 @@ export const services: readonly ServiceRecord[] = [
       "part-time cook maid in Wakad",
       "cook maid in Baner",
     ],
-    priceRange: "₹4,000 – ₹9,000/month",
+    priceRange: "₹4,000 - ₹9,000/month",
     searchIntent: "transactional",
     faq: [
       {
@@ -252,7 +252,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "How quickly can I get a cook maid in Hinjewadi?",
         answer:
-          "Most placements happen within 24–48 hours of your enquiry. We prioritise maids who live near your society - Megapolis, Blue Ridge, Life Republic - so travel time is minimal.",
+          "Most placements happen within 24-48 hours of your enquiry. We prioritise maids who live near your society - Megapolis, Blue Ridge, Life Republic - so travel time is minimal.",
       },
     ],
   },
@@ -323,7 +323,7 @@ export const services: readonly ServiceRecord[] = [
       "Cooking services in Pune",
       "House cleaning in Hinjewadi",
     ],
-    priceRange: "₹6,000 – ₹12,000/month",
+    priceRange: "₹6,000 - ₹12,000/month",
     searchIntent: "mixed",
     faq: [
       {
@@ -349,7 +349,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Can we do a trial visit first?",
         answer:
-          "Yes - a short trial half-day helps align routines and build comfort before committing weekly. Most Hinjewadi families do a 2–3 hour trial before full onboarding.",
+          "Yes - a short trial half-day helps align routines and build comfort before committing weekly. Most Hinjewadi families do a 2-3 hour trial before full onboarding.",
       },
     ],
   },
@@ -401,7 +401,7 @@ export const services: readonly ServiceRecord[] = [
       "newborn care in Wakad",
       "postpartum care in Baner",
     ],
-    priceRange: "₹12,000 – ₹20,000 / 40-day placement",
+    priceRange: "₹12,000 - ₹20,000 / 40-day placement",
     searchIntent: "transactional",
     faq: [
       {
@@ -417,7 +417,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Do Japa maids live in or visit daily?",
         answer:
-          "Both options are available. Live-in Japa maids are more common for newborns requiring night feeds and attention. Daily visit Japa maids work 8–12 hour shifts. We confirm the arrangement at enquiry.",
+          "Both options are available. Live-in Japa maids are more common for newborns requiring night feeds and attention. Daily visit Japa maids work 8-12 hour shifts. We confirm the arrangement at enquiry.",
       },
       {
         question: "Is the Japa maid experienced with hospital discharge routines?",
@@ -427,7 +427,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "How early should I book a Japa maid in Hinjewadi?",
         answer:
-          "We recommend booking 3–4 weeks before your expected delivery date. Japa maids are in high demand in Hinjewadi and Wakad, especially in large societies like Life Republic, Blue Ridge, and Megapolis - early booking ensures availability.",
+          "We recommend booking 3-4 weeks before your expected delivery date. Japa maids are in high demand in Hinjewadi and Wakad, especially in large societies like Life Republic, Blue Ridge, and Megapolis - early booking ensures availability.",
       },
       {
         question: "Can the Japa maid also help with household cooking for the family?",
@@ -479,7 +479,7 @@ export const services: readonly ServiceRecord[] = [
       "live-in maid in Wakad",
       "elder care in Baner",
     ],
-    priceRange: "₹7,000 – ₹14,000/month",
+    priceRange: "₹7,000 - ₹14,000/month",
     searchIntent: "mixed",
     faq: [
       {
@@ -521,14 +521,14 @@ export const services: readonly ServiceRecord[] = [
     points: [
       "Ongoing full-day household help",
       "Cleaning, cooking, laundry & errands",
-      "8–12 hour shifts or live-in",
+      "8-12 hour shifts or live-in",
     ],
     mobileSummary: "Year-round maid for cleaning, cooking & home duties-not postpartum-only.",
     headline: "Full-Time Maid in Hinjewadi, Wakad & Baner, Pune",
     metaTitle:
       "Full Time Maid in Hinjewadi Pune | Live-in Maid | All-Day Help | SakhiHome",
     metaDescription:
-      "Hire a full-time maid in Hinjewadi, Wakad & Baner, Pune. 8–12 hour shifts or live-in option. Cleaning, cooking, errands & all-round household help. Background-verified. SakhiHome.",
+      "Hire a full-time maid in Hinjewadi, Wakad & Baner, Pune. 8-12 hour shifts or live-in option. Cleaning, cooking, errands & all-round household help. Background-verified. SakhiHome.",
     longDescription:
       "Demanding weeks call for dependable all-day coverage. A full-time maid from SakhiHome handles your Hinjewadi or Wakad household from morning to evening - cleaning rotations, cooking, ironing, grocery errands, and vendor coordination. Whether you need 8-hour weekday coverage or a live-in arrangement for a large family in societies like Blue Ridge, Megapolis Splendour, or Life Republic, we match you with a verified, locally-sourced full-time maid who understands your household rhythm.",
     keywords: [
@@ -556,18 +556,18 @@ export const services: readonly ServiceRecord[] = [
       "live-in maid in Wakad",
       "full-time maid in Baner",
     ],
-    priceRange: "₹8,000 – ₹18,000/month",
+    priceRange: "₹8,000 - ₹18,000/month",
     searchIntent: "transactional",
     faq: [
       {
         question: "What hours count as full-time in Hinjewadi?",
         answer:
-          "Typical placements run 8–12 hour weekday shifts, usually 7 AM to 6 PM or 8 AM to 7 PM. Weekend coverage is negotiated separately based on your requirement.",
+          "Typical placements run 8-12 hour weekday shifts, usually 7 AM to 6 PM or 8 AM to 7 PM. Weekend coverage is negotiated separately based on your requirement.",
       },
       {
         question: "What is the salary for a full-time maid in Pune in 2026?",
         answer:
-          "For 8–10 hour daily shifts in Hinjewadi, Wakad, and Baner, the market rate in 2026 is ₹10,000 to ₹17,000 per month depending on experience, tasks, and society location. Premium gated communities like Blue Ridge and Life Republic often have higher benchmarks.",
+          "For 8-10 hour daily shifts in Hinjewadi, Wakad, and Baner, the market rate in 2026 is ₹10,000 to ₹17,000 per month depending on experience, tasks, and society location. Premium gated communities like Blue Ridge and Life Republic often have higher benchmarks.",
       },
       {
         question: "What are the accommodation expectations for live-in maids?",
@@ -582,7 +582,7 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "What if I need to end or change the placement?",
         answer:
-          "We recommend aligned notice windows from both sides. SakhiHome handles the transition and matches you with a replacement - usually within 24–48 hours for high-priority cases in Hinjewadi.",
+          "We recommend aligned notice windows from both sides. SakhiHome handles the transition and matches you with a replacement - usually within 24-48 hours for high-priority cases in Hinjewadi.",
       },
     ],
   },
@@ -596,16 +596,16 @@ export const services: readonly ServiceRecord[] = [
     title: "Part-Time Maid",
     tag: "Flexible",
     points: [
-      "Flexible 1–3 hr visits",
+      "Flexible 1-3 hr visits",
       "Choose tasks & timing",
       "Perfect for working families",
     ],
-    mobileSummary: "Flexible 1–3 hr visits - choose your timing.",
+    mobileSummary: "Flexible 1-3 hr visits - choose your timing.",
     headline: "Part-Time Maid in Hinjewadi, Wakad & Baner, Pune",
     metaTitle:
       "Part Time Maid in Hinjewadi Pune | Hourly Maid | Morning Bai | SakhiHome",
     metaDescription:
-      "Flexible part-time maids in Hinjewadi, Wakad & Baner, Pune. 1–3 hour visits, choose your tasks & timing. Ideal for working IT families. Background-verified. SakhiHome.",
+      "Flexible part-time maids in Hinjewadi, Wakad & Baner, Pune. 1-3 hour visits, choose your tasks & timing. Ideal for working IT families. Background-verified. SakhiHome.",
     longDescription:
       "Not every chore needs eight hours - sometimes you just need ninety focused minutes of jhadu-pocha and kitchen tidying before the school bus arrives. SakhiHome lines up part-time maids (morning bai) in Hinjewadi, Wakad, Baner, and Megapolis tuned to your weekday windows. Choose your timing, pick your tasks, and scale up or down month to month without any long-term lock-in.",
     keywords: [
@@ -633,13 +633,13 @@ export const services: readonly ServiceRecord[] = [
       "cook maid in Wakad",
       "part-time maid in Baner",
     ],
-    priceRange: "₹2,500 – ₹5,000/month",
+    priceRange: "₹2,500 - ₹5,000/month",
     searchIntent: "transactional",
     faq: [
       {
         question: "What is the minimum visit length for a part-time maid in Hinjewadi?",
         answer:
-          "Most micro visits run 90–120 minutes, though we can arrange 60-minute slots for very focused tasks in Hinjewadi, Wakad, and Baner societies. Enquire for your specific requirement.",
+          "Most micro visits run 90-120 minutes, though we can arrange 60-minute slots for very focused tasks in Hinjewadi, Wakad, and Baner societies. Enquire for your specific requirement.",
       },
       {
         question: "Can I stack multiple tasks in one visit?",
@@ -649,12 +649,12 @@ export const services: readonly ServiceRecord[] = [
       {
         question: "Is part-time maid timing WFH-friendly?",
         answer:
-          "Yes - we align quiet hours so Zoom calls survive vacuum passes. Most Hinjewadi IT Park families prefer 7–9 AM or 12–2 PM slots. Just tell us your schedule.",
+          "Yes - we align quiet hours so Zoom calls survive vacuum passes. Most Hinjewadi IT Park families prefer 7-9 AM or 12-2 PM slots. Just tell us your schedule.",
       },
       {
         question: "What about festival and holiday coverage?",
         answer:
-          "Availability may reduce near Diwali, Ganesh Chaturthi, and other long weekends. We recommend enquiring 1–2 weeks early during festival seasons so we can confirm your maid's availability.",
+          "Availability may reduce near Diwali, Ganesh Chaturthi, and other long weekends. We recommend enquiring 1-2 weeks early during festival seasons so we can confirm your maid's availability.",
       },
       {
         question: "Can I upgrade from part-time to full-time later?",

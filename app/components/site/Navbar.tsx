@@ -14,6 +14,7 @@ const links = [
   { label: "How it works", href: homeSection("process") },
   { label: "Areas", href: homeSection("areas") },
   { label: "About", href: homeSection("about") },
+  { label: "Blog", href: "/blog" },
   { label: "Enquiry", href: homeSection("enquiry") },
 ] as const;
 

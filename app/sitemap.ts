@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { AREAS, getAllSocietySlugs } from "@/lib/areas";
+import { getBlogEntriesForSitemap } from "@/lib/blog";
 import { getAbsoluteSiteUrl, getAllServiceSlugs, services } from "@/lib/services";
 
 function dedupeValidSitemapEntries(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
@@ -68,6 +69,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const combined = [...staticPages, ...servicePages, ...areaPages, ...serviceAreaPages, ...societyPages];
+  const blogPages = getBlogEntriesForSitemap(now);
+
+  const combined = [...staticPages, ...servicePages, ...areaPages, ...serviceAreaPages, ...societyPages, ...blogPages];
   return dedupeValidSitemapEntries(combined);
 }
