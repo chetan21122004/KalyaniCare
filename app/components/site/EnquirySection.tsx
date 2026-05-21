@@ -20,6 +20,7 @@ import {
   Wand2,
 } from "lucide-react";
 import { toast } from "sonner";
+import { BusinessMap } from "@/app/components/site/BusinessMap";
 import {
   CONTACT_PHONE_DISPLAY_IN,
   CONTACT_PHONE_E164,
@@ -228,6 +229,8 @@ const EnquirySection = () => {
               <p className="mt-5 md:mt-6 text-[11px] text-dark-muted">
                 Mon–Sun · 8 AM – 9 PM · Replies within minutes
               </p>
+
+              <BusinessMap className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10" />
             </div>
           </aside>
 

@@ -1,7 +1,10 @@
 import { Phone, MessageCircle, MapPin, ArrowUpRight, Mail } from "lucide-react";
+import { BusinessMap } from "@/app/components/site/BusinessMap";
 import {
+  BUSINESS_ADDRESS_DISPLAY,
   CONTACT_PHONE_DISPLAY_IN,
   CONTACT_PHONE_E164,
+  GOOGLE_MAPS_DIRECTIONS_URL,
   WHATSAPP,
 } from "@/lib/contact";
 import { services } from "@/lib/services";
@@ -174,10 +177,21 @@ const Footer = () => {
                   <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-white/[0.06] ring-1 ring-white/10">
                     <MapPin className="h-4 w-4 text-accent" />
                   </span>
-                  <span className="font-medium leading-snug">Hinjewadi IT Park, Pune</span>
+                  <address className="not-italic font-medium leading-snug">
+                    <a
+                      href={GOOGLE_MAPS_DIRECTIONS_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent transition-smooth"
+                    >
+                      {BUSINESS_ADDRESS_DISPLAY}
+                    </a>
+                  </address>
                 </li>
               </ul>
             </div>
+
+            <BusinessMap className="rounded-2xl border border-white/10 bg-white/[0.03] p-4" />
 
             <div className="border-t border-white/10 pt-5 text-center text-xs text-dark-muted">
               <p>© {new Date().getFullYear()} SakhiHome Services. All rights reserved.</p>
@@ -315,8 +329,17 @@ const Footer = () => {
                       <MapPin className="h-4 w-4 text-accent" />
                     </span>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-dark-muted">Based in</p>
-                      <span className="font-medium leading-snug">Hinjewadi IT Park, Pune</span>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-dark-muted">Office</p>
+                      <address className="not-italic font-medium leading-snug">
+                        <a
+                          href={GOOGLE_MAPS_DIRECTIONS_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-accent transition-smooth"
+                        >
+                          {BUSINESS_ADDRESS_DISPLAY}
+                        </a>
+                      </address>
                     </div>
                   </li>
                 </ul>
@@ -324,6 +347,8 @@ const Footer = () => {
             </div>
           </div>
           </div>
+
+          <BusinessMap className="mt-10 max-w-2xl" />
 
           <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-dark-muted sm:flex-row">
             <p>© {new Date().getFullYear()} SakhiHome Services. All rights reserved.</p>

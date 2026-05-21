@@ -9,7 +9,12 @@ import LocalProgrammaticTemplate, {
 import Navbar from "@/app/components/site/Navbar";
 import StickyWhatsApp from "@/app/components/site/StickyWhatsApp";
 import { AREAS, getAreaBySlug, getAllSocietySlugs, getSocietyBySlug } from "@/lib/areas";
-import { CONTACT_PHONE_E164 } from "@/lib/contact";
+import {
+  CONTACT_PHONE_E164,
+  GOOGLE_MAPS_DIRECTIONS_URL,
+  getBusinessGeoJsonLd,
+  getBusinessPostalAddressJsonLd,
+} from "@/lib/contact";
 import {
   AREA_SERVED_CITY,
   AREA_SERVED_LOCALITY,
@@ -417,12 +422,9 @@ export default async function ProgrammaticPage(props: PageProps) {
         name: BRAND_NAME,
         url: homeUrl,
         telephone: CONTACT_PHONE_E164,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: AREA_SERVED_CITY,
-          addressRegion: "Maharashtra",
-          addressCountry: "IN",
-        },
+        address: getBusinessPostalAddressJsonLd(),
+        geo: getBusinessGeoJsonLd(),
+        hasMap: GOOGLE_MAPS_DIRECTIONS_URL,
       },
       {
         "@type": "Service",

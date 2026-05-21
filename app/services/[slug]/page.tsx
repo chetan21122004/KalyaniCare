@@ -8,10 +8,15 @@ import StickyWhatsApp from "@/app/components/site/StickyWhatsApp";
 import LocalProgrammaticTemplate from "@/app/components/site/LocalProgrammaticTemplate";
 
 import {
+  CONTACT_PHONE_E164,
+  GOOGLE_MAPS_DIRECTIONS_URL,
+  getBusinessGeoJsonLd,
+  getBusinessPostalAddressJsonLd,
+} from "@/lib/contact";
+import {
   AREA_SERVED_CITY,
   AREA_SERVED_LOCALITY,
   BRAND_NAME,
-  CONTACT_PHONE_E164,
   findServiceSlugByLabel,
   getAbsoluteSiteUrl,
   getServiceBySlug,
@@ -137,12 +142,9 @@ export default async function ServiceDetailPage(props: PageProps) {
         url: homeUrl,
         telephone: CONTACT_PHONE_E164,
         description: `${BRAND_NAME} connects Pune households with vetted maid, cleaning, childcare, elder support, and cooking help.`,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: AREA_SERVED_CITY,
-          addressRegion: "Maharashtra",
-          addressCountry: "IN",
-        },
+        address: getBusinessPostalAddressJsonLd(),
+        geo: getBusinessGeoJsonLd(),
+        hasMap: GOOGLE_MAPS_DIRECTIONS_URL,
         areaServed: {
           "@type": "City",
           name: AREA_SERVED_CITY,

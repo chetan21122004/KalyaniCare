@@ -12,10 +12,15 @@ import StickyWhatsApp from "@/app/components/site/StickyWhatsApp";
 import Testimonials from "@/app/components/site/Testimonials";
 import TrustSection from "@/app/components/site/TrustSection";
 import {
+  GOOGLE_MAPS_DIRECTIONS_URL,
+  getBusinessGeoJsonLd,
+  getBusinessPostalAddressJsonLd,
+  CONTACT_PHONE_E164,
+} from "@/lib/contact";
+import {
   AREA_SERVED_CITY,
   AREA_SERVED_LOCALITY,
   BRAND_NAME,
-  CONTACT_PHONE_E164,
   getAbsoluteSiteUrl,
 } from "@/lib/services";
 
@@ -51,12 +56,9 @@ export default function Home() {
         name: BRAND_NAME,
         url: canonical,
         telephone: CONTACT_PHONE_E164,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: AREA_SERVED_CITY,
-          addressRegion: "Maharashtra",
-          addressCountry: "IN",
-        },
+        address: getBusinessPostalAddressJsonLd(),
+        geo: getBusinessGeoJsonLd(),
+        hasMap: GOOGLE_MAPS_DIRECTIONS_URL,
         areaServed: {
           "@type": "Place",
           name: `${AREA_SERVED_LOCALITY}, ${AREA_SERVED_CITY}`,

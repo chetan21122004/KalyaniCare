@@ -365,9 +365,9 @@ export const services: readonly ServiceRecord[] = [
     points: [
       "Mother & newborn care after delivery",
       "Traditional Japa diet, massage & baby routines",
-      "Short-term 40-day specialist — not daily housekeeping",
+      "Short-term 40-day specialist-not daily housekeeping",
     ],
-    mobileSummary: "Postpartum specialist for mother & baby — not a regular full-time maid.",
+    mobileSummary: "Postpartum specialist for mother & baby-not a regular full-time maid.",
     headline: "Japa Maid in Hinjewadi, Wakad & Baner, Pune",
     metaTitle:
       "Japa Maid in Hinjewadi Pune | Postpartum Care | Newborn Care | SakhiHome",
@@ -523,7 +523,7 @@ export const services: readonly ServiceRecord[] = [
       "Cleaning, cooking, laundry & errands",
       "8–12 hour shifts or live-in",
     ],
-    mobileSummary: "Year-round maid for cleaning, cooking & home duties — not postpartum-only.",
+    mobileSummary: "Year-round maid for cleaning, cooking & home duties-not postpartum-only.",
     headline: "Full-Time Maid in Hinjewadi, Wakad & Baner, Pune",
     metaTitle:
       "Full Time Maid in Hinjewadi Pune | Live-in Maid | All-Day Help | SakhiHome",

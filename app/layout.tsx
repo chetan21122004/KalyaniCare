@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@/app/components/GoogleAnalytics";
 import { getAbsoluteSiteUrl } from "@/lib/services";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
@@ -57,6 +58,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", "font-sans", inter.variable)}
     >
       <body className="min-h-full flex flex-col pb-[calc(env(safe-area-inset-bottom)+4.5rem)] md:pb-0">
+        <GoogleAnalytics />
         {children}
         <BottomNav />
         <Toaster richColors position="top-center" />
