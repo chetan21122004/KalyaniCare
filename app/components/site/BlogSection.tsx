@@ -20,7 +20,7 @@ const BlogSection = () => {
             Advice & guides
           </span>
           <h2 className="mt-5 md:mt-6 font-display text-3xl font-extrabold leading-tight text-primary-deep md:text-4xl lg:text-5xl text-balance">
-            Tips for hiring <span className="text-gradient-brand">trusted child care</span> in Pune
+            Tips for hiring <span className="text-primary">trusted child care</span> in Pune
           </h2>
           <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed">
             Practical reads on verification, budgeting, and choosing babysitter or nanny support across Hinjewadi,

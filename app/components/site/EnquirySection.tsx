@@ -27,8 +27,6 @@ import {
   WHATSAPP,
 } from "@/lib/contact";
 
-const blobBg = "/assets/blobs/color_grunge_pattern_liquidity_style_background.jpg";
-
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdqpevg";
 
 const SERVICES = [
@@ -132,14 +130,6 @@ const EnquirySection = () => {
 
   return (
     <section id="enquiry" className="relative py-10 md:py-20 bg-gradient-soft overflow-hidden">
-      {/* Blob background texture */}
-      <img
-        src={blobBg}
-        alt=""
-        aria-hidden
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.04] md:opacity-[0.05] pointer-events-none select-none mix-blend-multiply"
-      />
-
       {/* Soft brand orbs */}
       <div
         className="absolute top-4 md:top-10 -left-28 md:-left-24 h-56 w-56 md:h-72 md:w-72 rounded-full bg-accent/15 blur-[90px] md:blur-[110px] pointer-events-none"
@@ -157,7 +147,7 @@ const EnquirySection = () => {
             Send us an enquiry
           </span>
           <h2 className="mt-4 md:mt-5 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-deep text-balance leading-tight md:leading-[1.05]">
-            Tell us what your <span className="text-gradient-brand">child needs</span>
+            Tell us what your <span className="text-primary">child needs</span>
           </h2>
           <p className="mt-3 md:mt-5 text-sm sm:text-base md:text-lg text-foreground/70 leading-relaxed">
             Share your child-care routine and our team will match you with a babysitter or nanny.
@@ -180,7 +170,7 @@ const EnquirySection = () => {
               </div>
 
               <h3 className="mt-4 md:mt-5 font-display text-xl sm:text-2xl md:text-3xl font-extrabold leading-tight">
-                Your details are safe with <span className="text-gradient-brand">KalyaniCare</span>
+                Your details are safe with <span className="text-accent">KalyaniCare</span>
               </h3>
               <p className="mt-2.5 md:mt-3 text-sm md:text-base text-dark-muted leading-relaxed">
                 We only use your info to find the right caregiver for your child. No spam, ever.

@@ -31,7 +31,7 @@ const doodleBySlug: Record<string, string> = {
 };
 
 const blobBySlug: Record<string, string> = {
-  babysitting: "/assets/blobs/063602423687.jpg",
+  babysitting: "/assets/baby_imgs/2.jpg",
 };
 
 export function generateStaticParams() {
@@ -82,7 +82,7 @@ export default async function ServiceDetailPage(props: PageProps) {
   const whatsappHref = getWhatsAppHrefWithService(service.title);
   const businessId = `${canonical}#localbusiness`;
   const doodleAsset = doodleBySlug[service.slug] ?? "/assets/doodles/cleaning service-amico.svg";
-  const blobAsset = blobBySlug[service.slug] ?? "/assets/blobs/254596558522.jpg";
+  const blobAsset = blobBySlug[service.slug] ?? "/assets/baby_imgs/1.jpg";
 
   const relatedFromSearches = service.relatedSearches
     .map((label) => {

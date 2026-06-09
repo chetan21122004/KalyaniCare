@@ -35,7 +35,7 @@ type BreadcrumbItem = { name: string; item: string };
 
 const nannyPrefix = "nanny-service-in-";
 const babysittingPrefix = "babysitting-in-";
-const blobAsset = "/assets/blobs/063602423687.jpg";
+const blobAsset = "/assets/baby_imgs/3.jpg";
 const doodleAsset = "/assets/doodles/cleaning service-amico.svg";
 
 const trustHighlights = [

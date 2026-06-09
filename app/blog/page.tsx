@@ -99,7 +99,7 @@ export default function BlogIndexPage() {
             <div className="container relative mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
               <BlogBreadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }]} />
               <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-primary-deep md:text-5xl lg:text-[3.35rem] text-balance">
-                Babysitter & nanny care <span className="text-gradient-brand">guides</span> for Pune
+                Babysitter & nanny care <span className="text-primary">guides</span> for Pune
               </h1>
               <p className="mt-5 max-w-2xl text-base md:text-lg leading-relaxed text-foreground/75">
                 Actionable guides on budgeting, verifying caregivers, and choosing the right child-care support near

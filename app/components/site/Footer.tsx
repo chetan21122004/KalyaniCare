@@ -13,7 +13,6 @@ import { homeSection } from "@/lib/siteNav";
 
 const logo = "logo_only.png";
 const logotext = "logo_text.png";
-const blobBg = "/assets/blobs/color_grunge_pattern_liquidity_style_background.jpg";
 
 const areas = [
   "Hinjewadi Phase 1",
@@ -29,15 +28,6 @@ const areas = [
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-dark text-dark-foreground">
-      {/* Blob background texture */}
-      <img
-        src={blobBg}
-        alt=""
-        aria-hidden
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.05] pointer-events-none select-none mix-blend-overlay"
-      />
-
-
       {/* Layers */}
       <div className="absolute inset-0 bg-grid-light opacity-[0.18]" aria-hidden />
       <div className="absolute inset-0 bg-dots-light opacity-30" aria-hidden />

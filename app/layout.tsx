@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@/app/components/GoogleAnalytics";
 import { getAbsoluteSiteUrl } from "@/lib/services";
 import { Toaster } from "sonner";
 import BottomNav from "@/app/components/site/BottomNav";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const siteUrl = getAbsoluteSiteUrl("/");
 
@@ -39,7 +54,11 @@ export const metadata: Metadata = {
       "Verified babysitters and nannies for child care at home across Hinjewadi, Wakad, Baner, and Pune west.",
   },
   icons: {
-    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
+    icon: [
+      { url: "/assets/logo_only.png", type: "image/png" },
+    ],
+    apple: [{ url: "/assets/logo_only.png" }],
+    shortcut: "/assets/logo_only.png",
   },
 };
 
@@ -49,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased font-sans">
+    <html lang="en" className={`h-full antialiased ${playfair.variable} ${inter.variable}`}>
       <body className="min-h-full flex flex-col pb-[calc(env(safe-area-inset-bottom)+4.5rem)] md:pb-0">
         <GoogleAnalytics />
         {children}

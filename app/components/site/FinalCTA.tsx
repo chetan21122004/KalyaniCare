@@ -7,22 +7,11 @@ import { homeSection } from "@/lib/siteNav";
 import { services } from "@/lib/services";
 import { WHATSAPP } from "@/lib/contact";
 
-const blobBg = "/assets/blobs/254596558522.jpg";
-
-
 const FinalCTA = () => {
   return (
     <section id="cta" className="py-10 md:py-12 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="relative overflow-hidden rounded-3xl md:rounded-[2.5rem] bg-gradient-dark-radial p-5 sm:p-7 md:p-16 text-center shadow-elevated">
-          {/* Blob background texture */}
-          <img
-            src={blobBg}
-            alt=""
-            aria-hidden
-            className="absolute inset-0 w-full h-full object-cover opacity-[0.08] md:opacity-[0.1] pointer-events-none select-none mix-blend-overlay"
-          />
-
           <div className="absolute inset-0 bg-grid-light opacity-20 md:opacity-30" aria-hidden />
           <Sparkles count={20} />
 
@@ -36,7 +25,7 @@ const FinalCTA = () => {
             </div>
 
             <h2 className="mt-4 md:mt-5 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-foreground text-balance max-w-3xl mx-auto leading-tight">
-              Looking for a nanny in <span className="text-gradient-brand">Hinjewadi</span>?
+              Looking for a nanny in <span className="text-accent">Hinjewadi</span>?
             </h2>
             <p className="mt-3 md:mt-5 text-sm sm:text-base md:text-xl text-dark-muted max-w-2xl mx-auto leading-relaxed">
               Get connected with verified babysitter and nanny options near you.

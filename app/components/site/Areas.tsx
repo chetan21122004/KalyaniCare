@@ -2,8 +2,6 @@ import { MapPin } from "lucide-react";
 import { homeSection } from "@/lib/siteNav";
 import Sparkles from "./Sparkles";
 
-const blobBg = "/assets/blobs/063602423687.jpg";
-
 const areas = [
   { name: "Phase 1", desc: "Rajiv Gandhi Infotech Park core & adjoining societies" },
   { name: "Phase 2", desc: "Infosys, Wipro & nearby gated societies" },
@@ -19,15 +17,8 @@ const Areas = () => {
   return (
     <section id="areas" className="relative overflow-hidden py-10 md:py-12 bg-gradient-dark-radial">
 
-      {/* Massive Rotating "Planet" Blob Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220vw] h-[220vw] md:w-[80vw] md:h-[80vw] opacity-20 md:opacity-30 mix-blend-screen pointer-events-none animate-[spin_120s_linear_infinite]">
-        <img
-          src={blobBg}
-          alt=""
-          aria-hidden
-          className="w-full h-full object-cover rounded-full blur-[70px] md:blur-[100px] scale-150"
-        />
-      </div>
+      {/* Rotating ambient orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full bg-primary-glow/20 blur-[120px] pointer-events-none animate-[spin_120s_linear_infinite]" aria-hidden />
 
       <div className="areas-grid-overlay absolute inset-0 bg-grid-light opacity-20" aria-hidden />
       <Sparkles count={25} />
@@ -38,7 +29,7 @@ const Areas = () => {
             Service Areas
           </span>
           <h2 className="mt-5 md:mt-6 font-display text-3xl sm:text-4xl md:text-6xl font-black text-white text-balance tracking-tight">
-            Serving <span className="text-gradient-brand">Hinjewadi</span> & nearby areas
+            Serving <span className="text-accent">Hinjewadi</span> & nearby areas
           </h2>
           <p className="mt-4 md:mt-5 text-base sm:text-lg md:text-xl text-white/60 leading-relaxed">
             Hinjewadi IT Park plus Wakad, Baner, Marunji & Bhumkar Chowk -local coverage keeps service fast & reliable.

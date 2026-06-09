@@ -6,90 +6,95 @@
 @custom-variant dark (&:is(.dark *));
 
 /* KalyaniCare Nanny Services Design System
-   Rich dark base + glowing gold→orange→teal accents + clean light sections.
+   Forest Teal primary · Warm Gold accent · Warm Cream backgrounds
    All colors HSL.
 */
 
 @layer base {
   :root {
-    /* Light surfaces (alternating sections) */
-    --background: 36 40% 97%;          /* #FAF9F6 ivory */
-    --foreground: 195 50% 8%;
+    /* === LIGHT SURFACES === */
+    --background: 38 77% 97%;           /* #fdf8f0 Warm Cream */
+    --foreground: 0 0% 10%;             /* #1a1a1a Near Black */
 
     --card: 0 0% 100%;
-    --card-foreground: 195 50% 8%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 195 50% 8%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Brand teal -anchored at #2A9D8F */
-    --primary: 173 58% 39%;
-    --primary-foreground: 36 40% 97%;
-    --primary-glow: 173 58% 50%;
-    --primary-deep: 192 71% 21%;       /* deep teal #0F4C5C */
+    /* === FOREST TEAL — #1a5045 === */
+    --primary: 168 51% 21%;             /* #1a5045 Forest Teal */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 154 46% 34%;        /* #2e7d5a Mid Teal */
+    --primary-deep: 168 51% 18%;        /* slightly deeper forest teal */
 
-    --secondary: 158 50% 95%;          /* #F1FAEE soft green tint */
-    --secondary-foreground: 192 71% 21%;
+    /* === LOTUS GOLD — section backgrounds === */
+    --secondary: 40 70% 87%;            /* #f5e6c8 Lotus Gold */
+    --secondary-foreground: 168 51% 21%;
 
-    --muted: 36 25% 93%;
-    --muted-foreground: 195 15% 38%;
+    --muted: 38 41% 92%;                /* lighter parchment */
+    --muted-foreground: 40 21% 45%;     /* #8a7a5a Warm Brown */
 
-    /* Gold accent #F4A261 */
-    --accent: 28 87% 67%;
-    --accent-foreground: 195 70% 8%;
-    --accent-deep: 14 78% 62%;         /* orange #E76F51 */
-    --accent-soft: 38 90% 92%;
+    /* === WARM GOLD — #c9a84c === */
+    --accent: 44 54% 54%;               /* #c9a84c Warm Gold */
+    --accent-foreground: 168 51% 21%;
+    --accent-deep: 43 71% 69%;          /* #e8c97a Light Gold */
+    --accent-soft: 40 70% 93%;          /* very light lotus gold */
 
-    /* Dark surfaces (hero, CTA) */
-    --dark: 192 55% 9%;                /* #0B1F24 */
-    --dark-mid: 192 71% 21%;           /* #0F4C5C */
-    --dark-soft: 188 56% 25%;          /* #1B5E63 */
-    --dark-foreground: 36 40% 97%;
-    --dark-muted: 188 25% 75%;
+    /* === SOFT MINT — card fills / badge backgrounds === */
+    --soft-mint: 152 40% 94%;           /* #e8f5ef */
+
+    /* === DARK SURFACES — Navbar, Footer, Hero, CTA (Forest Teal) === */
+    --dark: 168 51% 21%;                /* #1a5045 Forest Teal */
+    --dark-mid: 154 46% 34%;            /* #2e7d5a Mid Teal */
+    --dark-soft: 154 35% 40%;           /* slightly lighter teal */
+    --dark-foreground: 38 77% 97%;      /* Warm Cream on dark */
+    --dark-muted: 40 30% 80%;           /* muted warm on dark bg */
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 36 25% 88%;
-    --input: 36 25% 88%;
-    --ring: 173 58% 39%;
+    --border: 38 41% 85%;               /* #e8dcc8 Parchment */
+    --input: 38 41% 85%;
+    --ring: 168 51% 21%;
 
     --radius: 1.25rem;
 
     --whatsapp: 142 70% 45%;
     --whatsapp-foreground: 0 0% 100%;
 
-    /* Brand gradient: Gold → Orange → Teal */
-    --gradient-brand: linear-gradient(135deg, hsl(28 87% 67%) 0%, hsl(14 78% 62%) 50%, hsl(173 58% 39%) 100%);
-    --gradient-brand-soft: linear-gradient(135deg, hsl(28 87% 67% / 0.18) 0%, hsl(14 78% 62% / 0.18) 50%, hsl(173 58% 39% / 0.18) 100%);
+    /* === BRAND GRADIENT: Light Gold → Warm Gold → Forest Teal === */
+    --gradient-brand: linear-gradient(135deg, hsl(43 71% 69%) 0%, hsl(44 54% 54%) 50%, hsl(168 51% 21%) 100%);
+    --gradient-brand-soft: linear-gradient(135deg, hsl(43 71% 69% / 0.18) 0%, hsl(44 54% 54% / 0.18) 50%, hsl(168 51% 21% / 0.18) 100%);
 
-    /* Dark hero/CTA background */
-    --gradient-dark: linear-gradient(135deg, hsl(192 55% 9%) 0%, hsl(192 71% 21%) 55%, hsl(188 56% 25%) 100%);
-    --gradient-dark-radial: radial-gradient(ellipse at 20% 0%, hsl(173 58% 39% / 0.35) 0%, transparent 50%),
-                            radial-gradient(ellipse at 80% 100%, hsl(28 87% 67% / 0.25) 0%, transparent 50%),
-                            radial-gradient(ellipse at 100% 0%, hsl(14 78% 62% / 0.2) 0%, transparent 40%),
-                            linear-gradient(135deg, hsl(192 55% 9%) 0%, hsl(192 71% 21%) 60%, hsl(188 56% 25%) 100%);
+    /* === DARK SECTION GRADIENT (Forest Teal) === */
+    --gradient-dark: linear-gradient(135deg, hsl(168 51% 21%) 0%, hsl(154 46% 34%) 55%, hsl(154 35% 40%) 100%);
+    --gradient-dark-radial:
+      radial-gradient(ellipse at 20% 0%, hsl(44 54% 54% / 0.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, hsl(43 71% 69% / 0.2) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 0%, hsl(154 46% 34% / 0.3) 0%, transparent 40%),
+      linear-gradient(135deg, hsl(168 51% 21%) 0%, hsl(154 46% 34%) 60%, hsl(154 35% 40%) 100%);
 
-    /* Light section gradients */
-    --gradient-light: linear-gradient(180deg, hsl(36 40% 97%) 0%, hsl(158 50% 96%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(158 50% 95%) 0%, hsl(36 40% 97%) 100%);
+    /* === LIGHT SECTION GRADIENTS === */
+    --gradient-light: linear-gradient(180deg, hsl(38 77% 97%) 0%, hsl(152 40% 94%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(152 40% 94%) 0%, hsl(38 77% 97%) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -8px hsl(192 71% 21% / 0.15);
-    --shadow-card: 0 12px 40px -12px hsl(192 71% 21% / 0.2);
-    --shadow-elevated: 0 24px 60px -20px hsl(192 71% 21% / 0.3);
-    --shadow-glow: 0 0 40px hsl(28 87% 67% / 0.5), 0 0 80px hsl(14 78% 62% / 0.3);
-    --shadow-glow-teal: 0 0 40px hsl(173 58% 50% / 0.5);
-    --shadow-pop: 0 10px 30px -8px hsl(14 78% 62% / 0.4);
+    /* === SHADOWS === */
+    --shadow-soft: 0 4px 20px -8px hsl(168 51% 21% / 0.15);
+    --shadow-card: 0 12px 40px -12px hsl(168 51% 21% / 0.2);
+    --shadow-elevated: 0 24px 60px -20px hsl(168 51% 21% / 0.3);
+    --shadow-glow: 0 0 40px hsl(44 54% 54% / 0.5), 0 0 80px hsl(43 71% 69% / 0.3);
+    --shadow-glow-teal: 0 0 40px hsl(154 46% 34% / 0.5);
+    --shadow-pop: 0 10px 30px -8px hsl(44 54% 54% / 0.4);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    --chart-1: 28 87% 67%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 14 78% 62%;
-    --chart-4: 192 71% 21%;
-    --chart-5: 158 50% 70%;
+    --chart-1: 44 54% 54%;
+    --chart-2: 168 51% 21%;
+    --chart-3: 43 71% 69%;
+    --chart-4: 154 46% 34%;
+    --chart-5: 152 40% 70%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar: var(--sidebar-background);
@@ -113,13 +118,13 @@
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: var(--font-inter, Inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    letter-spacing: -0.025em;
+    font-family: var(--font-playfair, "Playfair Display"), Georgia, "Times New Roman", serif;
+    letter-spacing: -0.015em;
   }
 
   ::selection {
@@ -152,7 +157,7 @@
   .bg-gradient-light { background: var(--gradient-light); }
   .bg-gradient-soft { background: var(--gradient-soft); }
 
-  /* Gradient text -the brand magic */
+  /* Gradient text */
   .text-gradient-brand {
     background: var(--gradient-brand);
     -webkit-background-clip: text;
@@ -263,8 +268,8 @@
 /* ---break---
 */
 @theme inline {
-  --font-heading: var(--font-sans);
-  --font-sans: var(--font-sans);
+  --font-heading: var(--font-playfair, "Playfair Display");
+  --font-sans: var(--font-inter, Inter);
 
   /* Core surfaces */
   --color-background: hsl(var(--background));
@@ -288,11 +293,14 @@
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
 
-  /* Accent (gold/orange) */
+  /* Accent (warm gold) */
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
   --color-accent-deep: hsl(var(--accent-deep));
   --color-accent-soft: hsl(var(--accent-soft));
+
+  /* Soft mint */
+  --color-soft-mint: hsl(var(--soft-mint));
 
   /* Dark surfaces */
   --color-dark: hsl(var(--dark));

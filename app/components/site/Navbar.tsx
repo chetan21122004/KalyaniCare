@@ -15,7 +15,6 @@ const links = [
   { label: "Areas", href: homeSection("areas") },
   { label: "About", href: homeSection("about") },
   { label: "Blog", href: "/blog" },
-  { label: "Enquiry", href: homeSection("enquiry") },
 ] as const;
 
 const Navbar = () => {
@@ -63,23 +62,27 @@ const Navbar = () => {
         aria-hidden
       />
 
-      <nav className="container relative mx-auto flex flex-wrap items-center gap-x-3 py-1 px-4 md:flex-nowrap md:gap-4 md:px-6 ">
-        {/* Logo -both marks visible on mobile; sizes follow content */}
+      <nav className="container relative mx-auto flex h-14 md:h-16 flex-wrap items-center gap-x-3 px-4 md:flex-nowrap md:gap-4 md:px-6">
+        {/* Logo — fixed nav height; larger marks overflow visually without resizing the bar */}
         <a
           href={homeSection("top")}
           aria-label="KalyaniCare Nanny Services - home"
-          className="flex min-w-0 flex-1 items-center gap-2 sm:gap-2.5 md:flex-initial md:max-w-none"
+          className="flex h-full min-w-0 flex-1 items-center gap-2 sm:gap-2.5 md:flex-initial md:max-w-none"
         >
-          <img
-            src={logo}
-            alt=""
-            className="w-24"
-          />
-          <img
-            src={logotext}
-            alt="KalyaniCare Nanny Services"
-            className=" h-12"
-          />
+          <span className="relative inline-flex h-full w-10 shrink-0 items-center justify-center md:w-11">
+            <img
+              src={logo}
+              alt=""
+              className="h-14 w-14 max-w-none object-contain md:h-16 md:w-16"
+            />
+          </span>
+          <span className="inline-flex mt-4 h-full w-[9.75rem] shrink-0 items-center sm:w-[11rem] md:w-[12.5rem]">
+            <img
+              src={logotext}
+              alt="KalyaniCare Nanny Services"
+              className="h-[6.5rem] w-auto max-w-none object-contain object-left md:h-[7.15rem]"
+            />
+          </span>
         </a>
 
         {/* Center rail -high-contrast glass */}

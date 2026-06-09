@@ -1,6 +1,6 @@
 import { MessageSquare, UserSearch, CheckCircle2, Headphones } from "lucide-react";
 import Sparkles from "./Sparkles";
-const careDoodle = "/assets/doodles/cleaning service-amico.svg";
+const babyDoodle = "/assets/doodles/Baby-amico.svg";
 
 
 const steps = [
@@ -17,7 +17,7 @@ const MobileProcess = () => (
         How it works
       </span>
       <p className="mt-4 font-display text-[1.9rem] font-extrabold leading-[1.05] tracking-[-0.02em] text-dark-foreground">
-        Simple, <span className="text-gradient-brand">refined</span> process
+        Simple, <span className="text-accent">refined</span> process
       </p>
       <p className="mt-3 text-[13.5px] leading-relaxed text-dark-muted">
         From enquiry to confirmed caregiver, each step is clear and professionally managed.
@@ -61,12 +61,12 @@ const Process = () => {
               How it works
             </span>
             <h2 className="mt-4 font-display text-3xl md:text-5xl font-extrabold text-dark-foreground text-balance">
-              Simple & <span className="text-gradient-brand">quick</span> process
+              Simple & <span className="text-accent">quick</span> process
             </h2>
             <p className="mt-4 text-lg text-dark-muted max-w-xl mx-auto md:mx-0">From enquiry to confirmed nanny match -usually within a day.</p>
           </div>
           <div className="hidden md:flex justify-end">
-            <img src={careDoodle} alt="Illustration of at-home child care support for Pune families" className="w-64 lg:w-80 object-contain drop-shadow-xl animate-float" />
+            <img src={babyDoodle} alt="Illustration of nanny and baby care — KalyaniCare Pune" className="w-56 lg:w-72 object-contain drop-shadow-xl animate-float" />
           </div>
         </div>
 
@@ -78,7 +78,7 @@ const Process = () => {
                   <div className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-brand text-white shadow-pop">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <span className="font-display text-5xl font-extrabold text-gradient-brand opacity-50 leading-none">
+                  <span className="font-display text-5xl font-extrabold text-accent/50 leading-none">
                     0{i + 1}
                   </span>
                 </div>

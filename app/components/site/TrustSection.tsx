@@ -1,7 +1,6 @@
 import { Users, TrendingUp, Repeat, Heart, ShieldCheck } from "lucide-react";
 
-const dementiaDoodle = "/assets/doodles/Dementia-amico.svg";
-const blobBg = "/assets/blobs/063602423687.jpg";
+const babyImg = "/assets/baby_imgs/4.jpg";
 
 
 const items = [
@@ -27,7 +26,7 @@ const MobileTrust = () => (
         Why KalyaniCare
       </span>
       <p className="mt-4 font-display text-[1.85rem] font-extrabold leading-[1.05] tracking-[-0.02em] text-white">
-        Built on <span className="text-gradient-brand">trust</span>,
+        Built on <span className="text-accent">trust</span>,
         <span className="block">run with care</span>
       </p>
       <p className="mt-3 text-[13.5px] leading-relaxed text-white/65">
@@ -71,15 +70,6 @@ const MobileTrust = () => (
 const TrustSection = () => {
   return (
     <section className="relative py-12 bg-gradient-dark-radial overflow-hidden">
-      {/* Blob background texture */}
-      <img
-        src={blobBg}
-        alt=""
-        aria-hidden
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.06] pointer-events-none select-none mix-blend-screen"
-      />
-
-
       {/* Ambient glow orbs */}
       <div className="absolute top-0 left-1/4 h-72 w-72 rounded-full bg-accent/20 blur-[120px] animate-glow-pulse pointer-events-none" aria-hidden />
       <div className="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-primary-glow/20 blur-[120px] animate-glow-pulse pointer-events-none" style={{ animationDelay: "2s" }} aria-hidden />
@@ -90,7 +80,14 @@ const TrustSection = () => {
         <div className="hidden md:block">
           <div className="grid md:grid-cols-[auto_1fr] gap-8 items-center mb-16 max-w-5xl mx-auto text-center md:text-left">
             <div className="hidden md:flex justify-start">
-              <img src={dementiaDoodle} alt="Illustration representing dependable child care and family support in Hinjewadi" className="w-64 lg:w-80 object-contain drop-shadow-xl animate-float" />
+              <div className="relative w-64 lg:w-72 overflow-hidden rounded-[2rem] shadow-elevated border border-white/15 animate-float">
+                <img
+                  src={babyImg}
+                  alt="Dependable child care and family support in Hinjewadi"
+                  className="w-full h-56 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-transparent" />
+              </div>
             </div>
             <div>
               <span className="inline-flex items-center gap-2 rounded-full glass-strong border border-white/15 px-4 py-1.5 text-xs font-bold text-white uppercase tracking-wider">
@@ -98,7 +95,7 @@ const TrustSection = () => {
                 Why KalyaniCare
               </span>
               <h2 className="mt-5 font-display text-4xl md:text-6xl font-extrabold text-white text-balance leading-[1.05]">
-                Built on <span className="text-gradient-brand">trust</span>,
+                Built on <span className="text-accent">trust</span>,
                 <br className="hidden sm:block" /> run with care
               </h2>
               <p className="mt-5 text-lg text-white/70 max-w-xl mx-auto md:mx-0">
@@ -123,7 +120,7 @@ const TrustSection = () => {
                 <div className="relative grid h-14 w-14 place-items-center rounded-2xl bg-gradient-brand text-white shadow-glow">
                   <Icon className="h-6 w-6" />
                 </div>
-                <p className="relative mt-5 font-display text-2xl font-extrabold text-gradient-brand">{num}</p>
+                <p className="relative mt-5 font-display text-2xl font-extrabold text-accent">{num}</p>
                 <h3 className="relative mt-1 font-display text-lg font-bold text-white">{title}</h3>
                 <p className="relative mt-2 text-sm text-white/60 leading-relaxed">{desc}</p>
               </div>
