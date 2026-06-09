@@ -3,7 +3,6 @@ import { Heart, MapPin, Users, CheckCircle2, ArrowRight } from "lucide-react";
 import { WHATSAPP } from "@/lib/contact";
 import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 
-const baby1 = "/assets/baby_imgs/1.jpg";
 const baby2 = "/assets/baby_imgs/2.jpg";
 const baby3 = "/assets/baby_imgs/3.jpg";
 

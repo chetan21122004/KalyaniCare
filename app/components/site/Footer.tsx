@@ -9,6 +9,7 @@ import {
   GOOGLE_MAPS_DIRECTIONS_URL,
   WHATSAPP,
 } from "@/lib/contact";
+import { EnquiryTrigger } from "@/app/components/site/EnquiryTrigger";
 import { services } from "@/lib/services";
 import { homeSection } from "@/lib/siteNav";
 
@@ -26,13 +27,13 @@ const areas = [
   "Marunji",
 ];
 
-const quickLinks = [
+const quickLinks: { label: string; href: string; enquiry?: boolean }[] = [
   { label: "Babysitter & Nanny", href: homeSection("services") },
   { label: "How It Works", href: homeSection("process") },
   { label: "Areas", href: homeSection("areas") },
   { label: "About", href: homeSection("about") },
   { label: "Blog", href: "/blog" },
-  { label: "Enquiry", href: homeSection("enquiry") },
+  { label: "Book a Nanny", href: homeSection("enquiry"), enquiry: true },
 ];
 
 const Footer = () => {
@@ -93,15 +94,25 @@ const Footer = () => {
               Quick Links
             </h4>
             <div className="grid grid-cols-2 gap-2">
-              {quickLinks.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center text-xs font-semibold text-dark-muted transition-smooth hover:border-accent/35 hover:text-accent"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {quickLinks.map((item) =>
+                item.enquiry ? (
+                  <EnquiryTrigger
+                    key={item.label}
+                    href={item.href}
+                    className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center text-xs font-semibold text-dark-muted transition-smooth hover:border-accent/35 hover:text-accent"
+                  >
+                    {item.label}
+                  </EnquiryTrigger>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center text-xs font-semibold text-dark-muted transition-smooth hover:border-accent/35 hover:text-accent"
+                  >
+                    {item.label}
+                  </a>
+                ),
+              )}
             </div>
           </div>
 
@@ -181,9 +192,13 @@ const Footer = () => {
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
             {/* Brand column */}
             <div className="lg:col-span-4">
-              <a href={homeSection("top")} className="inline-flex items-center gap-4">
+              <a href={homeSection("top")} className="inline-flex items-end gap-4">
                 <img src={logo} alt="" className="h-20 w-20 shrink-0 object-contain" />
-                <img src={logotext} alt="KalyaniCare Nanny Services" className="h-[11.9rem] pt-8 w-auto object-contain object-left" />
+                <img
+                  src={logotext}
+                  alt="KalyaniCare Nanny Services"
+                  className="h-[11.9rem] w-auto max-w-[min(100%,36rem)] object-contain object-left"
+                />
               </a>
               <p className="mt-5 max-w-sm text-sm leading-relaxed text-dark-muted">
                 Trusted babysitter and nanny care across{" "}
@@ -226,12 +241,21 @@ const Footer = () => {
                 <ul className="space-y-2">
                   {quickLinks.map((item) => (
                     <li key={item.label}>
-                      <a
-                        href={item.href}
-                        className="text-sm text-dark-muted transition-smooth hover:text-accent"
-                      >
-                        {item.label}
-                      </a>
+                      {item.enquiry ? (
+                        <EnquiryTrigger
+                          href={item.href}
+                          className="text-sm text-dark-muted transition-smooth hover:text-accent"
+                        >
+                          {item.label}
+                        </EnquiryTrigger>
+                      ) : (
+                        <a
+                          href={item.href}
+                          className="text-sm text-dark-muted transition-smooth hover:text-accent"
+                        >
+                          {item.label}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

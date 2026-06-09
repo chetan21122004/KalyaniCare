@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import BlogSection from "@/app/components/site/BlogSection";
 import About from "@/app/components/site/About";
 import Areas from "@/app/components/site/Areas";
-import EnquiryPopup from "@/app/components/site/EnquiryPopup";
 import EnquirySection from "@/app/components/site/EnquirySection";
 import FinalCTA from "@/app/components/site/FinalCTA";
 import Footer from "@/app/components/site/Footer";
@@ -88,7 +87,6 @@ export default function Home() {
         </main>
         <Footer />
         <StickyWhatsApp />
-        <EnquiryPopup />
       </div>
     </>
   );

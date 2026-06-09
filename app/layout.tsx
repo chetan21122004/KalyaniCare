@@ -5,6 +5,7 @@ import { GoogleAnalytics } from "@/app/components/GoogleAnalytics";
 import { getAbsoluteSiteUrl } from "@/lib/services";
 import { Toaster } from "sonner";
 import BottomNav from "@/app/components/site/BottomNav";
+import EnquiryPopup from "@/app/components/site/EnquiryPopup";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         {children}
         <BottomNav />
+        <EnquiryPopup />
         <Toaster richColors position="top-center" />
       </body>
     </html>

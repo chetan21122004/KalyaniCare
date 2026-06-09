@@ -157,14 +157,6 @@
   .bg-gradient-light { background: var(--gradient-light); }
   .bg-gradient-soft { background: var(--gradient-soft); }
 
-  /* Gradient text */
-  .text-gradient-brand {
-    background: var(--gradient-brand);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
   /* Glassmorphism */
   .glass {
     background: hsl(0 0% 100% / 0.06);

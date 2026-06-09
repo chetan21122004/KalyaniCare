@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { EnquiryTrigger } from "@/app/components/site/EnquiryTrigger";
 import { homeSection } from "@/lib/siteNav";
 import { WHATSAPP } from "@/lib/contact";
 import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
@@ -117,10 +118,10 @@ const Navbar = () => {
             </a>
           </Button>
           <Button variant="hero" size="sm" className="relative overflow-hidden shadow-glow" asChild>
-            <a href={homeSection("enquiry")}>
+            <EnquiryTrigger>
               <span className="pointer-events-none absolute inset-0 animate-shimmer opacity-35" aria-hidden />
-              <span className="relative drop-shadow-sm">Start Enquiry</span>
-            </a>
+              <span className="relative drop-shadow-sm">Book a Nanny</span>
+            </EnquiryTrigger>
           </Button>
         </div>
 
@@ -164,9 +165,7 @@ const Navbar = () => {
               </a>
             </Button>
             <Button variant="hero" className="w-full shadow-glow" asChild>
-              <a href={homeSection("enquiry")} onClick={() => setOpen(false)}>
-                Find a Nanny
-              </a>
+              <EnquiryTrigger onClick={() => setOpen(false)}>Find a Nanny</EnquiryTrigger>
             </Button>
           </div>
         </div>

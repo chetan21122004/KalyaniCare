@@ -16,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import type { ServiceIconKey } from "@/lib/services";
 import { services } from "@/lib/services";
+import { EnquiryTrigger } from "@/app/components/site/EnquiryTrigger";
 import { homeSection } from "@/lib/siteNav";
 
 const baby1 = "/assets/baby_imgs/1.jpg";
@@ -65,7 +66,7 @@ const MobileServices = () => (
 
       {/* Price badge */}
       <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-[11px] font-bold text-primary-deep">
-        <span className="text-accent">₹</span> {service.priceRange}
+        ₹{service.priceRange}
       </div>
 
       {/* CTA */}
@@ -98,11 +99,11 @@ const MobileServices = () => (
     {/* CTA strip */}
     <div className="mx-auto mt-6 max-w-[26rem] space-y-3">
       <Button variant="hero" asChild className="h-12 w-full rounded-xl text-[13px] font-bold">
-        <a href={homeSection("enquiry")}>
+        <EnquiryTrigger>
           <ShieldCheck className="h-4 w-4" />
           Get Nanny Match
           <ArrowRight className="h-4 w-4" />
-        </a>
+        </EnquiryTrigger>
       </Button>
       <Button variant="outline" asChild className="h-11 w-full rounded-xl text-[13px]">
         <Link href={detailHref}>
@@ -171,21 +172,20 @@ const Services = () => {
 
               {/* Pricing badge */}
               <div className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-secondary bg-secondary/60 px-5 py-2.5">
-                <span className="text-base font-bold text-accent">₹</span>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-foreground/60">Indicative range</p>
-                  <p className="text-sm font-bold text-primary-deep">{service.priceRange}</p>
+                  <p className="text-sm font-bold text-primary-deep">₹{service.priceRange}</p>
                 </div>
               </div>
 
               {/* CTAs */}
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button variant="hero" size="lg" asChild className="group">
-                  <a href={homeSection("enquiry")}>
+                  <EnquiryTrigger>
                     <ShieldCheck className="h-4 w-4" />
                     Book Nanny in Hinjewadi
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
+                  </EnquiryTrigger>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link href={detailHref}>

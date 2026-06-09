@@ -6,13 +6,7 @@ import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 import { useMemo, useRef, useState } from "react";
 import { homeSection } from "@/lib/siteNav";
 import { WHATSAPP } from "@/lib/contact";
-
-function openEnquiryPopup(e?: React.MouseEvent) {
-  e?.preventDefault();
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(new CustomEvent("openEnquiryPopup"));
-  }
-}
+import { openEnquiryPopup } from "@/lib/openEnquiry";
 
 const logo = "logo_both.png";
 const bg1 = "assets/bg_vdos/1.mp4";

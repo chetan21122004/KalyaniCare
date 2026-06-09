@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Home, Layers, MapPin, Phone, Send } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { openEnquiryPopup } from "@/lib/openEnquiry";
 import { homeSection } from "@/lib/siteNav";
 import { CONTACT_PHONE_E164 } from "@/lib/contact";
 
@@ -11,13 +12,14 @@ type NavItem = {
   href: string;
   icon: React.ComponentType<{ className?: string }>;
   hash?: string;
+  enquiry?: boolean;
 };
 
 const items: NavItem[] = [
   { label: "Home", href: homeSection("top"), icon: Home },
   { label: "Services", href: homeSection("services"), icon: Layers, hash: "services" },
   { label: "Areas", href: homeSection("areas"), icon: MapPin, hash: "areas" },
-  { label: "Enquiry", href: homeSection("enquiry"), icon: Send, hash: "enquiry" },
+  { label: "Book", href: homeSection("enquiry"), icon: Send, hash: "enquiry", enquiry: true },
   { label: "Call", href: `tel:${CONTACT_PHONE_E164}`, icon: Phone },
 ];
 
@@ -56,6 +58,7 @@ const BottomNav = () => {
             <li key={item.label} className="flex">
               <a
                 href={item.href}
+                onClick={item.enquiry ? openEnquiryPopup : undefined}
                 className={`flex min-h-12 w-full flex-col items-center justify-center gap-1 rounded-xl transition-smooth ${
                   active
                     ? "bg-white/10 text-accent"

@@ -6,6 +6,7 @@ import { BlogArticleBody } from "@/app/components/blog/BlogArticleBody";
 import { BlogBreadcrumbs } from "@/app/components/blog/BlogBreadcrumbs";
 import { BlogCard } from "@/app/components/blog/BlogCard";
 import Footer from "@/app/components/site/Footer";
+import { EnquiryTrigger } from "@/app/components/site/EnquiryTrigger";
 import Navbar from "@/app/components/site/Navbar";
 import StickyWhatsApp from "@/app/components/site/StickyWhatsApp";
 import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
@@ -289,7 +290,7 @@ export default async function BlogPostPage(props: PageProps) {
                   </p>
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <Button variant="hero" size="lg" asChild>
-                      <Link href="/#enquiry">Send an enquiry</Link>
+                      <EnquiryTrigger>Book a Nanny</EnquiryTrigger>
                     </Button>
                     <Button variant="outline" size="lg" asChild>
                       <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">

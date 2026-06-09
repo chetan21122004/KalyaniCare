@@ -13,11 +13,11 @@ import {
   getBusinessGeoJsonLd,
   getBusinessPostalAddressJsonLd,
 } from "@/lib/contact";
+import { AREAS } from "@/lib/areas";
 import {
   AREA_SERVED_CITY,
   AREA_SERVED_LOCALITY,
   BRAND_NAME,
-  findServiceSlugByLabel,
   getAbsoluteSiteUrl,
   getServiceBySlug,
   getWhatsAppHrefWithService,
@@ -84,20 +84,10 @@ export default async function ServiceDetailPage(props: PageProps) {
   const doodleAsset = doodleBySlug[service.slug] ?? "/assets/doodles/Baby-amico.svg";
   const blobAsset = blobBySlug[service.slug] ?? "/assets/baby_imgs/1.jpg";
 
-  const relatedFromSearches = service.relatedSearches
-    .map((label) => {
-      const matchedSlug = findServiceSlugByLabel(label);
-      if (!matchedSlug || matchedSlug === service.slug) return null;
-      return { href: `/services/${matchedSlug}`, label };
-    })
-    .filter((item): item is { href: string; label: string } => item !== null);
-
-  const relatedLinks =
-    relatedFromSearches.length > 0
-      ? relatedFromSearches
-      : services
-          .filter((s) => s.slug !== service.slug)
-          .map((s) => ({ href: `/services/${s.slug}`, label: s.title }));
+  const relatedLinks = AREAS.slice(0, 6).map((area) => ({
+    href: `/nanny-service-in-${area.slug}`,
+    label: `Nanny in ${area.name}`,
+  }));
 
   const trustHighlights = [
     {
@@ -234,14 +224,14 @@ export default async function ServiceDetailPage(props: PageProps) {
               trustHighlights,
               faqHeading: "Frequently asked questions",
               faqItems: service.faq,
-              sideCtaTag: "Need help choosing?",
+              sideCtaTag: "Ready to book?",
               sideCtaTitle: "Talk to our local matching team",
-              sideCtaDescription: `Get recommendations based on family size, timing, and priorities in ${AREA_SERVED_LOCALITY} and nearby Pune areas. Indicative pricing: ${service.priceRange}.`,
+              sideCtaDescription: `Share your child's age, timings, and locality in ${AREA_SERVED_LOCALITY} or nearby Pune areas. Indicative pricing: ₹${service.priceRange}.`,
               primaryCtaLabel: `Book ${service.title}`,
               primaryCtaHref: "/#enquiry",
               secondaryCtaLabel: "WhatsApp for quick match",
               secondaryCtaHref: whatsappHref,
-              relatedHeading: "Related services",
+              relatedHeading: "Nanny coverage by area",
               relatedLinks,
             }}
           />

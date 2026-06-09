@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles as SparklesIcon } from "lucide-react";
 import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 import Sparkles from "./Sparkles";
-import { homeSection } from "@/lib/siteNav";
+import { EnquiryTrigger } from "@/app/components/site/EnquiryTrigger";
 import { services } from "@/lib/services";
 import { WHATSAPP } from "@/lib/contact";
 
@@ -34,9 +34,9 @@ const FinalCTA = () => {
 
             <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-2.5 md:gap-3 justify-center">
               <Button variant="hero" size="xl" asChild className="w-full sm:w-auto">
-                <a href={homeSection("enquiry")}>
-                  <SparklesIcon className="h-4 w-4" /> Send Nanny Enquiry
-                </a>
+                <EnquiryTrigger>
+                  <SparklesIcon className="h-4 w-4" /> Book a Nanny
+                </EnquiryTrigger>
               </Button>
               <Button variant="whatsapp" size="xl" asChild className="w-full sm:w-auto">
                 <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">

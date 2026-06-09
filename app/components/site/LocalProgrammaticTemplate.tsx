@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { EnquiryTrigger } from "@/app/components/site/EnquiryTrigger";
 import { homeSection } from "@/lib/siteNav";
 
 type BreadcrumbItem = {
@@ -139,10 +140,10 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
 
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button variant="hero" asChild className="rounded-xl px-7">
-                  <a href={data.primaryCtaHref}>
+                  <EnquiryTrigger href={data.primaryCtaHref}>
                     <Sparkles className="h-4 w-4" />
                     {data.primaryCtaLabel}
-                  </a>
+                  </EnquiryTrigger>
                 </Button>
                 <Button variant="outline" asChild className="rounded-xl border-primary/25">
                   <a href={data.secondaryCtaHref} target="_blank" rel="noopener noreferrer">
@@ -152,7 +153,7 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
                 </Button>
                 <Button variant="ghost" asChild>
                   <Link href={homeSection("services")}>
-                    Compare all services
+                    View our nanny service
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -249,7 +250,7 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
             </p>
             <div className="mt-5 flex flex-col gap-2.5">
               <Button variant="hero" asChild>
-                <a href={data.primaryCtaHref}>{data.primaryCtaLabel}</a>
+                <EnquiryTrigger href={data.primaryCtaHref}>{data.primaryCtaLabel}</EnquiryTrigger>
               </Button>
               <Button variant="outline" asChild className="border-primary/30">
                 <a href={data.secondaryCtaHref} target="_blank" rel="noopener noreferrer">
@@ -262,22 +263,24 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 pb-10 md:px-6 md:pb-14">
-        <h2 className="font-display text-2xl font-bold text-primary-deep md:text-3xl">
-          {data.relatedHeading}
-        </h2>
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {data.relatedLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="rounded-xl border border-border bg-card px-4 py-3 text-sm hover:border-primary/40"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </section>
+      {data.relatedLinks.length > 0 && (
+        <section className="container mx-auto px-4 pb-10 md:px-6 md:pb-14">
+          <h2 className="font-display text-2xl font-bold text-primary-deep md:text-3xl">
+            {data.relatedHeading}
+          </h2>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {data.relatedLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-xl border border-border bg-card px-4 py-3 text-sm hover:border-primary/40"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 }

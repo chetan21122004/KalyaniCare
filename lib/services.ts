@@ -113,7 +113,7 @@ export const services: readonly ServiceRecord[] = [
       "infant care in Baner",
       "ayah for baby in Pune",
     ],
-    priceRange: "Rs 6,000 - Rs 18,000/month",
+    priceRange: "6,000 – 18,000/month",
     searchIntent: "mixed",
     faq: [
       {
