@@ -1,6 +1,6 @@
 /** Site-wide call / WhatsApp / address - single source of truth for NAP consistency. */
 
-export const CONTACT_PHONE_E164 = "+919270075977";
+export const CONTACT_PHONE_E164 = "+919172475977";
 
 /** Registered office-matches Google Business / Maps listing. */
 export const BUSINESS_STREET_ADDRESS = "Annabhau Sathe Nagar, Maan";
@@ -41,15 +41,15 @@ export function getBusinessGeoJsonLd() {
 }
 
 /** Human-readable for India (matches marketing). */
-export const CONTACT_PHONE_DISPLAY_IN = "+91 92700 75977";
+export const CONTACT_PHONE_DISPLAY_IN = "+91 91724 75977";
 
-const WA_ME_DIGITS = "919270075977";
+const WA_ME_DIGITS = "919172475977";
 
-const DEFAULT_BOOKING_TEXT = "Hi SakhiHome, I'd like to book a maid";
+const DEFAULT_BOOKING_TEXT = "Hi KalyaniCare Nanny Services, I'd like to book a babysitter or nanny";
 
 export const WHATSAPP = `https://wa.me/${WA_ME_DIGITS}?text=${encodeURIComponent(DEFAULT_BOOKING_TEXT)}`;
 
 export function getWhatsAppHrefWithService(topic: string) {
-  const q = encodeURIComponent(`Hi SakhiHome, I'm interested in ${topic}.`);
+  const q = encodeURIComponent(`Hi KalyaniCare Nanny Services, I'm interested in ${topic}.`);
   return `https://wa.me/${WA_ME_DIGITS}?text=${q}`;
 }

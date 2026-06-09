@@ -36,16 +36,16 @@ const FinalCTA = () => {
             </div>
 
             <h2 className="mt-4 md:mt-5 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-foreground text-balance max-w-3xl mx-auto leading-tight">
-              Looking for a maid in <span className="text-gradient-brand">Hinjewadi</span>?
+              Looking for a nanny in <span className="text-gradient-brand">Hinjewadi</span>?
             </h2>
             <p className="mt-3 md:mt-5 text-sm sm:text-base md:text-xl text-dark-muted max-w-2xl mx-auto leading-relaxed">
-              Get connected instantly with verified maids near you. No waiting, no hassle.
+              Get connected with verified babysitter and nanny options near you.
             </p>
 
             <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-2.5 md:gap-3 justify-center">
               <Button variant="hero" size="xl" asChild className="w-full sm:w-auto">
                 <a href={homeSection("enquiry")}>
-                  <SparklesIcon className="h-4 w-4" /> Send Maid Enquiry
+                  <SparklesIcon className="h-4 w-4" /> Send Nanny Enquiry
                 </a>
               </Button>
               <Button variant="whatsapp" size="xl" asChild className="w-full sm:w-auto">
@@ -56,7 +56,7 @@ const FinalCTA = () => {
             </div>
 
             <div className="mt-6 md:mt-7">
-              <p className="text-xs md:text-sm text-dark-muted">Popular services in Hinjewadi, Pune:</p>
+              <p className="text-xs md:text-sm text-dark-muted">Nanny care in Hinjewadi, Pune:</p>
               <div className="mt-3 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2">
                 {services.slice(0, 4).map((service) => (
                   <a

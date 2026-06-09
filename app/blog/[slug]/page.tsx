@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/accordion";
 import { getAreaBySlug } from "@/lib/areas";
 import {
-  areaMaidHref,
+  areaNannyHref,
   blogCanonicalUrl,
   blogPostHref,
   getAllBlogSlugs,
@@ -212,7 +212,7 @@ export default async function BlogPostPage(props: PageProps) {
 
                 {post.relatedServiceSlugs.length > 0 ? (
                   <section className="mt-14 rounded-[1.5rem] border border-primary/15 bg-card p-6 shadow-card md:p-8">
-                    <h2 className="font-display text-xl font-bold text-primary-deep md:text-2xl">Related SakhiHome services</h2>
+                    <h2 className="font-display text-xl font-bold text-primary-deep md:text-2xl">Related KalyaniCare services</h2>
                     <ul className="mt-4 flex flex-wrap gap-2 md:gap-3">
                       {post.relatedServiceSlugs.map((s) => {
                         const svc = getServiceBySlug(s);
@@ -234,15 +234,15 @@ export default async function BlogPostPage(props: PageProps) {
 
                 {post.relatedAreaSlugs.length > 0 ? (
                   <section className="mt-8 rounded-[1.5rem] border border-border bg-muted/40 p-6 md:p-8">
-                    <h2 className="font-display text-xl font-bold text-primary-deep md:text-2xl">Local placement pages</h2>
+                    <h2 className="font-display text-xl font-bold text-primary-deep md:text-2xl">Local nanny pages</h2>
                     <ul className="mt-4 space-y-2">
                       {post.relatedAreaSlugs.map((slug) => {
                         const area = getAreaBySlug(slug);
-                        const href = areaMaidHref(slug);
+                        const href = areaNannyHref(slug);
                         return (
                           <li key={slug}>
                             <Link href={href} className="text-base font-semibold text-primary hover:underline">
-                              Maid service near {area?.name ?? slug.replace(/-/g, " ")}
+                              Nanny service near {area?.name ?? slug.replace(/-/g, " ")}
                             </Link>
                           </li>
                         );
@@ -281,9 +281,9 @@ export default async function BlogPostPage(props: PageProps) {
                 ) : null}
 
                 <aside className="mt-14 rounded-[1.75rem] border border-accent/35 bg-gradient-to-br from-accent/15 via-background to-background p-6 md:p-8">
-                  <h2 className="font-display text-xl font-bold text-primary-deep md:text-2xl">Ready to hire trusted help?</h2>
+                  <h2 className="font-display text-xl font-bold text-primary-deep md:text-2xl">Ready to hire trusted child care?</h2>
                   <p className="mt-3 text-sm md:text-base text-foreground/75 leading-relaxed">
-                    Tell us your timings, locality, and scope—we&apos;ll match you from our verified network across Pune
+                    Tell us your timings, locality, child age, and routine. We&apos;ll match you from our verified network across Pune
                     west.
                   </p>
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -292,7 +292,7 @@ export default async function BlogPostPage(props: PageProps) {
                     </Button>
                     <Button variant="outline" size="lg" asChild>
                       <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                        WhatsApp SakhiHome
+                        WhatsApp KalyaniCare
                       </a>
                     </Button>
                   </div>

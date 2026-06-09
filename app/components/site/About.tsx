@@ -2,18 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Heart, MapPin, Users, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
 import { WHATSAPP } from "@/lib/contact";
 
-const cleaningDoodle = "/assets/doodles/cleaning service-amico.svg";
+const careDoodle = "/assets/doodles/cleaning service-amico.svg";
 const blobBg = "/assets/blobs/254596558522.jpg";
 
 const stats = [
-  { icon: Users, num: "500+", label: "Maids in network" },
+  { icon: Users, num: "Focused", label: "Nanny network" },
   { icon: MapPin, num: "8", label: "Areas covered" },
   { icon: Heart, num: "24-48h", label: "Replacement time" },
   { icon: CheckCircle2, num: "100%", label: "Local matching" },
 ];
 
 const promises = [
-  "Background-verified, locally-known helpers",
+  "Background-verified, locally-known caregivers",
   "One real human you can call -no chatbots",
   "We stay involved long after day one",
 ];
@@ -29,6 +29,7 @@ const About = () => {
       <div className="container relative mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
           
+
           {/* Left -content */}
           <div className="relative z-10">
             <span className="inline-flex items-center gap-2 rounded-full bg-white border border-primary/20 shadow-soft px-4 py-1.5 text-xs font-bold text-primary-deep uppercase tracking-wider">
@@ -36,14 +37,14 @@ const About = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
-              About SakhiHome
+              About KalyaniCare
             </span>
             <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl font-black text-primary-deep text-balance leading-[1.05] tracking-tight">
-              Your local maid partner in <span className="text-gradient-brand">Hinjewadi</span>
+              Your local nanny care partner in <span className="text-gradient-brand">Hinjewadi</span>
             </h2>
             <p className="mt-6 text-lg text-foreground/75 leading-relaxed max-w-xl">
-              Built on a strong local network, SakhiHome connects families in Hinjewadi with trusted,
-              experienced domestic help -managed with a personal touch, focused on{" "}
+              Built on a strong local network, KalyaniCare connects families in Hinjewadi with trusted,
+              experienced babysitters and nannies -managed with a personal touch, focused on{" "}
               <span className="font-bold text-primary-deep">reliability, quick response, and long-term trust</span>.
             </p>
 
@@ -80,8 +81,8 @@ const About = () => {
               />
               <div className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full bg-accent/20 blur-[80px]" aria-hidden />
               <img
-                src={cleaningDoodle}
-                alt="Illustration of a home cleaning professional for Hinjewadi and Pune households"
+                src={careDoodle}
+                alt="Illustration of a child care professional for Hinjewadi and Pune households"
                 className="relative mx-auto w-full max-w-[240px] object-contain drop-shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
               />
             </div>
@@ -118,8 +119,8 @@ const About = () => {
             </div>
 
             <img
-              src={cleaningDoodle}
-              alt="Illustration of a home cleaning professional for Hinjewadi and Pune households"
+              src={careDoodle}
+              alt="Illustration of a child care professional for Hinjewadi and Pune households"
               className="relative z-20 w-[450px] drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] animate-float pointer-events-none"
               style={{ animationDuration: "5s", animationDelay: "0.5s" }}
             />

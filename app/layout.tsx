@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@/app/components/GoogleAnalytics";
 import { getAbsoluteSiteUrl } from "@/lib/services";
-import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
 import BottomNav from "@/app/components/site/BottomNav";
-
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const siteUrl = getAbsoluteSiteUrl("/");
 
@@ -22,25 +18,25 @@ function safeMetadataBaseUrl(url: string): URL {
 export const metadata: Metadata = {
   metadataBase: safeMetadataBaseUrl(siteUrl),
   title: {
-    default: "SakhiHome - Trusted Maid Services in Hinjewadi IT Park, Pune",
-    template: `%s | SakhiHome`,
+    default: "KalyaniCare Nanny Services - Babysitter & Nanny Care in Pune",
+    template: `%s | KalyaniCare Nanny Services`,
   },
   description:
-    "Verified maids & home help in Pune: house cleaning, cooking, babysitting, elder care & full‑ or part‑time placements. SakhiHome -book trusted helpers today.",
+    "Verified babysitter and nanny services in Pune for infants, toddlers, and after-school care across Hinjewadi, Wakad, Baner, Marunji, and nearby areas.",
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "SakhiHome",
-    title: "SakhiHome - Trusted Maid & Home Services in Pune",
+    siteName: "KalyaniCare Nanny Services",
+    title: "KalyaniCare Nanny Services - Trusted Babysitter & Nanny Care",
     description:
-      "Verified maids & home help in Pune: cleaning, cooking, babysitting & elder care. Book trusted placements with SakhiHome.",
+      "Verified babysitters and nannies for child care at home across Pune west. Book trusted nanny support with KalyaniCare.",
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "SakhiHome - Trusted Maid & Home Services in Pune",
+    title: "KalyaniCare Nanny Services - Trusted Babysitter & Nanny Care",
     description:
-      "Verified maids & home help in Pune: cleaning, cooking, babysitting & elder care. Book with SakhiHome.",
+      "Verified babysitters and nannies for child care at home across Hinjewadi, Wakad, Baner, and Pune west.",
   },
   icons: {
     icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
@@ -53,10 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn("h-full", "antialiased", "font-sans", inter.variable)}
-    >
+    <html lang="en" className="h-full antialiased font-sans">
       <body className="min-h-full flex flex-col pb-[calc(env(safe-area-inset-bottom)+4.5rem)] md:pb-0">
         <GoogleAnalytics />
         {children}

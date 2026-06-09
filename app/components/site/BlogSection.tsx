@@ -20,11 +20,11 @@ const BlogSection = () => {
             Advice & guides
           </span>
           <h2 className="mt-5 md:mt-6 font-display text-3xl font-extrabold leading-tight text-primary-deep md:text-4xl lg:text-5xl text-balance">
-            Tips for hiring <span className="text-gradient-brand">trusted home help</span> in Pune
+            Tips for hiring <span className="text-gradient-brand">trusted child care</span> in Pune
           </h2>
           <p className="mt-4 text-base md:text-lg text-foreground/70 leading-relaxed">
-            Practical reads on verification, budgeting, and what domestic services cover across Hinjewadi, Wakad, and Pune
-            west—so you can choose with clarity before you enquire.
+            Practical reads on verification, budgeting, and choosing babysitter or nanny support across Hinjewadi,
+            Wakad, and Pune west, so you can enquire with clarity.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ const BlogSection = () => {
             <Link href="/blog">
               View all articles
               <span className="ml-2 transition-transform group-hover:translate-x-0.5" aria-hidden>
-                →
+                &rarr;
               </span>
             </Link>
           </Button>

@@ -32,12 +32,12 @@ const blobBg = "/assets/blobs/color_grunge_pattern_liquidity_style_background.jp
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdqpevg";
 
 const SERVICES = [
-  "House Cleaning",
-  "Cooking Services",
-  "Babysitting",
-  "Elder Care",
-  "Full-Time Maid",
-  "Part-Time Maid",
+  "Babysitter",
+  "Daytime Nanny",
+  "Infant Care",
+  "Toddler Care",
+  "After-school Care",
+  "Ayah-style Baby Care",
   "Not sure yet",
 ];
 
@@ -106,12 +106,12 @@ const EnquirySection = () => {
           budget: form.budget,
           start_time: form.startTime,
           end_time: form.endTime,
-          maid_daily_window:
+          nanny_daily_window:
             form.startTime || form.endTime
               ? [form.startTime || "?", form.endTime || "?"].join(" - ")
               : "",
           message: form.message,
-          _subject: `New SakhiHome enquiry from ${form.name}`,
+          _subject: `New KalyaniCare nanny enquiry from ${form.name}`,
         }),
       });
 
@@ -157,10 +157,10 @@ const EnquirySection = () => {
             Send us an enquiry
           </span>
           <h2 className="mt-4 md:mt-5 font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-deep text-balance leading-tight md:leading-[1.05]">
-            Tell us what your <span className="text-gradient-brand">home needs</span>
+            Tell us what your <span className="text-gradient-brand">child needs</span>
           </h2>
           <p className="mt-3 md:mt-5 text-sm sm:text-base md:text-lg text-foreground/70 leading-relaxed">
-            Share a few details and our team will match you with the right maid -usually within hours.
+            Share your child-care routine and our team will match you with a babysitter or nanny.
           </p>
         </div>
 
@@ -180,17 +180,17 @@ const EnquirySection = () => {
               </div>
 
               <h3 className="mt-4 md:mt-5 font-display text-xl sm:text-2xl md:text-3xl font-extrabold leading-tight">
-                Your details are safe with <span className="text-gradient-brand">SakhiHome</span>
+                Your details are safe with <span className="text-gradient-brand">KalyaniCare</span>
               </h3>
               <p className="mt-2.5 md:mt-3 text-sm md:text-base text-dark-muted leading-relaxed">
-                We only use your info to find the right maid for your home. No spam, ever.
+                We only use your info to find the right caregiver for your child. No spam, ever.
               </p>
 
               <ul className="mt-5 md:mt-7 space-y-3.5 md:space-y-4">
                 {[
                   "Real human matching, not an automated app",
-                  "Background-verified maids near your locality",
-                  "Replacement maid arranged within 24-48 hours",
+                  "Background-verified babysitters near your locality",
+                  "Replacement caregiver support within 24-48 hours",
                 ].map((point) => (
                   <li key={point} className="flex items-start gap-3 text-sm text-dark-foreground/90">
                     <span className="mt-0.5 grid h-5 w-5 md:h-6 md:w-6 shrink-0 place-items-center rounded-full bg-accent/15 text-accent">
@@ -245,8 +245,8 @@ const EnquirySection = () => {
                   Enquiry received!
                 </h3>
                 <p className="mt-2.5 md:mt-3 max-w-md text-sm md:text-base text-foreground/70 leading-relaxed">
-                  Thank you for reaching out to SakhiHome. Our team will get in touch with you shortly to
-                  understand your needs and share matching maids.
+                  Thank you for reaching out to KalyaniCare Nanny Services. Our team will get in touch with you shortly to
+                  understand your needs and share matching caregivers.
                 </p>
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3">
                   <Button variant="hero" size="lg" asChild>
@@ -380,7 +380,7 @@ const EnquirySection = () => {
 
                 <div className="space-y-2">
                   <div>
-                    <p className="text-sm font-medium text-primary-deep">When do you need the maid?</p>
+                    <p className="text-sm font-medium text-primary-deep">When do you need the caregiver?</p>
                     <p className="mt-1 text-xs text-muted-foreground">
                       Daily window you need help at home -approximate times are fine.
                     </p>
@@ -388,7 +388,7 @@ const EnquirySection = () => {
                   <div className="grid sm:grid-cols-2 gap-3.5 md:gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="enq-time-start" className="text-primary-deep">
-                        From (maid start)
+                        From (care starts)
                       </Label>
                       <Input
                         id="enq-time-start"
@@ -397,12 +397,12 @@ const EnquirySection = () => {
                         value={form.startTime}
                         onChange={handleChange("startTime")}
                         className="h-11 md:h-12"
-                        aria-label="Time you need the maid from"
+                        aria-label="Time you need the caregiver from"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="enq-time-end" className="text-primary-deep">
-                        To (maid end)
+                        To (care ends)
                       </Label>
                       <Input
                         id="enq-time-end"
@@ -411,7 +411,7 @@ const EnquirySection = () => {
                         value={form.endTime}
                         onChange={handleChange("endTime")}
                         className="h-11 md:h-12"
-                        aria-label="Time you need the maid until"
+                        aria-label="Time you need the caregiver until"
                       />
                     </div>
                   </div>
@@ -427,7 +427,7 @@ const EnquirySection = () => {
                   <Textarea
                     id="enq-message"
                     name="message"
-                    placeholder="Family size, specific tasks, language preference, etc."
+                    placeholder="Child age, routine, feeding support, language preference, etc."
                     value={form.message}
                     onChange={handleChange("message")}
                     className="min-h-[100px] md:min-h-[110px]"
@@ -455,7 +455,7 @@ const EnquirySection = () => {
                     )}
                   </Button>
                   <p className="text-xs text-muted-foreground">
-                    By sending, you agree to be contacted by SakhiHome about your enquiry.
+                    By sending, you agree to be contacted by KalyaniCare Nanny Services about your enquiry.
                   </p>
                 </div>
               </form>

@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, MapPin, ArrowUpRight, Mail } from "lucide-react";
+import Link from "next/link";
+import { Phone, MessageCircle, MapPin, ArrowUpRight } from "lucide-react";
 import { BusinessMap } from "@/app/components/site/BusinessMap";
 import {
   BUSINESS_ADDRESS_DISPLAY,
@@ -12,7 +13,7 @@ import { homeSection } from "@/lib/siteNav";
 
 const logo = "logo_only.png";
 const logotext = "logo_text.png";
-const blobBg = "blobs/color_grunge_pattern_liquidity_style_background.jpg";
+const blobBg = "/assets/blobs/color_grunge_pattern_liquidity_style_background.jpg";
 
 const areas = [
   "Hinjewadi Phase 1",
@@ -30,7 +31,7 @@ const Footer = () => {
     <footer className="relative overflow-hidden bg-dark text-dark-foreground">
       {/* Blob background texture */}
       <img
-        src={`/assets/${blobBg}`}
+        src={blobBg}
         alt=""
         aria-hidden
         className="absolute inset-0 w-full h-full object-cover opacity-[0.05] pointer-events-none select-none mix-blend-overlay"
@@ -58,7 +59,7 @@ const Footer = () => {
         className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap font-display text-[clamp(4rem,18vw,14rem)] font-black uppercase leading-none text-white/[0.03]"
         aria-hidden
       >
-        SakhiHome
+        KalyaniCare
       </p>
 
       <div className="relative container mx-auto px-4 pt-16 pb-10 md:px-6 md:pt-20">
@@ -70,10 +71,10 @@ const Footer = () => {
               <div className="pointer-events-none absolute -right-16 -top-14 h-36 w-36 rounded-full bg-accent/20 blur-[70px]" aria-hidden />
               <a href={homeSection("top")} className="relative inline-flex items-center gap-3">
                 <img src={`/assets/${logo}`} alt="" className="h-20 shrink-0 object-contain drop-shadow-[0_0_20px_hsl(var(--accent)/0.35)]" />
-                <img src={`/assets/${logotext}`} alt="SakhiHome Services" className="h-16 w-auto object-contain" />
+                <img src={`/assets/${logotext}`} alt="KalyaniCare Nanny Services" className="h-16 w-auto object-contain" />
               </a>
               <p className="relative mt-4 text-sm leading-relaxed text-dark-muted">
-                Trusted maid services across <span className="font-semibold text-dark-foreground/90">Hinjewadi IT Park</span> and Pune west.
+                Trusted babysitter and nanny services across <span className="font-semibold text-dark-foreground/90">Hinjewadi IT Park</span> and Pune west.
               </p>
               <div className="relative mt-5 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-accent">
                 <span className="relative flex h-2 w-2">
@@ -82,13 +83,13 @@ const Footer = () => {
                 </span>
                 Open for bookings
               </div>
-              <a
+              <Link
                 href="/blog"
                 className="relative mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-accent transition-smooth hover:text-dark-foreground hover:underline"
               >
                 Tips & guides
                 <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
+              </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-3">
@@ -114,7 +115,7 @@ const Footer = () => {
               <h4 className="mb-3 font-display text-[11px] font-bold uppercase tracking-[0.18em] text-accent">Quick Links</h4>
               <div className="grid grid-cols-2 gap-2">
                 {[
-                  { label: "Services", href: homeSection("services") },
+                  { label: "Nanny Care", href: homeSection("services") },
                   { label: "How It Works", href: homeSection("process") },
                   { label: "Areas", href: homeSection("areas") },
                   { label: "Blog", href: "/blog" },
@@ -132,7 +133,7 @@ const Footer = () => {
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-              <h4 className="mb-3 font-display text-[11px] font-bold uppercase tracking-[0.18em] text-accent">Popular Services</h4>
+              <h4 className="mb-3 font-display text-[11px] font-bold uppercase tracking-[0.18em] text-accent">Nanny Care</h4>
               <ul className="grid grid-cols-1 gap-1.5">
                 {services.slice(0, 4).map((s) => (
                   <li key={s.slug}>
@@ -175,10 +176,10 @@ const Footer = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-white/[0.06] ring-1 ring-white/10">
-                    <Mail className="h-4 w-4 text-accent" />
+                    <MessageCircle className="h-4 w-4 text-accent" />
                   </span>
-                  <a href="mailto:help@sakhihome.in" className="font-semibold hover:text-accent transition-smooth">
-                    help@sakhihome.in
+                  <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-accent transition-smooth">
+                    WhatsApp preferred
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
@@ -202,7 +203,7 @@ const Footer = () => {
             <BusinessMap className="rounded-2xl border border-white/10 bg-white/[0.03] p-4" />
 
             <div className="border-t border-white/10 pt-5 text-center text-xs text-dark-muted">
-              <p>© {new Date().getFullYear()} SakhiHome Services. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} KalyaniCare Nanny Services. All rights reserved.</p>
               <p className="mt-2 flex items-center justify-center gap-2">
                 <span className="h-1 w-1 rounded-full bg-accent" />
                 Crafted in Hinjewadi · Pune
@@ -225,13 +226,13 @@ const Footer = () => {
                 <img src={`/assets/${logo}`} alt="" className="h-24  shrink-0 object-contain drop-shadow-[0_0_20px_hsl(var(--accent)/0.35)]" />
                 <img
                   src={`/assets/${logotext}`}
-                  alt="SakhiHome Services"
+                  alt="KalyaniCare Nanny Services"
                   className="h-auto max-h-14 w-full max-w-[280px] object-contain object-left sm:max-w-none"
                 />
               </a>
               <p className="relative mt-6 max-w-md text-sm leading-relaxed text-dark-muted">
-                Trusted maid services across <span className="font-semibold text-dark-foreground/90">Hinjewadi IT Park</span>{" "}
-                and Pune west -fast matching, verified help, human support.
+                Trusted babysitter and nanny services across <span className="font-semibold text-dark-foreground/90">Hinjewadi IT Park</span>{" "}
+                and Pune west -fast matching, verified child care, human support.
               </p>
               <div className="relative mt-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-accent">
                 <span className="relative flex h-2 w-2">
@@ -240,22 +241,22 @@ const Footer = () => {
                 </span>
                 Open for bookings
               </div>
-              <a
+              <Link
                 href="/blog"
                 className="relative mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent transition-smooth hover:text-dark-foreground hover:underline underline-offset-4"
               >
                 Tips & guides (blog)
                 <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-3">
-            {/* Services */}
+            {/* Nanny care */}
             <div>
               <div className="mb-5 flex items-center gap-3">
                 <span className="h-px w-10 bg-gradient-to-r from-accent to-primary" />
-                <h4 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-accent">Services</h4>
+                <h4 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-accent">Nanny Care</h4>
               </div>
               <ul className="space-y-1">
                 {services.map((s) => (
@@ -327,15 +328,17 @@ const Footer = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/[0.06] ring-1 ring-white/10">
-                      <Mail className="h-4 w-4 text-accent" />
+                      <MessageCircle className="h-4 w-4 text-accent" />
                     </span>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-dark-muted">Email</p>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-dark-muted">Message</p>
                       <a
-                        href="mailto:help@sakhihome.in"
+                        href={WHATSAPP}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="font-semibold hover:text-accent transition-smooth"
                       >
-                        help@sakhihome.in
+                        WhatsApp preferred
                       </a>
                     </div>
                   </li>
@@ -366,7 +369,7 @@ const Footer = () => {
           <BusinessMap className="mt-10 max-w-2xl" />
 
           <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-dark-muted sm:flex-row">
-            <p>© {new Date().getFullYear()} SakhiHome Services. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} KalyaniCare Nanny Services. All rights reserved.</p>
             <p className="flex items-center gap-2">
               <span className="h-1 w-1 rounded-full bg-accent" />
               Crafted in Hinjewadi · Pune

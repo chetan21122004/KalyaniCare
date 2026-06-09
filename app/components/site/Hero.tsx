@@ -9,7 +9,7 @@ const logo = "logo_both.png";
 const  bg1 = "assets/bg_vdos/1.mp4";
 const bg2 = "assets/bg_vdos/2.mp4";
 const bg3 = "assets/bg_vdos/3.mp4";
-const blobBg = "blobs/color_grunge_pattern_liquidity_style_background.jpg";
+const blobBg = "/assets/blobs/color_grunge_pattern_liquidity_style_background.jpg";
 
 const VIDEOS = [bg1, bg2, bg3];
 const MobileHero = () => (
@@ -39,14 +39,14 @@ const MobileHero = () => (
           />
           <img
             src={`/assets/${logo}`}
-            alt="SakhiHome -Trusted Maid Services in Hinjewadi"
+            alt="KalyaniCare Nanny Services"
             className="relative h-48 w-48 object-contain drop-shadow-[0_14px_34px_rgba(0,0,0,0.55)]"
           />
         </div>
 
         <p className="min-w-0 flex-1 text-left font-display text-white">
           <span className="block text-[9px] font-bold uppercase tracking-[0.2em] text-white/55">
-            Trusted Maids for
+            Trusted Nannies for
           </span>
           <span className="mt-1.5 block text-[1.62rem] font-extrabold leading-[0.95] tracking-[-0.02em]">
             <span className="bg-gradient-to-r from-accent via-accent-deep to-primary-glow bg-clip-text text-transparent">
@@ -65,8 +65,8 @@ const MobileHero = () => (
       {/* Subcopy */}
       <p className="mt-5 text-[13.5px] leading-relaxed text-white/70">
         A network of{" "}
-        <span className="font-semibold text-white">500+ background-verified maids</span>
-        {" "}-matched to your home in hours.
+        <span className="font-semibold text-white">verified babysitters and nannies</span>
+        {" "}-matched to your child-care routine.
       </p>
 
       {/* CTA row -side-by-side */}
@@ -218,7 +218,7 @@ const Hero = () => {
 
       <div className="container relative z-10 mx-auto px-4 md:px-6">
         <h1 className="sr-only">
-          Trusted maids in Hinjewadi, Pune for cleaning, cooking, babysitting, elder care, and full-time domestic help
+          Trusted babysitter and nanny services in Hinjewadi, Pune for infant, toddler, and after-school care
         </h1>
         {/* Desktop / tablet layout (md+) -preserved exactly */}
         <div className="hidden md:block">
@@ -241,7 +241,7 @@ const Hero = () => {
 
             {/* Headline */}
             <p className="mx-auto mt-6 max-w-[18ch] font-display text-3xl font-semibold leading-[1.08] tracking-[-0.015em] text-white sm:text-4xl lg:mx-0 lg:text-[3.2rem]">
-              <span className="block text-white/85">Trusted Maids for</span>
+              <span className="block text-white/85">Trusted Nannies for</span>
               <span className="mt-1 block font-extrabold text-white">
                 <span className="bg-gradient-to-r from-accent via-accent-deep to-primary-glow bg-clip-text text-transparent">
                   Hinjewadi families
@@ -251,15 +251,15 @@ const Hero = () => {
 
             <p className="mt-5 text-base md:text-lg text-white/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Tap into a network of{" "}
-              <span className="font-bold text-accent">500+ background-verified maids</span>{" "}
-              for cleaning, cooking, babysitting and full-time domestic help -matched to your home in hours, not days.
+              <span className="font-bold text-accent">background-verified child caregivers</span>{" "}
+              for infants, toddlers and after-school supervision -matched to your family routine.
             </p>
 
             {/* CTAs */}
             <div id="book" className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <Button variant="hero" size="xl" asChild className="group">
                 <a href={homeSection("enquiry")}>
-                  <SparklesIcon className="h-4 w-4" /> Book Maid in Hinjewadi
+                  <SparklesIcon className="h-4 w-4" /> Book Nanny in Hinjewadi
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
@@ -308,7 +308,7 @@ const Hero = () => {
 
               <img
                 src={`/assets/${logo}`}
-                alt="SakhiHome -Trusted Maid Services in Hinjewadi"
+                alt="KalyaniCare Nanny Services"
                 className="relative w-full max-w-md lg:max-w-lg mx-auto animate-float drop-shadow-2xl"
               />
 
@@ -319,7 +319,7 @@ const Hero = () => {
                 </div>
                 <div className="text-left">
                   <div className="text-[11px] text-white/60 leading-none">Verified</div>
-                  <div className="text-sm font-bold text-white leading-tight">500+ Maids</div>
+                  <div className="text-sm font-bold text-white leading-tight">Verified Care</div>
                 </div>
               </div>
 

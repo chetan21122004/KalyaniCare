@@ -27,23 +27,11 @@ import {
 type PageProps = { params: Promise<{ slug: string }> };
 
 const doodleBySlug: Record<string, string> = {
-  "house-cleaning": "/assets/doodles/cleaning service-amico.svg",
-  "cooking-services": "/assets/doodles/Cooking-bro.svg",
   babysitting: "/assets/doodles/cleaning service-amico.svg",
-  "japa-maid": "/assets/doodles/cleaning service-amico.svg",
-  "elder-care": "/assets/doodles/Dementia-amico.svg",
-  "full-time-maid": "/assets/doodles/Cooking-bro.svg",
-  "part-time-maid": "/assets/doodles/cleaning service-amico.svg",
 };
 
 const blobBySlug: Record<string, string> = {
-  "house-cleaning": "/assets/blobs/color_grunge_pattern_liquidity_style_background.jpg",
-  "cooking-services": "/assets/blobs/254596558522.jpg",
   babysitting: "/assets/blobs/063602423687.jpg",
-  "japa-maid": "/assets/blobs/063602423687.jpg",
-  "elder-care": "/assets/blobs/063602423687.jpg",
-  "full-time-maid": "/assets/blobs/254596558522.jpg",
-  "part-time-maid": "/assets/blobs/color_grunge_pattern_liquidity_style_background.jpg",
 };
 
 export function generateStaticParams() {
@@ -93,7 +81,7 @@ export default async function ServiceDetailPage(props: PageProps) {
   const homeUrl = getAbsoluteSiteUrl("/");
   const whatsappHref = getWhatsAppHrefWithService(service.title);
   const businessId = `${canonical}#localbusiness`;
-  const doodleAsset = doodleBySlug[service.slug] ?? "/assets/doodles/Cooking-bro.svg";
+  const doodleAsset = doodleBySlug[service.slug] ?? "/assets/doodles/cleaning service-amico.svg";
   const blobAsset = blobBySlug[service.slug] ?? "/assets/blobs/254596558522.jpg";
 
   const relatedFromSearches = service.relatedSearches
@@ -141,7 +129,7 @@ export default async function ServiceDetailPage(props: PageProps) {
         name: BRAND_NAME,
         url: homeUrl,
         telephone: CONTACT_PHONE_E164,
-        description: `${BRAND_NAME} connects Pune households with vetted maid, cleaning, childcare, elder support, and cooking help.`,
+        description: `${BRAND_NAME} connects Pune households with vetted babysitters and nannies for child care at home.`,
         address: getBusinessPostalAddressJsonLd(),
         geo: getBusinessGeoJsonLd(),
         hasMap: GOOGLE_MAPS_DIRECTIONS_URL,

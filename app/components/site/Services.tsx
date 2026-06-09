@@ -1,32 +1,24 @@
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import {
-  Sparkles,
-  ChefHat,
   Baby,
-  HeartHandshake,
-  Home,
-  Clock,
   Heart,
   HandHeart,
   ArrowRight,
   Wand2,
+  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { ServiceIconKey } from "@/lib/services";
 import { services } from "@/lib/services";
 import { homeSection } from "@/lib/siteNav";
 
-const cookingDoodle = "/assets/doodles/Cooking-bro.svg";
+const careDoodle = "/assets/doodles/cleaning service-amico.svg";
 const blobBg = "/assets/blobs/color_grunge_pattern_liquidity_style_background.jpg";
 
 const iconByKey: Record<ServiceIconKey, LucideIcon> = {
-  sparkles: Sparkles,
-  chefHat: ChefHat,
   baby: Baby,
-  heartHandshake: HeartHandshake,
-  home: Home,
-  clock: Clock,
   heart: Heart,
   handHeart: HandHeart,
 };
@@ -37,13 +29,13 @@ const MobileServices = () => (
     <div className="mx-auto max-w-[26rem] text-left">
       <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-gradient-brand-soft px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-deep">
         <Wand2 className="h-3 w-3" />
-        Our Services
+        Nanny Care
       </span>
       <p className="mt-4 font-display text-[1.85rem] font-extrabold leading-[1.05] tracking-[-0.02em] text-primary-deep">
-        Everything your <span className="text-gradient-brand">home</span> needs
+        Child care your <span className="text-gradient-brand">family</span> can trust
       </p>
       <p className="mt-3 text-[13.5px] leading-relaxed text-foreground/65">
-        From a quick clean to a full-time helper -one trusted partner for every corner.
+        Babysitters, daytime nannies, and ayah-style support for children at home.
       </p>
 
       {/* Hairline */}
@@ -89,8 +81,8 @@ const MobileServices = () => (
     <div className="mx-auto mt-6 max-w-[26rem]">
       <Button variant="hero" asChild className="h-12 w-full rounded-xl text-[13px] font-bold tracking-tight">
         <a href={homeSection("enquiry")}>
-          <Sparkles className="h-4 w-4" />
-          Get Maid Match
+          <ShieldCheck className="h-4 w-4" />
+          Get Nanny Match
           <ArrowRight className="h-4 w-4" />
         </a>
       </Button>
@@ -121,17 +113,17 @@ const Services = () => {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-gradient-brand-soft border border-primary/20 px-4 py-1.5 text-xs font-bold text-primary-deep uppercase tracking-wider">
               <Wand2 className="h-3.5 w-3.5" />
-              Our Services
+              Nanny Care
             </span>
             <h2 className="mt-5 font-display text-4xl md:text-6xl font-extrabold text-primary-deep text-balance leading-[1.05]">
-              Everything your <span className="text-gradient-brand">home</span> needs
+              Child care your <span className="text-gradient-brand">family</span> can trust
             </h2>
             <p className="mt-5 text-lg text-foreground/70 max-w-xl mx-auto md:mx-0">
-              From a quick clean to a full-time helper, one trusted partner for every corner of your home.
+              Verified babysitters, daytime nannies, and ayah-style child care for infants, toddlers, and school-age children.
             </p>
           </div>
           <div className="hidden md:flex justify-end">
-            <img src={cookingDoodle} alt="Illustration of home cooking and domestic support services in Pune" className="w-64 lg:w-80 object-contain drop-shadow-xl animate-float" />
+            <img src={careDoodle} alt="Illustration of child care support for Pune families" className="w-64 lg:w-80 object-contain drop-shadow-xl animate-float" />
           </div>
         </div>
 

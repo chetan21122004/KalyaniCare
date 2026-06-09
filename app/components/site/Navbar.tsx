@@ -10,7 +10,7 @@ const logo = "/assets/logo_only.png";
 const logotext = "/assets/logo_text.png";
 
 const links = [
-  { label: "Services", href: homeSection("services") },
+  { label: "Nanny Care", href: homeSection("services") },
   { label: "How it works", href: homeSection("process") },
   { label: "Areas", href: homeSection("areas") },
   { label: "About", href: homeSection("about") },
@@ -67,7 +67,7 @@ const Navbar = () => {
         {/* Logo -both marks visible on mobile; sizes follow content */}
         <a
           href={homeSection("top")}
-          aria-label="SakhiHome -home"
+          aria-label="KalyaniCare Nanny Services - home"
           className="flex min-w-0 flex-1 items-center gap-2 sm:gap-2.5 md:flex-initial md:max-w-none"
         >
           <img
@@ -77,7 +77,7 @@ const Navbar = () => {
           />
           <img
             src={logotext}
-            alt="SakhiHome Services"
+            alt="KalyaniCare Nanny Services"
             className=" h-12"
           />
         </a>
@@ -161,7 +161,7 @@ const Navbar = () => {
             </Button>
             <Button variant="hero" className="w-full shadow-glow" asChild>
               <a href={homeSection("enquiry")} onClick={() => setOpen(false)}>
-                Find a Maid
+                Find a Nanny
               </a>
             </Button>
           </div>

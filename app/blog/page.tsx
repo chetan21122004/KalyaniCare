@@ -11,21 +11,21 @@ import { BRAND_NAME, getAbsoluteSiteUrl } from "@/lib/services";
 const canonical = getAbsoluteSiteUrl("/blog");
 
 export const metadata: Metadata = {
-  title: "Maid & Home Help Tips & Guides",
+  title: "Babysitter & Nanny Care Tips",
   description:
-    "Expert articles on hiring verified maids, salaries, verification, and home services across Hinjewadi IT Park, Wakad, and Pune—from SakhiHome.",
+    "Expert articles on hiring verified babysitters and nannies across Hinjewadi IT Park, Wakad, Baner, and Pune west.",
   keywords: [
-    "maid tips Pune",
-    "hire maid Hinjewadi",
-    "domestic help blog",
-    "SakhiHome guides",
-    "maid verification Maharashtra",
+    "babysitter tips Pune",
+    "hire nanny Hinjewadi",
+    "nanny care blog",
+    "KalyaniCare guides",
+    "babysitter verification Maharashtra",
   ],
   alternates: { canonical },
   openGraph: {
-    title: "Maid & Home Help Tips & Guides",
+    title: "Babysitter & Nanny Care Tips",
     description:
-      "Hiring guides, salaries, verification checklists & local Pune west advice from SakhiHome.",
+      "Hiring guides, pricing, verification checklists and child-care advice from KalyaniCare.",
     url: canonical,
     type: "website",
     locale: "en_IN",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maid & Home Help Tips & Guides | SakhiHome",
+    title: "Babysitter & Nanny Care Tips | KalyaniCare",
     description:
-      "Practical reads on maid hiring, costs, verification & services near Hinjewadi and Pune.",
+      "Practical reads on nanny hiring, costs, verification and child care near Hinjewadi and Pune.",
   },
 };
 
@@ -49,9 +49,9 @@ export default function BlogIndexPage() {
         "@type": "CollectionPage",
         "@id": `${canonical}#collection`,
         name: `${BRAND_NAME} Blog`,
-        headline: "Maid & home help tips for Pune households",
+        headline: "Babysitter and nanny care tips for Pune families",
         description:
-          "Guides on hiring domestic help near Hinjewadi IT Park, wages, verification, and what services include.",
+          "Guides on hiring babysitters and nannies near Hinjewadi IT Park, pricing, verification, and child-care routines.",
         url: canonical,
         inLanguage: "en-IN",
         isPartOf: { "@id": `${getAbsoluteSiteUrl("/")}#website` },
@@ -59,18 +59,8 @@ export default function BlogIndexPage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: getAbsoluteSiteUrl("/"),
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Blog",
-            item: canonical,
-          },
+          { "@type": "ListItem", position: 1, name: "Home", item: getAbsoluteSiteUrl("/") },
+          { "@type": "ListItem", position: 2, name: "Blog", item: canonical },
         ],
       },
       {
@@ -109,11 +99,11 @@ export default function BlogIndexPage() {
             <div className="container relative mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
               <BlogBreadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }]} />
               <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-primary-deep md:text-5xl lg:text-[3.35rem] text-balance">
-                Maid & home help <span className="text-gradient-brand">guides</span> for Pune
+                Babysitter & nanny care <span className="text-gradient-brand">guides</span> for Pune
               </h1>
               <p className="mt-5 max-w-2xl text-base md:text-lg leading-relaxed text-foreground/75">
-                Actionable guides on budgeting, verifying candidates, understanding service types near Hinjewadi IT Park,
-                Wakad, Baner—and how it maps to placements at SakhiHome.
+                Actionable guides on budgeting, verifying caregivers, and choosing the right child-care support near
+                Hinjewadi IT Park, Wakad, Baner, and nearby Pune communities.
               </p>
             </div>
           </div>

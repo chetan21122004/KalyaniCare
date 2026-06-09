@@ -1,11 +1,11 @@
 import { MessageSquare, UserSearch, CheckCircle2, Headphones } from "lucide-react";
 import Sparkles from "./Sparkles";
-const cookingDoodle = "/assets/doodles/Cooking-bro.svg";
+const careDoodle = "/assets/doodles/cleaning service-amico.svg";
 
 
 const steps = [
   { icon: MessageSquare, title: "Share Requirement", desc: "Tell us what you need via WhatsApp or call." },
-  { icon: UserSearch, title: "Get Matched", desc: "We shortlist available maids near your location." },
+  { icon: UserSearch, title: "Get Matched", desc: "We shortlist available babysitters and nannies near your location." },
   { icon: CheckCircle2, title: "Choose & Confirm", desc: "Pick the right fit and start service quickly." },
   { icon: Headphones, title: "Ongoing Support", desc: "We're here for replacements & assistance anytime." },
 ];
@@ -20,7 +20,7 @@ const MobileProcess = () => (
         Simple, <span className="text-gradient-brand">refined</span> process
       </p>
       <p className="mt-3 text-[13.5px] leading-relaxed text-dark-muted">
-        From enquiry to confirmed maid, each step is clear and professionally managed.
+        From enquiry to confirmed caregiver, each step is clear and professionally managed.
       </p>
     </div>
 
@@ -63,10 +63,10 @@ const Process = () => {
             <h2 className="mt-4 font-display text-3xl md:text-5xl font-extrabold text-dark-foreground text-balance">
               Simple & <span className="text-gradient-brand">quick</span> process
             </h2>
-            <p className="mt-4 text-lg text-dark-muted max-w-xl mx-auto md:mx-0">From enquiry to confirmed maid -usually within a day.</p>
+            <p className="mt-4 text-lg text-dark-muted max-w-xl mx-auto md:mx-0">From enquiry to confirmed nanny match -usually within a day.</p>
           </div>
           <div className="hidden md:flex justify-end">
-            <img src={cookingDoodle} alt="Illustration of at-home cooking support for Pune families" className="w-64 lg:w-80 object-contain drop-shadow-xl animate-float" />
+            <img src={careDoodle} alt="Illustration of at-home child care support for Pune families" className="w-64 lg:w-80 object-contain drop-shadow-xl animate-float" />
           </div>
         </div>
 

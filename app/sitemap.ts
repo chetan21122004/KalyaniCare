@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const areaPages: MetadataRoute.Sitemap = AREAS.map((area) => ({
-    url: getAbsoluteSiteUrl(`/maid-service-in-${area.slug}`),
+    url: getAbsoluteSiteUrl(`/nanny-service-in-${area.slug}`),
     lastModified: now,
     changeFrequency: "monthly",
     priority: area.searchVolumeTier === "high" ? 0.9 : 0.8,
@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   const societyPages: MetadataRoute.Sitemap = getAllSocietySlugs().map((slug) => ({
-    url: getAbsoluteSiteUrl(`/maid-service-in-${slug}`),
+    url: getAbsoluteSiteUrl(`/nanny-service-in-${slug}`),
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,

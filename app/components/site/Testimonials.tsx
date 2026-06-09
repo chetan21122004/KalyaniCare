@@ -8,12 +8,12 @@ const items = [
   {
     name: "Priya S.",
     location: "Megapolis, Hinjewadi Phase 3",
-    text: "Found a wonderful cooking maid through SakhiHome within 2 days. She's been with us for months now -reliable and warm.",
+    text: "Found a warm daytime nanny through KalyaniCare within 2 days. Our toddler settled faster than we expected.",
   },
   {
     name: "Rahul M.",
     location: "Blue Ridge, Phase 1",
-    text: "When our previous maid left suddenly, SakhiHome arranged a replacement in under 48 hours. Lifesaver for a working couple.",
+    text: "When our babysitter became unavailable, KalyaniCare arranged replacement options quickly. Lifesaver for a working couple.",
   },
   {
     name: "Anjali K.",

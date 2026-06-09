@@ -1,9 +1,9 @@
 /**
  * Canonical area + society catalog (single source of truth).
  * Drives programmatic SEO pages:
- *   /maid-service-in-[areaSlug]
+ *   /nanny-service-in-[areaSlug]
  *   /[serviceSlug]-in-[areaSlug]
- *   /maid-service-in-[societySlug]
+ *   /nanny-service-in-[societySlug]
  */
 
 export type Society = {
@@ -38,9 +38,9 @@ export const AREAS: readonly AreaRecord[] = [
     landmark: "Rajiv Gandhi Infotech Park Gate 1",
     pincode: "411057",
     nearbyMicroLocalities: ["Nande", "Hinjewadi Village", "Kate Wasti", "Kemse Vasti"],
-    seoTitle: "Maid Service in Hinjewadi Phase 1 | Verified Maids Near You - SakhiHome",
+    seoTitle: "Nanny Service in Hinjewadi Phase 1 | Babysitter Near You - KalyaniCare",
     metaDescription:
-      "Looking for a maid in Hinjewadi Phase 1? SakhiHome connects you with 500+ background-verified maids for cleaning, cooking, babysitting & more. Match within hours.",
+      "Looking for a nanny or babysitter in Hinjewadi Phase 1? KalyaniCare Nanny Services connects families with background-verified child caregivers.",
     searchVolumeTier: "high",
     societies: [
       { name: "Godrej 24", slug: "godrej-24-hinjewadi" },
@@ -64,9 +64,9 @@ export const AREAS: readonly AreaRecord[] = [
     landmark: "Infosys Pune Development Centre",
     pincode: "411057",
     nearbyMicroLocalities: ["Maan", "Mahalunge", "Hinjewadi Phase 2 Hill"],
-    seoTitle: "Maid Service in Hinjewadi Phase 2 | Trusted Domestic Help - SakhiHome",
+    seoTitle: "Nanny Service in Hinjewadi Phase 2 | Child Care at Home - KalyaniCare",
     metaDescription:
-      "Find verified maids near Infosys & Wipro IT societies in Hinjewadi Phase 2. SakhiHome matches local, background-checked domestic help within hours.",
+      "Find verified babysitters and nannies near Infosys, Wipro, and Hinjewadi Phase 2 societies. Infant, toddler, and after-school care at home.",
     searchVolumeTier: "high",
     societies: [
       { name: "Supreme Estia Phase 1", slug: "supreme-estia-hinjewadi-phase-2" },
@@ -87,9 +87,9 @@ export const AREAS: readonly AreaRecord[] = [
     landmark: "Blue Ridge Township",
     pincode: "411057",
     nearbyMicroLocalities: ["Sus", "Marunji Road", "Hinjewadi Maan Phase 3"],
-    seoTitle: "Maid Service in Hinjewadi Phase 3 | Blue Ridge & Life Republic - SakhiHome",
+    seoTitle: "Nanny Service in Hinjewadi Phase 3 | Blue Ridge & Life Republic - KalyaniCare",
     metaDescription:
-      "Trusted maid services in Hinjewadi Phase 3 -Blue Ridge, Life Republic & nearby societies. 500+ verified maids matched within hours. SakhiHome.",
+      "Trusted babysitter and nanny services in Hinjewadi Phase 3, Blue Ridge, Life Republic, Megapolis, and nearby societies.",
     searchVolumeTier: "high",
     societies: [
       { name: "Blue Ridge Township", slug: "blue-ridge-township-hinjewadi" },
@@ -111,9 +111,9 @@ export const AREAS: readonly AreaRecord[] = [
     landmark: "Megapolis Splendour Tower",
     pincode: "411057",
     nearbyMicroLocalities: ["Godambewadi", "Hinjewadi Phase 3 corridor"],
-    seoTitle: "Maid Service in Megapolis Hinjewadi | Verified Domestic Help - SakhiHome",
+    seoTitle: "Nanny Service in Megapolis Hinjewadi | Verified Babysitters - KalyaniCare",
     metaDescription:
-      "Need a maid in Megapolis Splendour or Sparklet? SakhiHome provides background-verified maids for cleaning, cooking, babysitting & more. Fast matching, quick replacement.",
+      "Need a nanny in Megapolis Splendour or Sparklet? KalyaniCare provides verified babysitters and child caregivers for infants and young children.",
     searchVolumeTier: "medium",
     societies: [
       { name: "Megapolis Splendour", slug: "megapolis-splendour-hinjewadi" },
@@ -132,9 +132,9 @@ export const AREAS: readonly AreaRecord[] = [
     landmark: "Wakad Chowk",
     pincode: "411057",
     nearbyMicroLocalities: ["Tathawade", "Dange Chowk", "Pimple Saudagar"],
-    seoTitle: "Maid Service in Wakad Pune | Trusted Maids & Domestic Help - SakhiHome",
+    seoTitle: "Nanny Service in Wakad Pune | Trusted Babysitter & Child Care - KalyaniCare",
     metaDescription:
-      "Find verified maids in Wakad, Pune. SakhiHome connects you with local, background-checked maids for cleaning, cooking, babysitting & more. Match within hours.",
+      "Find verified nannies and babysitters in Wakad, Pune. Daytime child care, infant support, toddler supervision, and after-school coverage.",
     searchVolumeTier: "high",
     societies: [
       { name: "RGS Forte", slug: "rgs-forte-wakad" },
@@ -156,9 +156,9 @@ export const AREAS: readonly AreaRecord[] = [
     landmark: "Bhumkar Chowk Junction",
     pincode: "411033",
     nearbyMicroLocalities: ["Bhumkar Nagar", "Wakadkar Wasti", "Hinjewadi Road"],
-    seoTitle: "Maid Service in Bhumkar Chowk | Verified Maids Near You - SakhiHome",
+    seoTitle: "Nanny Service in Bhumkar Chowk | Verified Babysitters Near You - KalyaniCare",
     metaDescription:
-      "Looking for a maid near Bhumkar Chowk? SakhiHome has 500+ background-verified maids for all home needs. Fast matching & 24-48 hr replacement guaranteed.",
+      "Looking for a babysitter near Bhumkar Chowk? KalyaniCare helps families find verified nannies and child caregivers with replacement support.",
     searchVolumeTier: "medium",
     societies: [
       { name: "Bhumkar Nagar Societies", slug: "bhumkar-nagar-societies" },
@@ -178,9 +178,9 @@ export const AREAS: readonly AreaRecord[] = [
     landmark: "Baner Road",
     pincode: "411045",
     nearbyMicroLocalities: ["Balewadi", "Aundh", "Pashan", "Sus Road"],
-    seoTitle: "Maid Service in Baner Pune | Trusted Verified Domestic Help - SakhiHome",
+    seoTitle: "Nanny Service in Baner Pune | Trusted Verified Babysitters - KalyaniCare",
     metaDescription:
-      "Find trusted maids in Baner, Pune. SakhiHome provides background-verified maids for cleaning, cooking, elder care & babysitting. Fast matching near your society.",
+      "Find trusted nannies and babysitters in Baner, Pune. Verified child caregivers for infant care, toddler routines, and after-school supervision.",
     searchVolumeTier: "high",
     societies: [
       { name: "VJ Portia Grande", slug: "vj-portia-grande-baner" },
@@ -202,9 +202,9 @@ export const AREAS: readonly AreaRecord[] = [
     landmark: "Marunji Village Road",
     pincode: "412115",
     nearbyMicroLocalities: ["Sus", "Kasarsai Road", "Hinjewadi Phase 3 border"],
-    seoTitle: "Maid Service in Marunji Pune | Background-Verified Maids - SakhiHome",
+    seoTitle: "Nanny Service in Marunji Pune | Background-Verified Babysitters - KalyaniCare",
     metaDescription:
-      "Need domestic help in Marunji near Sus or Hinjewadi? SakhiHome matches you with local, verified maids for all home services. Available within hours.",
+      "Need a babysitter in Marunji near Sus or Hinjewadi? KalyaniCare matches families with local, verified nannies and child caregivers.",
     searchVolumeTier: "medium",
     societies: [
       { name: "Life Republic Marunji", slug: "life-republic-marunji" },

@@ -12,7 +12,7 @@ type BusinessMapProps = {
 };
 
 /** Crawlable address + Google Maps embed for local SEO. */
-export function BusinessMap({ className, title = "SakhiHome office location on Google Maps" }: BusinessMapProps) {
+export function BusinessMap({ className, title = "KalyaniCare Nanny Services office location on Google Maps" }: BusinessMapProps) {
   return (
     <div className={className}>
       <h3 className="sr-only">Office location</h3>
