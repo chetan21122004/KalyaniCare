@@ -183,7 +183,7 @@ const Footer = () => {
             <div className="lg:col-span-4">
               <a href={homeSection("top")} className="inline-flex items-center gap-4">
                 <img src={logo} alt="" className="h-20 w-20 shrink-0 object-contain" />
-                <img src={logotext} alt="KalyaniCare Nanny Services" className="h-[11.9rem] w-auto object-contain object-left" />
+                <img src={logotext} alt="KalyaniCare Nanny Services" className="h-[11.9rem] pt-8 w-auto object-contain object-left" />
               </a>
               <p className="mt-5 max-w-sm text-sm leading-relaxed text-dark-muted">
                 Trusted babysitter and nanny care across{" "}
