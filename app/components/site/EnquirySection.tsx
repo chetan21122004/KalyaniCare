@@ -27,17 +27,9 @@ import {
   WHATSAPP,
 } from "@/lib/contact";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdqpevg";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xpqereyl";
 
-const SERVICES = [
-  "Babysitter",
-  "Daytime Nanny",
-  "Infant Care",
-  "Toddler Care",
-  "After-school Care",
-  "Ayah-style Baby Care",
-  "Not sure yet",
-];
+const SERVICES = ["Babysitter", "Nanny", "Not sure yet"];
 
 const AREAS = [
   "Hinjewadi Phase 1",

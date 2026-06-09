@@ -37,13 +37,6 @@ const featurePillars = [
   { icon: RefreshCw, label: "Replacement Support", desc: "New caregiver arranged in 24–48 hrs" },
 ];
 
-const careTypes = [
-  { label: "Infant & Newborn Care", icon: Baby },
-  { label: "Daytime Nanny", icon: Heart },
-  { label: "After-school Care", icon: HandHeart },
-  { label: "Ayah-style Support", icon: Star },
-];
-
 const MobileServices = () => (
   <div className="md:hidden">
     {/* Header */}
@@ -99,15 +92,6 @@ const MobileServices = () => (
         </div>
       </div>
 
-      {/* Care type chips */}
-      <div className="mt-4 flex flex-wrap gap-2">
-        {careTypes.map(({ label, icon: CIcon }) => (
-          <div key={label} className="flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-[11px] font-semibold text-primary-deep">
-            <CIcon className="h-3 w-3 text-primary" />
-            {label}
-          </div>
-        ))}
-      </div>
     </div>
 
     {/* CTA strip */}
@@ -169,7 +153,7 @@ const Services = () => {
               </h2>
 
               <p className="mt-5 text-lg text-foreground/70 leading-relaxed max-w-lg">
-                Verified babysitters, daytime nannies, and ayah-style child care for infants, toddlers, and school-age children.
+                Verified babysitters and nannies for families across Hinjewadi, Wakad, and Baner.
               </p>
 
               {/* Service points */}
@@ -254,7 +238,7 @@ const Services = () => {
                 <div className="absolute bottom-5 left-5 right-5">
                   <div className="rounded-2xl border border-white/20 bg-dark/70 px-4 py-3 backdrop-blur-md">
                     <p className="text-xs font-bold uppercase tracking-wider text-accent mb-1">Available in Hinjewadi</p>
-                    <p className="text-sm font-bold text-white">Infant · Toddler · After-school · Ayah Care</p>
+                    <p className="text-sm font-bold text-white">Babysitter & Nanny Care</p>
                   </div>
                 </div>
               </div>
@@ -273,29 +257,8 @@ const Services = () => {
             </div>
           </div>
 
-          {/* Feature pillars strip */}
-          <div className="mt-16 max-w-4xl mx-auto grid grid-cols-3 gap-6">
-            {featurePillars.map(({ icon: PIcon, label, desc }) => (
-              <div key={label} className="group relative rounded-2xl border border-border bg-card p-6 shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                <div className="absolute -top-12 -right-12 h-28 w-28 rounded-full bg-gradient-brand-soft blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden />
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <PIcon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-4 font-display text-base font-bold text-primary-deep">{label}</h3>
-                <p className="mt-1.5 text-sm text-foreground/65 leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
+       
 
-          {/* Care type chips */}
-          <div className="mt-8 flex justify-center flex-wrap gap-3">
-            {careTypes.map(({ label, icon: CIcon }) => (
-              <div key={label} className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-primary-deep shadow-sm">
-                <CIcon className="h-4 w-4 text-primary" />
-                {label}
-              </div>
-            ))}
-          </div>
         </div>
         {/* /Desktop layout */}
 

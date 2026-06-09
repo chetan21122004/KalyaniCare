@@ -5,8 +5,6 @@ import { X, ShieldCheck, Send, Loader2, CheckCircle2, Baby } from "lucide-react"
 import { Button } from "@/components/ui/button";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xpqereyl";
-const AUTO_SHOW_DELAY_MS = 6700;
-const SESSION_KEY = "kc_enquiry_popup_shown";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -14,31 +12,11 @@ export default function EnquiryPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [formState, setFormState] = useState<FormState>("idle");
   const formRef = useRef<HTMLFormElement>(null);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    // Listen for manual open events from "Book Nanny" buttons
     const handleOpen = () => setIsOpen(true);
     window.addEventListener("openEnquiryPopup", handleOpen);
-
-    // Auto-show after 6.7 s — only once per session
-    const alreadyShown = typeof sessionStorage !== "undefined"
-      ? sessionStorage.getItem(SESSION_KEY)
-      : null;
-
-    if (!alreadyShown) {
-      timerRef.current = setTimeout(() => {
-        setIsOpen(true);
-        if (typeof sessionStorage !== "undefined") {
-          sessionStorage.setItem(SESSION_KEY, "1");
-        }
-      }, AUTO_SHOW_DELAY_MS);
-    }
-
-    return () => {
-      window.removeEventListener("openEnquiryPopup", handleOpen);
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
+    return () => window.removeEventListener("openEnquiryPopup", handleOpen);
   }, []);
 
   // Trap focus and close on Escape
@@ -177,15 +155,14 @@ export default function EnquiryPopup() {
                 <select
                   id="kcp-service"
                   name="service"
+                  required
                   className="w-full rounded-xl border border-border bg-muted/40 px-4 py-2.5 text-sm font-medium text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none"
                   defaultValue=""
                 >
                   <option value="" disabled>Select a service…</option>
-                  <option value="Daytime Nanny">Daytime Nanny</option>
-                  <option value="Infant / Newborn Care">Infant / Newborn Care</option>
-                  <option value="Part-day Babysitter">Part-day Babysitter</option>
-                  <option value="Ayah-style Care">Ayah-style Care</option>
-                  <option value="After-school Care">After-school Care</option>
+                  <option value="Babysitter">Babysitter</option>
+                  <option value="Nanny">Nanny</option>
+                  <option value="Not sure yet">Not sure yet</option>
                 </select>
               </div>
 
