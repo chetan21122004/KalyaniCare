@@ -11,16 +11,15 @@ import {
   IndianRupee,
   Loader2,
   MapPin,
-  MessageCircle,
   Phone,
   Send,
   ShieldCheck,
-  Sparkles as SparklesIcon,
   User,
   Wand2,
 } from "lucide-react";
 import { toast } from "sonner";
 import { BusinessMap } from "@/app/components/site/BusinessMap";
+import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 import {
   CONTACT_PHONE_DISPLAY_IN,
   CONTACT_PHONE_E164,
@@ -28,8 +27,6 @@ import {
 } from "@/lib/contact";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xpqereyl";
-
-const SERVICES = ["Babysitter", "Nanny", "Not sure yet"];
 
 const AREAS = [
   "Hinjewadi Phase 1",
@@ -47,7 +44,6 @@ const initialState = {
   name: "",
   phone: "",
   area: "",
-  service: "",
   budget: "",
   startTime: "",
   endTime: "",
@@ -68,7 +64,6 @@ const EnquirySection = () => {
     if (!form.name.trim()) return "Please enter your name.";
     const phoneDigits = form.phone.replace(/\D/g, "");
     if (phoneDigits.length < 10) return "Please enter a valid phone number.";
-    if (!form.service) return "Please choose the service you need.";
     return null;
   };
 
@@ -92,7 +87,6 @@ const EnquirySection = () => {
           name: form.name,
           phone: form.phone,
           area: form.area,
-          service: form.service,
           budget: form.budget,
           start_time: form.startTime,
           end_time: form.endTime,
@@ -191,7 +185,7 @@ const EnquirySection = () => {
                   className="flex flex-col gap-1 rounded-xl md:rounded-2xl glass border border-white/10 px-3 md:px-4 py-3 transition-smooth hover:border-accent/40"
                 >
                   <span className="flex items-center gap-1.5 md:gap-2 text-[10px] font-bold uppercase tracking-[0.16em] md:tracking-wider text-accent">
-                    <MessageCircle className="h-3.5 w-3.5" />
+                    <WhatsAppIcon className="h-3.5 w-3.5" />
                     WhatsApp
                   </span>
                   <span className="text-xs sm:text-sm font-semibold">Chat instantly</span>
@@ -233,7 +227,7 @@ const EnquirySection = () => {
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3">
                   <Button variant="hero" size="lg" asChild>
                     <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                      <MessageCircle className="h-4 w-4" />
+                      <WhatsAppIcon className="h-4 w-4" />
                       Chat on WhatsApp
                     </a>
                   </Button>
@@ -292,52 +286,26 @@ const EnquirySection = () => {
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-3.5 md:gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="enq-area" className="text-primary-deep">
-                      Your Area
-                    </Label>
-                    <div className="relative">
-                      <MapPin className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                      <select
-                        id="enq-area"
-                        name="area"
-                        value={form.area}
-                        onChange={handleChange("area")}
-                        className="flex h-11 md:h-12 w-full rounded-md border border-input bg-background pl-10 pr-3 py-2 text-sm appearance-none ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      >
-                        <option value="">Select area</option>
-                        {AREAS.map((a) => (
-                          <option key={a} value={a}>
-                            {a}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="enq-service" className="text-primary-deep">
-                      Service Needed <span className="text-destructive">*</span>
-                    </Label>
-                    <div className="relative">
-                      <SparklesIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                      <select
-                        id="enq-service"
-                        name="service"
-                        required
-                        value={form.service}
-                        onChange={handleChange("service")}
-                        className="flex h-11 md:h-12 w-full rounded-md border border-input bg-background pl-10 pr-3 py-2 text-sm appearance-none ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                      >
-                        <option value="">Select service</option>
-                        {SERVICES.map((s) => (
-                          <option key={s} value={s}>
-                            {s}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                <div className="space-y-2">
+                  <Label htmlFor="enq-area" className="text-primary-deep">
+                    Your Area
+                  </Label>
+                  <div className="relative">
+                    <MapPin className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                    <select
+                      id="enq-area"
+                      name="area"
+                      value={form.area}
+                      onChange={handleChange("area")}
+                      className="flex h-11 md:h-12 w-full rounded-md border border-input bg-background pl-10 pr-3 py-2 text-sm appearance-none ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="">Select area</option>
+                      {AREAS.map((a) => (
+                        <option key={a} value={a}>
+                          {a}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
 

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { homeSection } from "@/lib/siteNav";
 import { WHATSAPP } from "@/lib/contact";
+import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 
 const logo = "/assets/logo_only.png";
 const logotext = "/assets/logo_text.png";
@@ -111,8 +112,8 @@ const Navbar = () => {
             className="border-white/35 bg-dark/40 text-dark-foreground shadow-[0_2px_16px_rgba(0,0,0,0.45)] backdrop-blur-sm hover:bg-dark/60"
             asChild
           >
-            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-              WhatsApp
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <WhatsAppIcon className="h-4 w-4" />
             </a>
           </Button>
           <Button variant="hero" size="sm" className="relative overflow-hidden shadow-glow" asChild>
@@ -158,8 +159,8 @@ const Navbar = () => {
           </ul>
           <div className="mt-5 flex flex-col gap-2 border-t border-white/10 pt-5">
             <Button variant="outlineDark" className="w-full border-white/30 bg-dark/50" asChild>
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                WhatsApp
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <WhatsAppIcon className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="hero" className="w-full shadow-glow" asChild>

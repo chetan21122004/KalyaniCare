@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, MapPin, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, Sparkles } from "lucide-react";
+import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -97,7 +98,7 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
           src={data.blobAsset}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.06] mix-blend-multiply"
+          className="pointer-events-none absolute inset-0 hidden h-full w-full object-cover opacity-[0.06] mix-blend-multiply md:block"
         />
         <div
           className="pointer-events-none absolute -top-24 -left-20 h-72 w-72 rounded-full bg-primary/10 blur-[120px]"
@@ -145,7 +146,7 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
                 </Button>
                 <Button variant="outline" asChild className="rounded-xl border-primary/25">
                   <a href={data.secondaryCtaHref} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="h-4 w-4" />
+                    <WhatsAppIcon className="h-4 w-4" />
                     {data.secondaryCtaLabel}
                   </a>
                 </Button>
@@ -159,21 +160,21 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
             </header>
 
             <aside className="relative overflow-hidden rounded-[2rem] border border-primary/15 bg-gradient-soft p-6 shadow-card md:p-8">
-              <img
-                src={data.blobAsset}
-                alt=""
-                aria-hidden
-                className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.12]"
-              />
               <div
                 className="pointer-events-none absolute -top-16 -right-12 h-48 w-48 rounded-full bg-accent/20 blur-[90px]"
                 aria-hidden
               />
               <div className="relative">
+                {/* Mobile: one clear baby photo; desktop: baby doodle illustration */}
+                <img
+                  src={data.blobAsset}
+                  alt={data.doodleAlt}
+                  className="mx-auto h-52 w-full max-w-[320px] rounded-2xl object-cover object-top shadow-md md:hidden"
+                />
                 <img
                   src={data.doodleAsset}
                   alt={data.doodleAlt}
-                  className="mx-auto h-auto w-full max-w-[320px] object-contain drop-shadow-xl"
+                  className="mx-auto hidden h-auto w-full max-w-[320px] object-contain drop-shadow-xl md:block"
                 />
                 <div className="mt-5 rounded-2xl border border-primary/15 bg-background/85 p-4">
                   <p className="text-sm font-semibold text-primary-deep">{data.visualTitle}</p>
@@ -252,6 +253,7 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
               </Button>
               <Button variant="outline" asChild className="border-primary/30">
                 <a href={data.secondaryCtaHref} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="h-4 w-4" />
                   {data.secondaryCtaLabel}
                 </a>
               </Button>

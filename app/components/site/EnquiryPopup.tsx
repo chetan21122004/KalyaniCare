@@ -147,25 +147,6 @@ export default function EnquiryPopup() {
                 />
               </div>
 
-              {/* Service */}
-              <div>
-                <label htmlFor="kcp-service" className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-primary-deep">
-                  Service needed
-                </label>
-                <select
-                  id="kcp-service"
-                  name="service"
-                  required
-                  className="w-full rounded-xl border border-border bg-muted/40 px-4 py-2.5 text-sm font-medium text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all appearance-none"
-                  defaultValue=""
-                >
-                  <option value="" disabled>Select a service…</option>
-                  <option value="Babysitter">Babysitter</option>
-                  <option value="Nanny">Nanny</option>
-                  <option value="Not sure yet">Not sure yet</option>
-                </select>
-              </div>
-
               {/* Area */}
               <div>
                 <label htmlFor="kcp-area" className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-primary-deep">

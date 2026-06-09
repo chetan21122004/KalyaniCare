@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Phone, Sparkles as SparklesIcon } from "lucide-react";
+import { Sparkles as SparklesIcon } from "lucide-react";
+import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 import Sparkles from "./Sparkles";
 import { homeSection } from "@/lib/siteNav";
 import { services } from "@/lib/services";
@@ -39,7 +40,7 @@ const FinalCTA = () => {
               </Button>
               <Button variant="whatsapp" size="xl" asChild className="w-full sm:w-auto">
                 <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                  <Phone className="h-4 w-4" /> Chat on WhatsApp
+                  <WhatsAppIcon className="h-4 w-4" /> Chat on WhatsApp
                 </a>
               </Button>
             </div>

@@ -27,7 +27,7 @@ import {
 type PageProps = { params: Promise<{ slug: string }> };
 
 const doodleBySlug: Record<string, string> = {
-  babysitting: "/assets/doodles/cleaning service-amico.svg",
+  babysitting: "/assets/doodles/Baby-amico.svg",
 };
 
 const blobBySlug: Record<string, string> = {
@@ -81,7 +81,7 @@ export default async function ServiceDetailPage(props: PageProps) {
   const homeUrl = getAbsoluteSiteUrl("/");
   const whatsappHref = getWhatsAppHrefWithService(service.title);
   const businessId = `${canonical}#localbusiness`;
-  const doodleAsset = doodleBySlug[service.slug] ?? "/assets/doodles/cleaning service-amico.svg";
+  const doodleAsset = doodleBySlug[service.slug] ?? "/assets/doodles/Baby-amico.svg";
   const blobAsset = blobBySlug[service.slug] ?? "/assets/baby_imgs/1.jpg";
 
   const relatedFromSearches = service.relatedSearches

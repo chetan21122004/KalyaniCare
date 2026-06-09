@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Clock, RefreshCw, MapPin, Phone, Sparkles as SparklesIcon, Star, ArrowRight } from "lucide-react";
+import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 import { useMemo, useRef, useState } from "react";
 import { homeSection } from "@/lib/siteNav";
 import { WHATSAPP } from "@/lib/contact";
@@ -38,25 +39,18 @@ const MobileHero = () => (
         </span>
       </div>
 
-      {/* Baby photo + headline row */}
-      <div className="mt-6 relative overflow-hidden rounded-3xl">
-        <img
-          src={baby1}
-          alt="Happy baby cared for by KalyaniCare nanny in Hinjewadi Pune"
-          className="w-full h-52 object-cover object-top"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/30 to-transparent" />
-        <div className="absolute bottom-4 left-4 right-4">
-          <p className="font-display text-white text-2xl font-bold leading-tight">
-            Trusted Nannies for{" "}
-            <span className="text-accent">Hinjewadi</span>{" "}
-            families
-          </p>
-        </div>
-        {/* Verified badge */}
-        <div className="absolute top-4 right-4 flex items-center gap-1.5 rounded-full border border-accent/40 bg-dark/70 px-2.5 py-1 backdrop-blur-sm">
-          <ShieldCheck className="h-3.5 w-3.5 text-accent" />
-          <span className="text-[10px] font-bold text-white">Verified</span>
+      {/* Headline — background video/image already provides the visual */}
+      <div className="mt-6 rounded-3xl border border-white/12 bg-white/[0.04] px-4 py-5 backdrop-blur-sm">
+        <p className="font-display text-white text-2xl font-bold leading-tight">
+          Trusted Nannies for{" "}
+          <span className="text-accent">Hinjewadi</span>{" "}
+          families
+        </p>
+        <div className="mt-3 flex items-center gap-1.5">
+          <span className="inline-flex items-center gap-1 rounded-full border border-accent/40 bg-dark/50 px-2.5 py-1 backdrop-blur-sm">
+            <ShieldCheck className="h-3.5 w-3.5 text-accent" />
+            <span className="text-[10px] font-bold text-white">Verified</span>
+          </span>
         </div>
       </div>
 
@@ -84,7 +78,7 @@ const MobileHero = () => (
           className="h-12 w-full rounded-xl border-white/20 bg-white/[0.04] text-[13px] font-semibold text-white backdrop-blur-md hover:border-white/35 hover:bg-white/[0.08] hover:text-white"
         >
           <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-            <Phone className="h-4 w-4" />
+            <WhatsAppIcon className="h-4 w-4" />
             WhatsApp
           </a>
         </Button>
@@ -255,7 +249,7 @@ const Hero = () => {
                 </Button>
                 <Button variant="glass" size="xl" asChild>
                   <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                    <Phone className="h-4 w-4" /> Chat on WhatsApp
+                    <WhatsAppIcon className="h-4 w-4" /> Chat on WhatsApp
                   </a>
                 </Button>
               </div>

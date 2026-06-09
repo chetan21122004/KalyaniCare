@@ -64,14 +64,14 @@ export const services: readonly ServiceRecord[] = [
   {
     slug: "babysitting",
     iconKey: "baby",
-    title: "Babysitter & Nanny Services",
-    tag: "Specialist",
+    title: "Babysitter & Nanny",
+    tag: "Our Service",
     points: [
-      "Infant, toddler & after-school supervision",
-      "Daytime nanny, part-day babysitter, and ayah-style care",
-      "Background-verified profiles with trial and replacement support",
+      "One trusted service — babysitter and nanny care for your child at home",
+      "Flexible timing for part-day, full-day, or recurring care",
+      "Background-verified caregivers with trial and replacement support",
     ],
-    mobileSummary: "Verified babysitters and nannies for child care at home.",
+    mobileSummary: "Verified babysitter and nanny care for your child at home.",
     headline: "Trusted Babysitter & Nanny Services in Hinjewadi, Wakad & Baner",
     metaTitle:
       "Babysitter & Nanny Services in Hinjewadi Pune | KalyaniCare Nanny Services",

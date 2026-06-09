@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Heart, MapPin, Users, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
+import { Heart, MapPin, Users, CheckCircle2, ArrowRight } from "lucide-react";
 import { WHATSAPP } from "@/lib/contact";
+import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 
 const baby1 = "/assets/baby_imgs/1.jpg";
 const baby2 = "/assets/baby_imgs/2.jpg";
@@ -63,7 +64,7 @@ const About = () => {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl" className="group" asChild>
                 <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
-                  <Sparkles className="h-4 w-4" /> Talk to Us
+                  <WhatsAppIcon className="h-4 w-4" /> WhatsApp
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
@@ -75,7 +76,7 @@ const About = () => {
             <div className="relative overflow-hidden rounded-[2rem] border border-primary/15 bg-gradient-soft p-4 shadow-card">
               <div className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full bg-accent/20 blur-[80px]" aria-hidden />
               <img
-                src={baby1}
+                src={baby2}
                 alt="KalyaniCare nanny with child in Hinjewadi Pune"
                 className="relative w-full rounded-2xl object-cover h-52"
               />

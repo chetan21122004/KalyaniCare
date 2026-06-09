@@ -8,6 +8,7 @@ import { BlogCard } from "@/app/components/blog/BlogCard";
 import Footer from "@/app/components/site/Footer";
 import Navbar from "@/app/components/site/Navbar";
 import StickyWhatsApp from "@/app/components/site/StickyWhatsApp";
+import { WhatsAppIcon } from "@/app/components/site/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -292,6 +293,7 @@ export default async function BlogPostPage(props: PageProps) {
                     </Button>
                     <Button variant="outline" size="lg" asChild>
                       <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
+                        <WhatsAppIcon className="h-4 w-4" />
                         WhatsApp KalyaniCare
                       </a>
                     </Button>

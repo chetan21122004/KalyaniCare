@@ -20,6 +20,7 @@ import { homeSection } from "@/lib/siteNav";
 
 const baby1 = "/assets/baby_imgs/1.jpg";
 const baby2 = "/assets/baby_imgs/2.jpg";
+const baby3 = "/assets/baby_imgs/3.jpg";
 
 const iconByKey: Record<ServiceIconKey, LucideIcon> = {
   baby: Baby,
@@ -43,7 +44,7 @@ const MobileServices = () => (
     <div className="mx-auto max-w-[26rem] text-left">
       <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-gradient-brand-soft px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-deep">
         <Sparkles className="h-3 w-3" />
-        {service.tag ?? "Nanny Care"}
+        {service.tag ?? "Babysitter & Nanny"}
       </span>
       <h2 className="mt-4 font-display text-[1.85rem] font-extrabold leading-[1.05] tracking-[-0.02em] text-primary-deep">
         {service.title}
@@ -75,7 +76,7 @@ const MobileServices = () => (
     <div className="mx-auto mt-5 max-w-[26rem]">
       <div className="relative overflow-hidden rounded-2xl shadow-card">
         <img
-          src={baby1}
+          src={baby3}
           alt="Professional nanny with child — KalyaniCare Hinjewadi"
           className="w-full h-52 object-cover"
         />
@@ -127,7 +128,7 @@ const Services = () => {
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 rounded-full bg-gradient-brand-soft border border-primary/20 px-4 py-1.5 text-xs font-bold text-primary-deep uppercase tracking-wider">
               <Sparkles className="h-3.5 w-3.5" />
-              Nanny Care
+              Babysitter & Nanny
             </span>
           </div>
 
@@ -153,7 +154,7 @@ const Services = () => {
               </h2>
 
               <p className="mt-5 text-lg text-foreground/70 leading-relaxed max-w-lg">
-                Verified babysitters and nannies for families across Hinjewadi, Wakad, and Baner.
+                One service for families in Hinjewadi, Wakad, and Baner — babysitter and nanny care, matched to your routine.
               </p>
 
               {/* Service points */}
@@ -238,7 +239,7 @@ const Services = () => {
                 <div className="absolute bottom-5 left-5 right-5">
                   <div className="rounded-2xl border border-white/20 bg-dark/70 px-4 py-3 backdrop-blur-md">
                     <p className="text-xs font-bold uppercase tracking-wider text-accent mb-1">Available in Hinjewadi</p>
-                    <p className="text-sm font-bold text-white">Babysitter & Nanny Care</p>
+                    <p className="text-sm font-bold text-white">Babysitter & Nanny</p>
                   </div>
                 </div>
               </div>
