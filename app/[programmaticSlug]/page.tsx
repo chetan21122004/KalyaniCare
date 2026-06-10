@@ -16,6 +16,13 @@ import {
   getBusinessPostalAddressJsonLd,
 } from "@/lib/contact";
 import {
+  SCHEMA_AGGREGATE_RATING,
+  SCHEMA_OPENING_HOURS,
+  SCHEMA_PRICE_RANGE,
+  SCHEMA_BUSINESS_IMAGE,
+  SCHEMA_AREA_SERVED,
+} from "@/lib/schema";
+import {
   AREA_SERVED_CITY,
   AREA_SERVED_LOCALITY,
   BRAND_NAME,
@@ -282,9 +289,14 @@ export default async function ProgrammaticPage(props: PageProps) {
         name: BRAND_NAME,
         url: homeUrl,
         telephone: CONTACT_PHONE_E164,
+        image: SCHEMA_BUSINESS_IMAGE,
         address: getBusinessPostalAddressJsonLd(),
         geo: getBusinessGeoJsonLd(),
         hasMap: GOOGLE_MAPS_DIRECTIONS_URL,
+        openingHours: SCHEMA_OPENING_HOURS,
+        priceRange: SCHEMA_PRICE_RANGE,
+        aggregateRating: SCHEMA_AGGREGATE_RATING,
+        areaServed: SCHEMA_AREA_SERVED.map((name) => ({ "@type": "Place", name })),
       },
       {
         "@type": "Service",

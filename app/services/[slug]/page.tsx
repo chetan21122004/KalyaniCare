@@ -13,6 +13,14 @@ import {
   getBusinessGeoJsonLd,
   getBusinessPostalAddressJsonLd,
 } from "@/lib/contact";
+import {
+  SCHEMA_AGGREGATE_RATING,
+  SCHEMA_REVIEWS,
+  SCHEMA_OPENING_HOURS,
+  SCHEMA_PRICE_RANGE,
+  SCHEMA_BUSINESS_IMAGE,
+  SCHEMA_AREA_SERVED,
+} from "@/lib/schema";
 import { AREAS } from "@/lib/areas";
 import {
   AREA_SERVED_CITY,
@@ -120,17 +128,15 @@ export default async function ServiceDetailPage(props: PageProps) {
         url: homeUrl,
         telephone: CONTACT_PHONE_E164,
         description: `${BRAND_NAME} connects Pune households with vetted babysitters and nannies for child care at home.`,
+        image: SCHEMA_BUSINESS_IMAGE,
         address: getBusinessPostalAddressJsonLd(),
         geo: getBusinessGeoJsonLd(),
         hasMap: GOOGLE_MAPS_DIRECTIONS_URL,
-        areaServed: {
-          "@type": "City",
-          name: AREA_SERVED_CITY,
-        },
-        serviceArea: {
-          "@type": "Place",
-          name: `${AREA_SERVED_LOCALITY}, ${AREA_SERVED_CITY}`,
-        },
+        openingHours: SCHEMA_OPENING_HOURS,
+        priceRange: SCHEMA_PRICE_RANGE,
+        aggregateRating: SCHEMA_AGGREGATE_RATING,
+        review: SCHEMA_REVIEWS,
+        areaServed: SCHEMA_AREA_SERVED.map((name) => ({ "@type": "Place", name })),
       },
       {
         "@type": "Service",

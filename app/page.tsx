@@ -24,6 +24,15 @@ import {
   BRAND_NAME,
   getAbsoluteSiteUrl,
 } from "@/lib/services";
+import {
+  getLocalBusinessSchemaBase,
+  SCHEMA_AGGREGATE_RATING,
+  SCHEMA_REVIEWS,
+  SCHEMA_OPENING_HOURS,
+  SCHEMA_PRICE_RANGE,
+  SCHEMA_BUSINESS_IMAGE,
+  SCHEMA_AREA_SERVED,
+} from "@/lib/schema";
 
 const canonical = getAbsoluteSiteUrl("/");
 
@@ -57,13 +66,16 @@ export default function Home() {
         name: BRAND_NAME,
         url: canonical,
         telephone: CONTACT_PHONE_E164,
+        description: `${BRAND_NAME} connects families in Hinjewadi IT Park and Pune west with background-verified babysitters and nannies for infant care, toddler routines, after-school supervision, and ongoing child care at home.`,
+        image: SCHEMA_BUSINESS_IMAGE,
         address: getBusinessPostalAddressJsonLd(),
         geo: getBusinessGeoJsonLd(),
         hasMap: GOOGLE_MAPS_DIRECTIONS_URL,
-        areaServed: {
-          "@type": "Place",
-          name: `${AREA_SERVED_LOCALITY}, ${AREA_SERVED_CITY}`,
-        },
+        openingHours: SCHEMA_OPENING_HOURS,
+        priceRange: SCHEMA_PRICE_RANGE,
+        aggregateRating: SCHEMA_AGGREGATE_RATING,
+        review: SCHEMA_REVIEWS,
+        areaServed: SCHEMA_AREA_SERVED.map((name) => ({ "@type": "Place", name })),
       },
     ],
   };

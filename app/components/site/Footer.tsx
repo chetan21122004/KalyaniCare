@@ -17,14 +17,14 @@ const logo = "/assets/logo_only.png";
 const logotext = "/assets/logo_text.png";
 
 const areas = [
-  "Hinjewadi Phase 1",
-  "Hinjewadi Phase 2",
-  "Hinjewadi Phase 3",
-  "Megapolis",
-  "Wakad",
-  "Bhumkar Chowk",
-  "Baner",
-  "Marunji",
+  { name: "Hinjewadi Phase 1", slug: "hinjewadi-phase-1" },
+  { name: "Hinjewadi Phase 2", slug: "hinjewadi-phase-2" },
+  { name: "Hinjewadi Phase 3", slug: "hinjewadi-phase-3" },
+  { name: "Megapolis", slug: "megapolis-hinjewadi" },
+  { name: "Wakad", slug: "wakad" },
+  { name: "Bhumkar Chowk", slug: "bhumkar-chowk" },
+  { name: "Baner", slug: "baner" },
+  { name: "Marunji", slug: "marunji" },
 ];
 
 const quickLinks: { label: string; href: string; enquiry?: boolean }[] = [
@@ -137,12 +137,13 @@ const Footer = () => {
             </h4>
             <div className="flex flex-wrap gap-2">
               {areas.map((a) => (
-                <span
-                  key={a}
-                  className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-medium text-dark-muted"
+                <a
+                  key={a.slug}
+                  href={`/nanny-service-in-${a.slug}`}
+                  className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-medium text-dark-muted transition-smooth hover:border-accent/35 hover:text-accent"
                 >
-                  {a}
-                </span>
+                  {a.name}
+                </a>
               ))}
             </div>
           </div>
@@ -278,12 +279,13 @@ const Footer = () => {
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {areas.map((a) => (
-                    <span
-                      key={a}
-                      className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-medium text-dark-muted"
+                    <a
+                      key={a.slug}
+                      href={`/nanny-service-in-${a.slug}`}
+                      className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-medium text-dark-muted transition-smooth hover:border-accent/35 hover:text-accent"
                     >
-                      {a}
-                    </span>
+                      {a.name}
+                    </a>
                   ))}
                 </div>
               </div>

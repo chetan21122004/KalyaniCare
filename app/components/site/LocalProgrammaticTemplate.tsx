@@ -227,6 +227,7 @@ export default function LocalProgrammaticTemplate({ data }: Props) {
             <Accordion
               type="single"
               collapsible
+              defaultValue="faq-0"
               className="mt-4 w-full rounded-2xl border border-border bg-card px-4 py-2 md:px-6 md:py-3"
             >
               {data.faqItems.map((item, i) => (
