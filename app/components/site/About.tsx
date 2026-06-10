@@ -15,7 +15,7 @@ const stats = [
 
 const promises = [
   "Background-verified, locally-known caregivers",
-  "One real human you can call — no chatbots",
+  "One real human you can call - no chatbots",
   "We stay involved long after day one",
 ];
 
@@ -30,7 +30,7 @@ const About = () => {
       <div className="container relative mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-center">
 
-          {/* Left — content */}
+          {/* Left - content */}
           <div className="relative z-10">
             <span className="inline-flex items-center gap-2 rounded-full bg-white border border-primary/20 shadow-soft px-4 py-1.5 text-xs font-bold text-primary-deep uppercase tracking-wider">
               <span className="relative flex h-2 w-2">
@@ -44,7 +44,7 @@ const About = () => {
             </h2>
             <p className="mt-6 text-lg text-foreground/75 leading-relaxed max-w-xl">
               Built on a strong local network, KalyaniCare connects families in Hinjewadi with trusted,
-              experienced babysitters and nannies — managed with a personal touch, focused on{" "}
+              experienced babysitters and nannies - managed with a personal touch, focused on{" "}
               <span className="font-bold text-primary-deep">reliability, quick response, and long-term trust</span>.
             </p>
 
@@ -70,7 +70,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right — Mobile (baby photo) */}
+          {/* Right - Mobile (baby photo) */}
           <div className="mt-10 md:hidden">
             <div className="relative overflow-hidden rounded-[2rem] border border-primary/15 bg-gradient-soft p-4 shadow-card">
               <div className="pointer-events-none absolute -top-12 -right-12 h-40 w-40 rounded-full bg-accent/20 blur-[80px]" aria-hidden />
@@ -98,7 +98,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right — Desktop: baby photo collage */}
+          {/* Right - Desktop: baby photo collage */}
           <div className="relative mt-12 hidden min-h-[560px] items-center justify-center md:flex lg:mt-0">
             {/* Background card with main photo */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

@@ -22,29 +22,29 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    /* === FOREST TEAL — #1a5045 === */
+    /* === FOREST TEAL - #1a5045 === */
     --primary: 168 51% 21%;             /* #1a5045 Forest Teal */
     --primary-foreground: 0 0% 100%;
     --primary-glow: 154 46% 34%;        /* #2e7d5a Mid Teal */
     --primary-deep: 168 51% 18%;        /* slightly deeper forest teal */
 
-    /* === LOTUS GOLD — section backgrounds === */
+    /* === LOTUS GOLD - section backgrounds === */
     --secondary: 40 70% 87%;            /* #f5e6c8 Lotus Gold */
     --secondary-foreground: 168 51% 21%;
 
     --muted: 38 41% 92%;                /* lighter parchment */
     --muted-foreground: 40 21% 45%;     /* #8a7a5a Warm Brown */
 
-    /* === WARM GOLD — #c9a84c === */
+    /* === WARM GOLD - #c9a84c === */
     --accent: 44 54% 54%;               /* #c9a84c Warm Gold */
     --accent-foreground: 168 51% 21%;
     --accent-deep: 43 71% 69%;          /* #e8c97a Light Gold */
     --accent-soft: 40 70% 93%;          /* very light lotus gold */
 
-    /* === SOFT MINT — card fills / badge backgrounds === */
+    /* === SOFT MINT - card fills / badge backgrounds === */
     --soft-mint: 152 40% 94%;           /* #e8f5ef */
 
-    /* === DARK SURFACES — Navbar, Footer, Hero, CTA (Forest Teal) === */
+    /* === DARK SURFACES - Navbar, Footer, Hero, CTA (Forest Teal) === */
     --dark: 168 51% 21%;                /* #1a5045 Forest Teal */
     --dark-mid: 154 46% 34%;            /* #2e7d5a Mid Teal */
     --dark-soft: 154 35% 40%;           /* slightly lighter teal */

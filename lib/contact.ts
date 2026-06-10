@@ -2,23 +2,25 @@
 
 export const CONTACT_PHONE_E164 = "+919172475977";
 
-/** Registered office-matches Google Business / Maps listing. */
-export const BUSINESS_STREET_ADDRESS = "Annabhau Sathe Nagar, Maan";
-export const BUSINESS_ADDRESS_LOCALITY = "Man";
+/** Registered office - matches Google Business / Maps listing. */
+export const BUSINESS_STREET_ADDRESS =
+  "Krishna Market, Megapolis Cir, Phase 3, Hinjawadi Rajiv Gandhi Infotech Park, Hinjawadi";
+export const BUSINESS_ADDRESS_LOCALITY = "Pune";
 export const BUSINESS_ADDRESS_REGION = "Maharashtra";
 export const BUSINESS_POSTAL_CODE = "411057";
 export const BUSINESS_ADDRESS_COUNTRY = "IN";
 export const BUSINESS_ADDRESS_DISPLAY =
-  "Annabhau Sathe Nagar, Maan, Man, Maharashtra 411057";
+  "Krishna Market, Megapolis Cir, Phase 3, Hinjawadi, Pune, Maharashtra 411057";
 
-export const BUSINESS_GEO_LAT = 18.575996;
-export const BUSINESS_GEO_LNG = 73.709906;
+export const BUSINESS_GEO_LAT = 18.5774064;
+export const BUSINESS_GEO_LNG = 73.6908265;
+export const GOOGLE_PLACE_ID = "ChIJK4aBqwS7wjsRJxHdNe2kua4";
 
 export const GOOGLE_MAPS_EMBED_SRC =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d778.0587754592929!2d73.70990627494702!3d18.57599619609245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb9abfbdf319%3A0xf0027cd442f858e0!2sAnnabhau%20Sathe%20Nagar%2C%20Maan%2C%20Man%2C%20Maharashtra%20411057!5e1!3m2!1sen!2sin!4v1779388548356!5m2!1sen!2sin";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d778.0587754592929!2d73.6908265!3d18.5774064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sChIJK4aBqwS7wjsRJxHdNe2kua4!2sKalyaniCare%20Nanny%20Services!5e0!3m2!1sen!2sin!4v1740000000000!5m2!1sen!2sin";
 
 export const GOOGLE_MAPS_DIRECTIONS_URL =
-  "https://www.google.com/maps/place/Annabhau+Sathe+Nagar,+Maan,+Man,+Maharashtra+411057/@18.575996,73.709906,17z";
+  "https://www.google.com/maps/search/?api=1&query=KalyaniCare+Nanny+Services&query_place_id=ChIJK4aBqwS7wjsRJxHdNe2kua4";
 
 /** Schema.org PostalAddress for LocalBusiness JSON-LD. */
 export function getBusinessPostalAddressJsonLd() {

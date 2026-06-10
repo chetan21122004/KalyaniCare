@@ -61,7 +61,7 @@ function parseInlineSegments(input: string): Segment[] {
       continue;
     }
 
-    // Leading "**" — treat as escaped literal to avoid infinite loop.
+    // Leading "**" - treat as escaped literal to avoid infinite loop.
     out.push("*");
     rest = rest.slice(1);
   }

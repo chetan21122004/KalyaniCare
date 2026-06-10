@@ -66,7 +66,7 @@ const Process = () => {
             <p className="mt-4 text-lg text-dark-muted max-w-xl mx-auto md:mx-0">From enquiry to confirmed nanny match -usually within a day.</p>
           </div>
           <div className="hidden md:flex justify-end">
-            <img src={babyDoodle} alt="Illustration of nanny and baby care — KalyaniCare Pune" className="w-56 lg:w-72 object-contain drop-shadow-xl animate-float" />
+            <img src={babyDoodle} alt="Illustration of nanny and baby care - KalyaniCare Pune" className="w-56 lg:w-72 object-contain drop-shadow-xl animate-float" />
           </div>
         </div>
 

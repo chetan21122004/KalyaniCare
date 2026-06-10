@@ -191,7 +191,7 @@ export default async function ProgrammaticPage(props: PageProps) {
       h1: `Nanny & Babysitter Service in ${area.name}`,
       intro: `KalyaniCare Nanny Services helps families in ${area.name} find verified babysitters and nannies for safe child care at home near ${area.landmark}.`,
       highlights: [
-        "One trusted service — babysitter and nanny care at home",
+        "One trusted service - babysitter and nanny care at home",
         "Flexible part-day, full-day, or recurring timings",
         `Coverage near ${area.landmark}`,
         "Trial visits and replacement support",

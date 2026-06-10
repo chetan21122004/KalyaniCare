@@ -67,7 +67,7 @@ export const services: readonly ServiceRecord[] = [
     title: "Babysitter & Nanny",
     tag: "Our Service",
     points: [
-      "One trusted service — babysitter and nanny care for your child at home",
+      "One trusted service - babysitter and nanny care for your child at home",
       "Flexible timing for part-day, full-day, or recurring care",
       "Background-verified caregivers with trial and replacement support",
     ],

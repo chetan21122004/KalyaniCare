@@ -78,7 +78,7 @@ const MobileServices = () => (
       <div className="relative overflow-hidden rounded-2xl shadow-card">
         <img
           src={baby3}
-          alt="Professional nanny with child — KalyaniCare Hinjewadi"
+          alt="Professional nanny with child - KalyaniCare Hinjewadi"
           className="w-full h-52 object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
@@ -133,9 +133,9 @@ const Services = () => {
             </span>
           </div>
 
-          {/* Featured service — two-column split */}
+          {/* Featured service - two-column split */}
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-            {/* Left — service details */}
+            {/* Left - service details */}
             <div>
               {/* Tag + title */}
               <div className="flex items-center gap-3 mb-6">
@@ -155,7 +155,7 @@ const Services = () => {
               </h2>
 
               <p className="mt-5 text-lg text-foreground/70 leading-relaxed max-w-lg">
-                One service for families in Hinjewadi, Wakad, and Baner — babysitter and nanny care, matched to your routine.
+                One service for families in Hinjewadi, Wakad, and Baner - babysitter and nanny care, matched to your routine.
               </p>
 
               {/* Service points */}
@@ -206,7 +206,7 @@ const Services = () => {
               </div>
             </div>
 
-            {/* Right — photo collage */}
+            {/* Right - photo collage */}
             <div className="relative">
               {/* Halo glow */}
               <div className="absolute -inset-8 bg-primary/5 rounded-[3rem] blur-[60px] pointer-events-none" aria-hidden />
@@ -215,7 +215,7 @@ const Services = () => {
               <div className="relative overflow-hidden rounded-[2.5rem] shadow-elevated border border-primary/10">
                 <img
                   src={baby2}
-                  alt="Trusted nanny with infant — KalyaniCare Hinjewadi Pune"
+                  alt="Trusted nanny with infant - KalyaniCare Hinjewadi Pune"
                   className="w-full h-[420px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-transparent" />

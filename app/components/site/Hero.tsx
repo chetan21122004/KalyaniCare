@@ -33,7 +33,7 @@ const MobileHero = () => (
         </span>
       </div>
 
-      {/* Headline — background video/image already provides the visual */}
+      {/* Headline - background video/image already provides the visual */}
       <div className="mt-6 rounded-3xl border border-white/12 bg-white/[0.04] px-4 py-5 backdrop-blur-sm">
         <p className="font-display text-white text-2xl font-bold leading-tight">
           Trusted Nannies for{" "}
@@ -52,7 +52,7 @@ const MobileHero = () => (
       <p className="mt-4 text-[13.5px] leading-relaxed text-white/70">
         A network of{" "}
         <span className="font-semibold text-white">verified babysitters and nannies</span>
-        {" "}— matched to your child-care routine.
+        {" "}- matched to your child-care routine.
       </p>
 
       {/* CTA row */}
@@ -205,7 +205,7 @@ const Hero = () => {
         {/* Desktop / tablet layout (md+) */}
         <div className="hidden md:block">
           <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
-            {/* Left — content */}
+            {/* Left - content */}
             <div className="text-center lg:text-left animate-fade-up">
               {/* Status pill */}
               <div className="inline-flex items-center gap-2 rounded-full glass-strong px-4 py-2 text-xs font-semibold text-white border border-white/15 shadow-elevated">
@@ -232,7 +232,7 @@ const Hero = () => {
               <p className="mt-5 text-base md:text-lg text-white/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 Tap into a network of{" "}
                 <span className="font-bold text-accent">background-verified child caregivers</span>{" "}
-                for infants, toddlers and after-school supervision — matched to your family routine.
+                for infants, toddlers and after-school supervision - matched to your family routine.
               </p>
 
               {/* CTAs */}
@@ -276,7 +276,7 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Right — large logo with floating baby photos */}
+            {/* Right - large logo with floating baby photos */}
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative">
                 {/* Halo rings */}

@@ -31,7 +31,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 md:px-6">
         {/* Section header */}
         <div className="grid md:grid-cols-[auto_1fr] gap-5 md:gap-10 items-center mb-10 md:mb-14 max-w-5xl mx-auto text-center md:text-left">
-          {/* Baby image — desktop only */}
+          {/* Baby image - desktop only */}
           <div className="hidden md:block relative shrink-0">
             <div className="relative w-52 lg:w-64 overflow-hidden rounded-[2rem] shadow-card border border-border">
               <img
@@ -81,7 +81,7 @@ const Testimonials = () => {
                 {`\u201C${t.text}\u201D`}
               </p>
               <div className="mt-5 md:mt-6 pt-4 md:pt-5 border-t border-border flex items-center gap-3">
-                {/* Avatar — use baby photo for last card, initials for others */}
+                {/* Avatar - use baby photo for last card, initials for others */}
                 {idx === 2 ? (
                   <div className="h-10 w-10 md:h-11 md:w-11 overflow-hidden rounded-full border-2 border-accent/30 shadow-sm shrink-0">
                     <img src={baby4} alt="" className="w-full h-full object-cover" />

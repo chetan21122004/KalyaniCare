@@ -65,7 +65,7 @@ const Navbar = () => {
       />
 
       <nav className="container relative mx-auto flex h-14 md:h-16 flex-wrap items-center gap-x-3 px-4 md:flex-nowrap md:gap-4 md:px-6">
-        {/* Logo — fixed nav height; larger marks overflow visually without resizing the bar */}
+        {/* Logo - fixed nav height; larger marks overflow visually without resizing the bar */}
         <a
           href={homeSection("top")}
           aria-label="KalyaniCare Nanny Services - home"

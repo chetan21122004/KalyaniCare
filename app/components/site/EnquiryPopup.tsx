@@ -72,7 +72,7 @@ export default function EnquiryPopup() {
       onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
       role="dialog"
       aria-modal="true"
-      aria-label="Book a nanny — enquiry form"
+      aria-label="Book a nanny - enquiry form"
     >
       {/* Panel */}
       <div className="relative w-full max-w-md overflow-hidden rounded-3xl bg-background shadow-elevated border border-border animate-in fade-in zoom-in-95 duration-200">
@@ -99,7 +99,7 @@ export default function EnquiryPopup() {
           </div>
 
           <p className="mt-3 text-sm text-white/75 leading-relaxed">
-            Share your requirement — we&apos;ll match you with a verified nanny.
+            Share your requirement - we&apos;ll match you with a verified nanny.
           </p>
         </div>
 

@@ -44,7 +44,7 @@ const Footer = () => {
       {/* Top accent rule */}
       <div className="h-1 w-full bg-accent" aria-hidden />
 
-      {/* Subtle background — single layer, contained */}
+      {/* Subtle background - single layer, contained */}
       <div className="pointer-events-none absolute inset-0 bg-dots-light opacity-[0.14]" aria-hidden />
       <div
         className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-accent/12 blur-[120px]"
@@ -202,7 +202,7 @@ const Footer = () => {
               </a>
               <p className="mt-5 max-w-sm text-sm leading-relaxed text-dark-muted">
                 Trusted babysitter and nanny care across{" "}
-                <span className="font-semibold text-dark-foreground/90">Hinjewadi IT Park</span> and Pune west — verified
+                <span className="font-semibold text-dark-foreground/90">Hinjewadi IT Park</span> and Pune west - verified
                 caregivers, fast matching, human support.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
