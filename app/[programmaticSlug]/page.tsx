@@ -68,26 +68,51 @@ const trustHighlights = [
   },
 ];
 
-const genericFaq: LocalProgrammaticTemplateData["faqItems"] = [
+/** FAQ for nanny-service-in-[area] pages (regular daytime care) */
+const nannyFaq: LocalProgrammaticTemplateData["faqItems"] = [
   {
-    question: "How quickly can I get a nanny or babysitter?",
+    question: "What does a daytime nanny do at home in Pune?",
     answer:
-      "Availability depends on the area, timing, and child-care scope. Most enquiries receive suitable matching options quickly after the requirement is clarified.",
+      "A daytime nanny follows your child's routine — feeding support, diapering, naps, supervised play, toddler engagement, and light child-related tasks. They work set hours each day, giving parents a reliable, recurring caregiver.",
   },
   {
-    question: "Can the caregiver support infants and toddlers?",
+    question: "How quickly can I get a nanny matched?",
     answer:
-      "Yes. We match for age-specific needs such as feeding support, diapering, naps, supervised play, and calm handovers.",
+      "Most families receive shortlisted nanny options within one to two days of sharing their requirement. Same-day options exist depending on locality and timing.",
   },
   {
-    question: "Is this service for general housekeeping?",
+    question: "Can I get a nanny for infants under 12 months?",
     answer:
-      "No. KalyaniCare Nanny Services is focused on babysitter, nanny, ayah-style, and child-care support. Light child-related tidy-up can be discussed.",
+      "Yes. We match infant-care nannies with experience in newborn routines, bottle feeding, burping, diapering, and calm sleep support.",
   },
   {
     question: "Do you offer trial and replacement support?",
     answer:
-      "Yes. A trial helps families assess comfort and routine fit, and our team assists with replacement options when needed.",
+      "Yes. A short trial helps the child and family settle with the caregiver. If fit or availability changes, KalyaniCare arranges replacement options as quickly as possible.",
+  },
+];
+
+/** FAQ for babysitting-in-[area] pages (flexible / on-demand care) */
+const babysittingFaq: LocalProgrammaticTemplateData["faqItems"] = [
+  {
+    question: "Can I hire a babysitter for just a few hours?",
+    answer:
+      "Yes. KalyaniCare supports part-day babysitting, evening cover, and one-time supervision depending on availability in your area. Share your timing and we will shortlist suitable options.",
+  },
+  {
+    question: "What is the difference between a babysitter and a nanny?",
+    answer:
+      "A babysitter typically provides flexible, shorter-duration supervision — a few hours, an evening, or specific shifts. A nanny works recurring daily hours as an ongoing caregiver. KalyaniCare can help with both depending on your routine.",
+  },
+  {
+    question: "Are babysitters background-verified?",
+    answer:
+      "Yes. We prioritise background-verified profiles for all child-care placements, including short-duration babysitting engagements.",
+  },
+  {
+    question: "How fast can a babysitter be arranged near me?",
+    answer:
+      "For recurring needs, families usually get options within one to two days. For flexible or one-time requests, availability depends on locality and timing — WhatsApp us for the fastest response.",
   },
 ];
 
@@ -133,11 +158,24 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 
   const canonical = getAbsoluteSiteUrl(`/${programmaticSlug}`);
 
-  if (resolved.kind === "area" || resolved.kind === "service-area") {
+  if (resolved.kind === "area") {
     const area = getAreaBySlug(resolved.areaSlug);
     if (!area) return {};
-    const title = `Nanny & Babysitter Service in ${area.name}, Pune | ${BRAND_NAME}`;
-    const description = `Hire trusted nannies and babysitters in ${area.name}, Pune for infant care, toddler supervision, after-school support, trials, and replacement assistance.`;
+    const title = `Nanny Service in ${area.name}, Pune | ${BRAND_NAME}`;
+    const description = `Find a verified daytime nanny in ${area.name}, Pune for infant routines, toddler care, after-school supervision, and recurring home child care. Background-checked, locally matched.`;
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: { title, description, url: canonical, siteName: BRAND_NAME, type: "website", locale: "en_IN" },
+    };
+  }
+
+  if (resolved.kind === "service-area") {
+    const area = getAreaBySlug(resolved.areaSlug);
+    if (!area) return {};
+    const title = `Babysitter in ${area.name}, Pune | ${BRAND_NAME}`;
+    const description = `Book a trusted babysitter in ${area.name}, Pune for flexible part-day, full-day, or one-time child care near ${area.landmark}. Verified caregivers matched to your schedule.`;
     return {
       title,
       description,
@@ -175,13 +213,13 @@ export default async function ProgrammaticPage(props: PageProps) {
   let breadcrumbItems: BreadcrumbItem[] = [];
   let templateData: LocalProgrammaticTemplateData;
 
-  if (resolved.kind === "area" || resolved.kind === "service-area") {
+  if (resolved.kind === "area") {
     const area = getAreaBySlug(resolved.areaSlug);
     if (!area) notFound();
-    const waHref = getWhatsAppHrefWithService(`nanny or babysitter in ${area.name}`);
+    const waHref = getWhatsAppHrefWithService(`a daytime nanny in ${area.name}`);
 
-    schemaName = `Nanny & Babysitter Service in ${area.name}`;
-    schemaDescription = `Trusted nanny and babysitter support in ${area.name}, Pune.`;
+    schemaName = `Nanny Service in ${area.name}`;
+    schemaDescription = `Verified daytime nanny support for families in ${area.name}, Pune — infant routines, toddler care, and after-school supervision.`;
     breadcrumbItems = [
       { name: "Home", item: homeUrl },
       { name: "Areas", item: `${homeUrl}#areas` },
@@ -195,36 +233,90 @@ export default async function ProgrammaticPage(props: PageProps) {
         { label: area.name },
       ],
       localityLabel: `${area.name}, Pune`,
-      h1: `Nanny & Babysitter Service in ${area.name}`,
-      intro: `KalyaniCare Nanny Services helps families in ${area.name} find verified babysitters and nannies for safe child care at home near ${area.landmark}.`,
+      h1: `Nanny Service in ${area.name}, Pune`,
+      intro: `KalyaniCare Nanny Services helps families in ${area.name} find a reliable daytime nanny for recurring child care at home near ${area.landmark}. We match background-verified caregivers to your infant's routine, toddler's schedule, or after-school supervision needs.`,
       highlights: [
-        "One trusted service - babysitter and nanny care at home",
-        "Flexible part-day, full-day, or recurring timings",
-        `Coverage near ${area.landmark}`,
-        "Trial visits and replacement support",
+        `Recurring daytime nanny care near ${area.landmark}`,
+        "Infant and toddler routine support at home",
+        "Background-verified caregiver matching",
+        "Trial days and replacement assistance included",
       ],
       blobAsset,
       doodleAsset,
-      doodleAlt: `Nanny and babysitter support in ${area.name}`,
-      visualTitle: `Child-care coverage in ${area.shortName}`,
-      visualDescription: `Share your preferred timings, child age, language comfort, and routine. We align suitable caregivers from nearby communities.`,
+      doodleAlt: `Daytime nanny support in ${area.name}`,
+      visualTitle: `Nanny matching in ${area.shortName}`,
+      visualDescription: `Tell us your child's age, daily routine, and preferred timings. We shortlist locally-matched nannies for your home.`,
       trustHeading: `Why families in ${area.name} choose ${BRAND_NAME}`,
       trustHighlights,
-      faqHeading: "Frequently asked questions",
-      faqItems: genericFaq,
+      faqHeading: "Nanny service FAQs",
+      faqItems: nannyFaq,
       sideCtaTag: `Serving ${area.shortName}`,
-      sideCtaTitle: `Book a nanny in ${area.name}`,
-      sideCtaDescription: `Get recommendations based on your child's age, home routine, timings, and locality in ${area.name}.`,
+      sideCtaTitle: `Find a nanny in ${area.name}`,
+      sideCtaDescription: `Share your child's age, timings, and home routine. We match you with verified nannies near ${area.name}.`,
       primaryCtaLabel: "Start your enquiry",
       primaryCtaHref: "/#enquiry",
       secondaryCtaLabel: "WhatsApp for quick match",
       secondaryCtaHref: waHref,
-      relatedHeading: `Explore nanny coverage around ${area.name}`,
+      relatedHeading: `More child-care options near ${area.name}`,
       relatedLinks: [
         { href: `/services/babysitting`, label: "Babysitter & Nanny Services" },
-        { href: `/${babysittingPrefix}${area.slug}`, label: `Babysitting in ${area.name}` },
+        { href: `/${babysittingPrefix}${area.slug}`, label: `Babysitter in ${area.name}` },
         ...area.societies
           .slice(0, 6)
+          .map((s) => ({ href: nannyAreaHref(s.slug), label: `Nanny in ${s.name}` })),
+      ],
+    };
+  } else if (resolved.kind === "service-area") {
+    const area = getAreaBySlug(resolved.areaSlug);
+    if (!area) notFound();
+    const saArea = area as NonNullable<typeof area>;
+    const waHref = getWhatsAppHrefWithService(`a babysitter in ${saArea.name}`);
+
+    schemaName = `Babysitter in ${saArea.name}`;
+    schemaDescription = `Flexible babysitter bookings for families in ${saArea.name}, Pune — part-day, full-day, or one-time child care near ${saArea.landmark}.`;
+    breadcrumbItems = [
+      { name: "Home", item: homeUrl },
+      { name: "Areas", item: `${homeUrl}#areas` },
+      { name: `Babysitter in ${saArea.name}`, item: canonical },
+    ];
+
+    templateData = {
+      breadcrumb: [
+        { label: "Home", href: "/" },
+        { label: "Areas", href: "/#areas" },
+        { label: `Babysitter in ${saArea.name}` },
+      ],
+      localityLabel: `${saArea.name}, Pune`,
+      h1: `Babysitter in ${saArea.name}, Pune`,
+      intro: `Looking for a babysitter in ${saArea.name}? KalyaniCare connects families near ${saArea.landmark} with background-verified babysitters for flexible part-day, full-day, or recurring child supervision at home.`,
+      highlights: [
+        `Flexible babysitting near ${saArea.landmark}`,
+        "Part-day, full-day, or one-time bookings",
+        "Background-verified babysitters",
+        "Fast matching — often same-day availability",
+      ],
+      blobAsset,
+      doodleAsset,
+      doodleAlt: `Babysitter in ${saArea.name}`,
+      visualTitle: `Babysitter matching in ${saArea.shortName}`,
+      visualDescription: `Tell us your preferred hours and your child's age. We shortlist verified babysitters available near ${saArea.name}.`,
+      trustHeading: `Why ${saArea.name} families trust ${BRAND_NAME}`,
+      trustHighlights,
+      faqHeading: "Babysitter FAQs",
+      faqItems: babysittingFaq,
+      sideCtaTag: `Babysitting in ${saArea.shortName}`,
+      sideCtaTitle: `Book a babysitter in ${saArea.name}`,
+      sideCtaDescription: `Share your timing, child's age, and location in ${saArea.name}. We match you with available verified babysitters.`,
+      primaryCtaLabel: "Book a babysitter",
+      primaryCtaHref: "/#enquiry",
+      secondaryCtaLabel: "WhatsApp now",
+      secondaryCtaHref: waHref,
+      relatedHeading: `More child-care options near ${saArea.name}`,
+      relatedLinks: [
+        { href: nannyAreaHref(saArea.slug), label: `Nanny service in ${saArea.name}` },
+        { href: `/services/babysitting`, label: "Babysitter & Nanny Services" },
+        ...saArea.societies
+          .slice(0, 4)
           .map((s) => ({ href: nannyAreaHref(s.slug), label: `Nanny in ${s.name}` })),
       ],
     };
@@ -264,7 +356,7 @@ export default async function ProgrammaticPage(props: PageProps) {
       trustHeading: `Why families in ${society.name} choose ${BRAND_NAME}`,
       trustHighlights,
       faqHeading: "Frequently asked questions",
-      faqItems: genericFaq,
+      faqItems: nannyFaq,
       sideCtaTag: "Society support",
       sideCtaTitle: `Need a nanny in ${society.name}?`,
       sideCtaDescription: `Our team can recommend verified babysitter and nanny options near ${society.name}.`,
